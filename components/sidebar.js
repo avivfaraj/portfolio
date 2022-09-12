@@ -18,11 +18,12 @@ const Cards = [
   name: "Computer Science",
   reference: "/Projects/CS/cs_home"
 },
-{
-  id: 3.3,
-  name: "Electronics",
-  reference: "/contact"
-}]
+// {
+//   id: 3.3,
+//   name: "Electronics",
+//   reference: "/contact"
+// }
+]
 export default function Sidebar() {
   const [showAll, setShowAll] = useState(false);
   const toggleAll = () => {
@@ -98,4 +99,3 @@ export default function Sidebar() {
 
   )
 }
-// <input className={styles.input} placeholder="Search..." />
