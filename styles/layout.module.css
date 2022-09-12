@@ -2,7 +2,6 @@
   display: flex;
   height: 100vh;
   max-height: calc(100vh + 35vh);
-  /*background: linear-gradient(to top, #33ccff 6%, #009999 36%);*/
   background: #d9d9d9;
   overflow-y: hidden;
 }

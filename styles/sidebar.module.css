@@ -15,7 +15,6 @@
 .nav > a {
   margin: 8px 0;
   text-decoration: none;
-  /*background: #009999;*/
   background-color: inherit;
   /*background:  ${({ selected }) => (selected ? "grey" : "black")};*/
   border-radius: 4px;

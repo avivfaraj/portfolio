@@ -3,7 +3,7 @@ import Sidebar from '../components/sidebar'
 import Image from 'next/image';
 import styles from '../styles/certificates.module.css'
 import Honors from '../vars/honors'
-import LImage from '../components/LinkedImage'
+import LImage from '../components/linkedImage'
 
 const name = 'Aviv Faraj';
 export default function Contact() {
@@ -32,16 +32,13 @@ export default function Contact() {
       </div>
 
       <div className={styles.verticalCertificate}>
-      <ul style={{"list-style-type": "none"}}>
-        <li>
-          <h3>Dean's List 2019</h3>
+        <h3>Dean's List 2019</h3>
           <LImage {...Honors[5]} />
-        </li>
-        <li style={{"padding-top": "50px"}}>
-          <h3>Dean's List 2018</h3>
+      </div>
+
+      <div className={styles.verticalCertificate}>
+        <h3>Dean's List 2018</h3>
           <LImage {...Honors[6]} />
-        </li>
-      </ul>
       </div>
        
     </div>
