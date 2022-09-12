@@ -7,8 +7,9 @@ import Projects from '../../../vars/projects'
 export default function DSHome() {
   return (
     <section>
+      <h2> Data Science Projects</h2>
       <div className={styles.container}>
-        <h2> Data Science Projects</h2>
+        
 
           <div className={styles.grid}>
 

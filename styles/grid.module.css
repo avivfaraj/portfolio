@@ -42,6 +42,7 @@
 .container {
     box-sizing: border-box;
     min-height: 100vh;
+    margin-top: -15%;
     padding: 0 0.5rem;
     display: flex;
     flex-direction: column;
@@ -56,4 +57,3 @@
     flex-direction: column;
   }
 }
-

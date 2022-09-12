@@ -9,39 +9,39 @@ const name = 'Aviv Faraj';
 export default function Contact() {
   return (
     <section>
-    
-    <div className={styles.main}>
       <h2>Honors & Awards</h2>
-      <div className={styles.horizontalCertificate}>
-      <h3>Honor Society - Upsilon Pi Epsilon</h3>
-      <LImage {...Honors[0]} />
-      </div>
+      <div className={styles.main}>
+        
+        <div className={styles.horizontalCertificate}>
+        <h3>Honor Society - Upsilon Pi Epsilon</h3>
+        <LImage {...Honors[0]} />
+        </div>
 
-      
-      
-      <div className={styles.verticalCertificate}>
-      <h3>Magna Cum Laude - Electrical Engineering 2020</h3>
-        <LImage {...Honors[1]} />
-        <LImage {...Honors[2]} />
-      </div>
+        
+        
+        <div className={styles.verticalCertificate}>
+        <h3>Magna Cum Laude - Electrical Engineering 2020</h3>
+          <LImage {...Honors[1]} />
+          <LImage {...Honors[2]} />
+        </div>
 
-      <div className={styles.verticalCertificate}>
-      <h3>Summa Cum Laude - Physics 2019</h3>
-        <LImage {...Honors[3]} />
-        <LImage {...Honors[4]} />
-      </div>
+        <div className={styles.verticalCertificate}>
+        <h3>Summa Cum Laude - Physics 2019</h3>
+          <LImage {...Honors[3]} />
+          <LImage {...Honors[4]} />
+        </div>
 
-      <div className={styles.verticalCertificate}>
-        <h3>Dean's List 2019</h3>
-          <LImage {...Honors[5]} />
-      </div>
+        <div className={styles.verticalCertificate}>
+          <h3>Dean's List 2019</h3>
+            <LImage {...Honors[5]} />
+        </div>
 
-      <div className={styles.verticalCertificate}>
-        <h3>Dean's List 2018</h3>
-          <LImage {...Honors[6]} />
+        <div className={styles.verticalCertificate}>
+          <h3>Dean's List 2018</h3>
+            <LImage {...Honors[6]} />
+        </div>
+         
       </div>
-       
-    </div>
     </section>
   )
 }
