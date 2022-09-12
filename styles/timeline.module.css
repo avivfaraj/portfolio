@@ -3,16 +3,19 @@ https://github.com/Borges53/Timeline/blob/main/components/Timeline/item.module.c
 */
 
 .container-timeline{
-  width:  60%;
-  height: calc(100vh - 70px);
+  position: relative;
+  width:  70%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto auto;
-  padding-right: 10rem;
+  padding-left: 30%;
+
 }
 
+.container-timeline > h2{
+  margin-left: -45%;
+}
 .container-item::before{
   border-color: rgba(241, 64, 64, 0.8);
   left: 0;
@@ -98,7 +101,7 @@ https://github.com/Borges53/Timeline/blob/main/components/Timeline/item.module.c
   }
   
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 320px) {
     .container-roadMap {
       width: 85%;
       height: 100%;
@@ -128,5 +131,6 @@ https://github.com/Borges53/Timeline/blob/main/components/Timeline/item.module.c
     margin-left: 20px;
     min-height: 40px;
   }
+
 
     

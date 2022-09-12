@@ -10,9 +10,12 @@ import Styles from '../styles/timeline.module.css'
 
 export default function About() {
   return (
+
     <section>
-      <h2>About</h2>
+      
       <div className={Styles['container-timeline']}>
+        <h2>About</h2>
+        
         {items.map((item) => (
           <Item data={item} key={item.title}/>
           ))}

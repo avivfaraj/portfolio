@@ -41,8 +41,6 @@
 }
 .container {
     box-sizing: border-box;
-    min-height: 100vh;
-    margin-top: -15%;
     padding: 0 0.5rem;
     display: flex;
     flex-direction: column;
@@ -50,7 +48,7 @@
     align-items: center;
 }
 
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   .grid {
     box-sizing: border-box;
     width: 100%;
