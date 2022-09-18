@@ -35,7 +35,7 @@ const steps =[
     start_date: "Apr 2018",
   },
   {
-    title: "Enrolled in Dual Bachelor Degree at Ariel University",
+    title: "Enrolled in Dual Bachelor Degree",
     description: "Dual Bachelor in Physics & Electrical Engineering, Ariel University",
     start_date: "Oct 2016",
   }
