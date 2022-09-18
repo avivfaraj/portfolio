@@ -27,8 +27,8 @@ const projects ={
 
   cs:[
   {
-    name: "TODO Comments",
-    href: "https://github.com/avivfaraj/todocom",
+    name: "TODOCOM",
+    href: "./todocomPage",
     desc: "Command Line Interface (CLI) program to extract all TODO comments from a file/folder. It also enable to prioritize tasks by simply adding special TODO comments in the code.",
     keywords: "Python3, CLI, argparse, package"
   },

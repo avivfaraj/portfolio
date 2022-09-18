@@ -4,11 +4,9 @@ import styles from '../../../styles/grid.module.css'
 import Card from '../../../components/card'
 import Projects from '../../../vars/projects'
 
-export default function DSHome() {
+export default function CSHome() {
   return (
     <section>
-
-       
         <div className={styles.container}>
          <h2> Computer Science Projects</h2>
           <div className={styles.grid}>
@@ -22,7 +20,7 @@ export default function DSHome() {
   )
 }
 
-DSHome.getLayout = function getLayout(page) {
+CSHome.getLayout = function getLayout(page) {
   return (
     <Layout>
       <Sidebar />
