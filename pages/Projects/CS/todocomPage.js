@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <section>
         <GithubCorner href="https://github.com/avivfaraj/todocom" />
-
+        
         <h2> todocom (Todo Comments) </h2>
         <p>CLI program that retrieves all TODO comments from file(s) and prints them in terminal/shell. 
         It was created in order to automatically update a list of TODO tasks by simply adding "TODO:" comments in the code (<a href="#format">Comments Format</a>).
@@ -42,12 +42,18 @@ export default function Page() {
 
         <code>
         # Store results in a txt file
+        <br />
         todo -o [path/to/sample.txt] [folder/file]
         </code>
 
+        <br />
+        <br />
         <h2> Setup </h2>
 
         <code>pip install todocom</code>
+        
+        <br />
+        <br />
         <h2 id="format"> Comments Format </h2>
         <p>
         There are two types of comments: single line and multi-line. Currently, multi-line comments (docstrings) are only supported in Python, but single line should work for most programming languages.
