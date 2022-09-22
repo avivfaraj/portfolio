@@ -20,14 +20,24 @@
   width: 70%;
   padding-left: 20%;
   margin-bottom: 2%;
+  line-height: 35px;
 }
 
 .main section > h2{
+  margin-top: 7%;
   position: relative;
   text-align: center;
 }
 
-.main section code{
+.main section > h4{
+  margin-top: 2%;
+  padding-left: 20%;
+  position: relative;
+  text-align: left;
+  margin-bottom: -1%;
+}
+
+.main section > code{
   border-radius: 10px;
   padding-top: .5%;
   padding-bottom: .5%;
@@ -39,18 +49,66 @@
   color: white;
 }
 
-.main section ul{
+.main section > ul{
   padding-left: 22%;
   display: table;
 }
+
+.main section > figure{
+  padding-left: 23%;
+}
+
+.main section > figure > img{
+  width: 80%;
+  height: 80%;
+}
+
+/* Nested CSS doesn't work in NextJS, 
+   so this is just a workaround */
+.main section > figure > figcaption{
+  postion: relative;
+  padding-left: 24%;
+  padding-top: 2%;
+}
+
+.main hr{
+  width: 80%;
+  margin-left: 15%;
+}
+
 
 @media screen and (max-width: 720px) {
     .main > section{
       font-size: 50%;
     }
 
+    .main > section > h2{
+      font-size: 95%;
+    }
+
     .profile{
       display: none;
+    }
+
+   .main section > figure > figcaption{
+      padding-left: 10%;
+      font-size: 50%;
+    }
+
+}
+
+@media screen and (max-width: 1280px) {
+    .main > section{
+      font-size: 90%;
+    }
+
+    .main > section > h2{
+      font-size: 95%;
+    }
+
+   .main section > figure > figcaption{
+      padding-left: 20%;
+      font-size: 80%;
     }
 
 }
