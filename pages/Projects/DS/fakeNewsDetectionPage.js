@@ -2,7 +2,9 @@ import Layout from '../../../components/layout'
 import Sidebar from '../../../components/sidebar'
 import React, { Component } from 'react';
 import GithubCorner from 'react-github-corner';
+import Styles from '../../../styles/layout.module.css';
 
+// {{"listStyleType": "none"}}
 export default function Page() {
   return (
     <section>
@@ -15,11 +17,21 @@ export default function Page() {
         </p>
         
 
-        <h2>Table of Contents</h2>
-        <ul style={{"list-style-type": "none"}}>
+        <br />
+        <ul className={`${Styles['toc']}`}>
+        <h2 className={Styles['toc-header']}>Table of Contents</h2>
           <li> <a href="#dataset">Dataset</a> </li>
           <li> <a href="#EDA">Exploratory Data Analysis (EDA)</a> </li>
+            <ul className={Styles['toc-sub-links']}>
+              <li> <a href="#class-balance">Class Balance</a> </li>
+              <li> <a href="#missing">Missing Values</a> </li>
+            </ul>
           <li> <a href="#methods">Methodology</a> </li>
+          <ul className={Styles['toc-sub-links']}>
+              <li> <a href="#baseline">Basline</a> </li>
+              <li> <a href="#pre-processing">Data Pre-Processing</a> </li>
+              <li> <a href="#pipeline">Pipeline</a> </li>
+          </ul>
           <li> <a href="#ML"> ML Model</a> </li>
           <li> <a href="#results">Results</a> </li>
           <li> <a href="#conclusions">Conclusions</a> </li>
@@ -36,7 +48,7 @@ export default function Page() {
 
 
         <h2 id="EDA"> Exploratory Data Analysis (EDA) </h2>
-        <h4> Class Balance </h4>
+        <h4 id="class-balance"> Class Balance </h4>
         <p>
           A data set that contains significantly more instances of one class than other classes is considered to be im- balanced. 
           In such case, a machine learning algorithm might tend toward the major class. 
@@ -52,7 +64,7 @@ export default function Page() {
           Therefore, our data set is balanced.
         </p>
 
-        <h4> Missing Values </h4>
+        <h4 id = "missing"> Missing Values </h4>
         <p>
           Missing values could lead to several errors that might lead to either termination of the program, or unreliable results. 
           Therefore, it is required to identify rows that are missing attributes as well as determine a proper way to deal with them.
@@ -70,7 +82,7 @@ export default function Page() {
         <hr />
         
         <h2 id="methods"> Methodology </h2>
-        <h4> Baseline </h4>
+        <h4 id = "baseline"> Baseline </h4>
         <p>
           A baseline is a guess that could be done easily by anyone, 
           and which the machine learning model is trying to improve. 
@@ -90,7 +102,7 @@ export default function Page() {
         </p>
 
 
-        <h4> Data Pre-Processing  </h4>
+        <h4 id = "pre-processing"> Data Pre-Processing  </h4>
         <p>
           Target class is balanced, but there are several rows that are missing at least one attribute. 
           Therefore, we must clean the data before developing pipeline. 
@@ -119,7 +131,7 @@ export default function Page() {
           In such cases, the text was taken.
         </p>
 
-        <h4> Pipeline </h4>
+        <h4 id = "pipeline"> Pipeline </h4>
         <p>
           Document classification requires converting sentences to words, and then to numerical values. 
           The process contains 4 stages as described below. They are being executed one after the other 

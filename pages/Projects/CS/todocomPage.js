@@ -1,7 +1,8 @@
 import Layout from '../../../components/layout'
 import Sidebar from '../../../components/sidebar'
-import React, { Component } from 'react';
-import GithubCorner from 'react-github-corner';
+import React, { Component } from 'react'
+import GithubCorner from 'react-github-corner'
+import Styles from '../../../styles/layout.module.css'
 
 export default function Page() {
   return (
@@ -61,7 +62,7 @@ export default function Page() {
         Format is flexible and can be lower-case, upper-case or a combination of both. Below are several examples:
         </p>
 
-        <ul>
+        <ul className={Styles.list}>
           <li> TODO: </li>
           <li> TODo: </li>
           <li> TOD0: </li>
@@ -74,7 +75,7 @@ export default function Page() {
         In <i>Urgent</i> and <i>soon</i> comments the TODO part is flexible as shown above, but must be followed by either <i>urgent</i> or <i>soon</i> in lower-case:
         </p>
 
-        <ul>
+        <ul className={Styles.list}> 
           <li> TO-DO soon:</li>
           <li> tODo soon: </li>
           <li> ToD0 urgent:</li>
