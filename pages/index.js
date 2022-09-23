@@ -2,9 +2,8 @@ import Layout from '../components/layout';
 import Sidebar from '../components/sidebar';
 import styles from '../styles/grid.module.css';
 import Card from '../components/card';
-import Projects from '../vars/projects';
+import Projects from '../vars/home_proj';
 import GithubCorner from 'react-github-corner';
-Projects["cs"][0]["href"] = "./Projects/CS/todocomPage";
 
 export default function Index() {
   return (
@@ -18,9 +17,8 @@ export default function Index() {
     <div className={styles.container}>
           <h2> Sample Projects</h2>
           <div className={styles.grid}>
-          {Projects.hasOwnProperty("ds") && (<Card {...Projects["ds"][0]} />)}
-          {Projects.hasOwnProperty("ds") && (<Card {...Projects["ds"][2]} />)}
-          {Projects.hasOwnProperty("cs") && (<Card {...Projects["cs"][0]} />)}
+          {Projects.map(proj => (<Card {...proj} />))}
+          
           </div>
     </div>
     </section>

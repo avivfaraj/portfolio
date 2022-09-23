@@ -3,8 +3,6 @@ import Sidebar from '../../../components/sidebar'
 import styles from '../../../styles/grid.module.css'
 import Card from '../../../components/card'
 import Projects from '../../../vars/projects'
-Projects["cs"][0]["href"] = "./todocomPage";
-
 
 export default function CSHome() {
   return (
