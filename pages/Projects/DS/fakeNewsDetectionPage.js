@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import GithubCorner from 'react-github-corner';
 import Styles from '../../../styles/layout.module.css';
 
-// {{"listStyleType": "none"}}
+
 export default function Page() {
   return (
     <section>
