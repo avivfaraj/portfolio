@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import ButtonList from './buttonList'
 import Image from 'next/image';
 import Head from 'next/head';
-import Button from './button'
+import Button from './button';
+import Social from './socialLink';
 
 const name = 'Aviv Faraj';
 const Cards = [
@@ -29,7 +30,7 @@ export default function Sidebar() {
   const toggleAll = () => {
     setShowAll(val => !val)
     };
-
+    
   return (
     <nav className={styles.nav}>
     <div className={styles.profile}>
@@ -59,40 +60,17 @@ export default function Sidebar() {
       <Button id={4} name={"Honors & Awards"} reference={"/honors-and-awards"} />
 
       <div className={styles.banner}>
-     
-        <a className={styles.social} href="https://github.com/avivfaraj" target="_blank">
-        <Image
-              priority
-              src="/images/github_32px.png"
-              className={styles.borderCircle}
-              layout={'fixed'}
-              height={25}
-              width={25}
-              alt={name}
-        />
-        </a>
-        <a className={styles.social} href="https://www.linkedin.com/in/aviv-faraj-857278180/" target="_blank">
-        <Image
-              priority
-              src="/images/linkedin_26px.png"
-              className={styles.borderCircle}
-              layout={'fixed'}
-              height={25}
-              width={25}
-              alt={name}
-        />
-        </a>
-        <a className={styles.social} href="mailto:avivfaraj4@gmail.com" target="_blank">
-        <Image
-              priority
-              src="/images/gmail_logo.png"
-              className={styles.borderCircle}
-              layout={'fixed'}
-              height={25}
-              width={25}
-              alt={name}
-        />
-        </a>
+        <Social src="/images/github_32px.png"
+                alt="github"
+                href="https://github.com/avivfaraj" />
+
+        <Social src="/images/linkedin_26px.png"
+                alt="linkedin" 
+                href="https://www.linkedin.com/in/aviv-faraj-857278180/" />
+
+        <Social src="/images/gmail_logo.png"
+                alt="logo"
+                href="mailto:avivfaraj4@gmail.com" />
       </div>
     </nav>
 
