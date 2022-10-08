@@ -3,7 +3,7 @@ import Sidebar from '../../../components/sidebar'
 import React, { Component } from 'react';
 import GithubCorner from 'react-github-corner';
 import Styles from '../../../styles/layout.module.css';
-
+import Gist from "react-gist";
  
 export default function Page() {
   return (
@@ -29,7 +29,7 @@ export default function Page() {
             </ul>
           <li> <a href="#methods">Methodology</a> </li>
           <ul className={Styles['toc-sub-links']}>
-              <li> <a href="#baseline">Basline</a> </li>
+              <li> <a href="#baseline">Baseline</a> </li>
               <li> <a href="#pre-processing">Data Pre-Processing</a> </li>
               <li> <a href="#pipeline">Pipeline</a> </li>
           </ul>
@@ -92,7 +92,9 @@ export default function Page() {
           Otherwise, it is labeled as reliable. 
           In this case, precision is great since reliable was guessed for the majority of rows in our dataset. 
           However, the recall is low (0.56), so the accuracy score is 0.61 and F1 score is 0.77 as shown below:
+          <Gist id="571ee510d21b70db0d43914605498fd4" />
         </p>
+        
         <figure>
           <img src="/images/fake_news_detection/dummy.png" />
           <figcaption> <b>Fig 2</b> - Dummy Classifier </figcaption>
@@ -161,6 +163,7 @@ export default function Page() {
         <p>
           Final stage is the Term Frequency (TF) in which the program count the frequency of every term in a document. 
           The result of this stage is our features column for the machine learning model.
+          <Gist id="61919f2c3569363eab2a9a19b39d88c8" />
         </p>
         <hr />
 
