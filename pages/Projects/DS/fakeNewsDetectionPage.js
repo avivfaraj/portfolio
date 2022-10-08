@@ -57,7 +57,7 @@ export default function Page() {
         </p>
         <figure>
           <img className={Styles.graph} src="/images/fake_news_detection/dist.png" />
-          <figcaption> <b>Fig 1</b> - Class Balance </figcaption>
+          <figcaption> <b>Fig. 1</b> - Class Balance </figcaption>
         </figure>
         
         <p>
@@ -97,7 +97,7 @@ export default function Page() {
         
         <figure>
           <img src="/images/fake_news_detection/dummy.png" />
-          <figcaption> <b>Fig 2</b> - Dummy Classifier </figcaption>
+          <figcaption> <b>Fig. 2</b> - Dummy Classifier </figcaption>
         </figure>
         <p>
           Our goal is to design a pipeline and utilize a machine learning algorithm 
@@ -113,7 +113,7 @@ export default function Page() {
         </p>
         <figure>
           <img src="/images/fake_news_detection/pre-process.png" />
-          <figcaption> <b>Fig 3</b> - Cleaning Dataset </figcaption>
+          <figcaption> <b>Fig. 3</b> - Cleaning Dataset </figcaption>
         </figure>
         <p>
           First stage is deleting all rows in which the text is shorter than 60 characters. 
@@ -143,7 +143,7 @@ export default function Page() {
         </p>
         <figure>
           <img src="/images/fake_news_detection/pipeline.png" />
-          <figcaption> <b>Fig 4</b> - Pipeline </figcaption>
+          <figcaption> <b>Fig. 4</b> - Pipeline </figcaption>
         </figure>
         <p>
           Tokenizer is the first stage in which the text is being split into a list of words. 
@@ -188,7 +188,7 @@ export default function Page() {
         <h2 id = "results"> Results </h2>
         <figure>
           <img src="/images/fake_news_detection/results.png" />
-          <figcaption> <b>Fig 3</b> - Cleaning Dataset </figcaption>
+          <figcaption> <b>Fig 5.</b> - Final Results </figcaption>
         </figure>
         <p>
           Precision was down by 0.2 compare to the baseline. 

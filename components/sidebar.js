@@ -30,7 +30,7 @@ export default function Sidebar() {
   const toggleAll = () => {
     setShowAll(val => !val)
     };
-    
+
   return (
     <nav className={styles.nav}>
     <div className={styles.profile}>

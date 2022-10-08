@@ -3,6 +3,7 @@
  * Author: https://stackoverflow.com/users/15304814/sean-w (Sean W.)
  * Some modifications were made.
 */
+
 import Link from 'next/link';
 import React, { useState } from "react";
 import styles from '../styles/social.module.css';
