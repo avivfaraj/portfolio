@@ -55,20 +55,19 @@
 }
 
 .main section > figure{
-  padding-left: 23%;
-}
-
-.main section > figure > img{
+  text-align: center;
+  align-content: center;
   width: 80%;
-  height: 80%;
+  margin-top: 2%;
+  padding-left: 7%;
+  margin-bottom: 2%;
+
 }
 
 /* Nested CSS doesn't work in NextJS, 
    so this is just a workaround */
 .main section > figure > figcaption{
-  postion: relative;
-  padding-left: 24%;
-  padding-top: 2%;
+      font-size: 80%;
 }
 
 .main hr{
@@ -82,6 +81,7 @@
   list-style-type: none;
   margin-left: 30%;
   width: 40%;
+  opacity: 85%;
  }
 
 .toc-sub-links{
@@ -100,10 +100,14 @@
   color: white;
 }
 
+.graph{
+  width: 800px;
+  height: 310px;
+}
 
 @media screen and (max-width: 720px) {
     .main > section{
-      font-size: 50%;
+      font-size: 75%;
     }
 
     .main > section > h2{
@@ -118,21 +122,17 @@
       padding-left: 10%;
       font-size: 50%;
     }
+    .main section > figure > img{
+      width: 70%;
+      height: 70%;
+    }
 
 }
 
 @media screen and (max-width: 1280px) {
-    .main > section{
-      font-size: 90%;
-    }
-
-    .main > section > h2{
-      font-size: 95%;
-    }
-
-   .main section > figure > figcaption{
-      padding-left: 20%;
-      font-size: 80%;
+    .graph{
+      width: 65%;
+      height: 100%;
     }
 
 }

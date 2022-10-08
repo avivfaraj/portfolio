@@ -4,14 +4,15 @@ import React, { Component } from 'react';
 import GithubCorner from 'react-github-corner';
 import Styles from '../../../styles/layout.module.css';
 
-
+ 
 export default function Page() {
   return (
     <section>
         <GithubCorner href="https://github.com/avivfaraj/Fake-News-Detection-PySpark" />
         
         <h2> Fake News Detection in PySpark </h2>
-        <p> 
+        <p>
+
           Fake news is an article contains inaccurate and misleading information aiming to change one's opinion,
           and in doing so gain power. In this work, I propose ML model to classify news into fake and reliable using PySpark
         </p>
@@ -55,9 +56,10 @@ export default function Page() {
           Therefore, our first step is examining class balance as shown below:
         </p>
         <figure>
-          <img src="/images/fake_news_detection/dist.png" />
+          <img className={Styles.graph} src="/images/fake_news_detection/dist.png" />
           <figcaption> <b>Fig 1</b> - Class Balance </figcaption>
         </figure>
+        
         <p>
           The figure above shows the distribution of the target column.
            There are 10,387 (49.93%) reliable articles and 10,413 (50.07%) unreliable articles. 
