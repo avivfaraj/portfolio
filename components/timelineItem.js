@@ -13,12 +13,14 @@ export default function item({data}){
       <div className={Styles['container-item']}>
         <div className={Styles['container-content-item']}>
           <div className={Styles['container-content-header']}>
+          <div className={Styles['container-content-header-background']}>
+            {start_date}
+          </div>
             <span className={`${Styles["container-content-header-time"]}`}>
               {title}
-              <div className={Styles['container-content-header-background']}>
-                {start_date}
-              </div>
             </span>
+
+
              <span className={Styles["container-content-desc-item"]}>{description}</span>
           </div>
         </div>

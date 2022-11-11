@@ -100,7 +100,7 @@
   padding: 8px 16px;
   height: 28px;
 }
-  
+
 @media screen and (max-width: 720px) {
     .nav {
       width: 10%;

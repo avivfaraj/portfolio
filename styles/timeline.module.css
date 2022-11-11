@@ -1,4 +1,4 @@
-/*Thanks to Borges53 for the Timeline code: 
+/*Thanks to Borges53 for the Timeline code:
 https://github.com/Borges53/Timeline/blob/main/components/Timeline/item.module.css
 */
 
@@ -74,19 +74,19 @@ https://github.com/Borges53/Timeline/blob/main/components/Timeline/item.module.c
     text-transform: Capitalize;
   }
 .container-content-header-background{
-    position: relative;
+    position: absolute;
     background-color: #006666;
     color: white;
-    font-size: 12px;
+    font-size: 15px;
     width: 50px;
     height: 50px;
     margin-left: -65.5px;
-    margin-top: -40px;
+    margin-top: -12px;
     border-radius: 50%;
     text-align: center;
     font-style: italic;
   }
-  
+
 .container-content-desc-item {
     display: flex;
     flex-direction: row;
@@ -107,8 +107,6 @@ https://github.com/Borges53/Timeline/blob/main/components/Timeline/item.module.c
     }
 
     .container-content-header-background {
-      margin-top: -33px;
+      font-size: 75%;
     }
 }
-
-    
