@@ -9,19 +9,19 @@ import React, { useState } from "react";
 import styles from '../styles/social.module.css';
 import Image from 'next/image';
 
-export default function Social({src,
-								href,
-								alt,
-								long_height = 32,
-								short_height = 25,
-								long_width = 32,
-								short_width = 25}){
+export default function EnlargeImg({src,
+                    								href,
+                    								alt,
+                    								long_height = 32,
+                    								short_height = 25,
+                    								long_width = 32,
+                    								short_width = 25}){
 
 	const [isHoveringLink, setIsHoveredLink] = useState(false);
   	const onMouseEnterLink = () => setIsHoveredLink(true);
   	const onMouseLeaveLink = () => setIsHoveredLink(false);
   	return(
-   
+
 	    <div onMouseEnter={onMouseEnterLink} onMouseLeave={onMouseLeaveLink}>
 	          <a className={styles.social} href={href} target="_blank">
 	            {isHoveringLink ? (

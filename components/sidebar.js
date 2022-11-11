@@ -5,7 +5,7 @@ import ButtonList from './buttonList'
 import Image from 'next/image';
 import Head from 'next/head';
 import Button from './button';
-import Social from './socialLink';
+import EnlargeImage from './enlargeImage';
 
 const name = 'Aviv Faraj';
 const Cards = [
@@ -46,7 +46,7 @@ export default function Sidebar() {
 
       </div>
       <h1 className={styles.heading2Xl}>{name}</h1>
-      
+
       <Button id={1} name={"Home"} reference={"/"} />
 
       <Button id={2} name={"About"} reference={"/about"} />
@@ -56,19 +56,19 @@ export default function Sidebar() {
       </Link>
       {showAll &&
       <ButtonList buttons={Cards}/>}
-      
+
       <Button id={4} name={"Honors & Awards"} reference={"/honors-and-awards"} />
 
       <div className={styles.banner}>
-        <Social src="/images/github_32px.png"
+        <EnlargeImage src="/images/github_32px.png"
                 alt="github"
                 href="https://github.com/avivfaraj" />
 
-        <Social src="/images/linkedin_26px.png"
-                alt="linkedin" 
+        <EnlargeImage src="/images/linkedin_26px.png"
+                alt="linkedin"
                 href="https://www.linkedin.com/in/aviv-faraj-857278180/" />
 
-        <Social src="/images/gmail_logo.png"
+        <EnlargeImage src="/images/gmail_logo.png"
                 alt="logo"
                 href="mailto:avivfaraj4@gmail.com" />
       </div>
