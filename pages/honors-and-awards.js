@@ -4,6 +4,7 @@ import Image from 'next/image';
 import styles from '../styles/certificates.module.css'
 import Honors from '../vars/honors'
 import LImage from '../components/linkedImage'
+import HoverLink from '../Components/HoverLink'
 
 const name = 'Aviv Faraj';
 export default function Contact() {
@@ -11,14 +12,12 @@ export default function Contact() {
     <section>
       <h2>Honors & Awards</h2>
       <div className={styles.main}>
-        
+
         <div className={styles.horizontalCertificate}>
         <h3>Honor Society - Upsilon Pi Epsilon</h3>
         <LImage {...Honors[0]} />
         </div>
 
-        
-        
         <div className={styles.verticalCertificate}>
         <h3>Magna Cum Laude - Electrical Engineering 2020</h3>
           <LImage {...Honors[1]} />
@@ -40,7 +39,7 @@ export default function Contact() {
           <h3>Dean's List 2018</h3>
             <LImage {...Honors[6]} />
         </div>
-         
+
       </div>
     </section>
   )

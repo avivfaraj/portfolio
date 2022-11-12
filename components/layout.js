@@ -7,6 +7,7 @@ export default function Layout({ children }) {
       <Head>
         <title>Aviv Faraj | Data Scientist</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta description="Aviv Faraj Portfolio." />
       </Head>
       <main className={styles.main}>{children}</main>
     </>

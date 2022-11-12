@@ -92,13 +92,13 @@ https://github.com/Borges53/Timeline/blob/main/components/Timeline/item.module.c
     min-height: 40px;
   }
 
-  .start-date {
-    color: white;
-    font-size: 15px;
-    padding-top: 5px;
-    text-align: center;
-    font-style: italic;
-  }
+.start-date {
+  color: white;
+  font-size: 15px;
+  padding-top: 5px;
+  text-align: center;
+  font-style: italic;
+}
 
 @media screen and (max-width: 720px) {
 
