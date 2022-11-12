@@ -4,7 +4,7 @@ import Image from 'next/image';
 import styles from '../styles/certificates.module.css'
 import Honors from '../vars/honors'
 import LImage from '../components/linkedImage'
-import HoverLink from '../Components/HoverLink'
+import HoverLink from '../components/hoverLink'
 
 const name = 'Aviv Faraj';
 export default function Contact() {

@@ -8,7 +8,7 @@ import Link from 'next/link';
 import React, { useState } from "react";
 import styles from '../styles/social.module.css';
 
-export default function HoverLink({href, alt, src = false}){
+export default function HoverLink({href, alt}){
 
 	const [isHoveringLink, setIsHoveredLink] = useState(false);
   	const onMouseEnterLink = () => setIsHoveredLink(true);
