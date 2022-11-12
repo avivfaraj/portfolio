@@ -14,7 +14,9 @@ export default function item({data}){
         <div className={Styles['container-content-item']}>
           <div className={Styles['container-content-header']}>
           <div className={Styles['container-content-header-background']}>
+          <div className={`${Styles["start-date"]}`}>
             {start_date}
+          </div>
           </div>
             <span className={`${Styles["container-content-header-time"]}`}>
               {title}
