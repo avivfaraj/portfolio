@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/layout.module.css'
+import Styles from '/styles/layout.module.css'
 
 export default function Layout({ children }) {
   return (
@@ -9,7 +9,7 @@ export default function Layout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta description="Aviv Faraj Portfolio." />
       </Head>
-      <main className={styles.main}>{children}</main>
+      <main className={Styles.main}>{children}</main>
     </>
   )
 }

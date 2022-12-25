@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from '../styles/sidebar.module.css'
+import Styles from '../styles/sidebar.module.css'
 import React, { useState } from "react";
 import ButtonList from './buttonList'
 import Image from 'next/image';
@@ -33,12 +33,12 @@ export default function Sidebar() {
     };
 
   return (
-    <nav className={styles.nav}>
-    <div className={styles.profile}>
+    <nav className={Styles.nav}>
+    <div className={Styles.profile}>
       <Image
               priority
-              src="/images/test.png"
-              className={styles.borderCircle}
+              src="/images/profile.png"
+              className={Styles.borderCircle}
               layout={'fixed'}
               height={138}
               width={144}
@@ -46,7 +46,7 @@ export default function Sidebar() {
         />
 
       </div>
-      <h1 className={styles.heading2Xl}>{name}</h1>
+      <h1 className={Styles.heading2Xl}>{name}</h1>
 
       <Button id={1} name={"Home"} reference={"/"} />
 
@@ -60,7 +60,7 @@ export default function Sidebar() {
 
       <Button id={4} name={"Honors & Awards"} reference={"/honors-and-awards"} />
 
-      <div className={styles.banner}>
+      <div className={Styles.banner}>
         <EnlargeImage src="/images/github_32px.png"
                 alt="github"
                 href="https://github.com/avivfaraj" />
