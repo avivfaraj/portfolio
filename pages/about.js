@@ -11,16 +11,16 @@ import Styles from '../styles/timeline.module.css'
 export default function About() {
   return (
 
-    <section>
-      
-      <div className={Styles['container-timeline']}>
+    <div className={Styles['main']}>
         <h2>About</h2>
-        
+      <div className={Styles['container-timeline']}>
+
+
         {items.map((item) => (
           <Item data={item} key={item.title}/>
           ))}
       </div>
-    </section>
+    </div>
   );
 }
 
