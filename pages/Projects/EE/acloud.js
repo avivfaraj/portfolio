@@ -1,4 +1,3 @@
-// import Layout from '../../../components/layout'
 import Layout from '/components/layout'
 import Sidebar from '/components/sidebar'
 import Styles from '/styles/layout.module.css'
@@ -57,7 +56,7 @@ export default function Page() {
                             Once the OS image is installed on the SD Card, you can connect it to the board. A keyboard, a mouse, Ethernet and HDMI connections are also required
                             until SSH is configured. Then, turn on the board using microUSB port and installation process should appear on the connected screen. Once completed, I recommend
                             enabling and configuring SSH to enable remote connection, so the HDMI, keyboard and mouse are no longer required. To make it more secured, I recommend
-                            configuring SSH to keys only, so access with password will be denied. More on that in the SSH page.
+                            configuring SSH to keys only, so access with password will be denied. More details in <a href = "/Projects/CS/ssh">SSH</a> page.
                     </li>
 
                     <li> <strong> Format Disk - </strong>
