@@ -1,8 +1,8 @@
-import Layout from '../../../components/layout'
-import Sidebar from '../../../components/sidebar'
-import Styles from '../../../styles/grid.module.css'
-import Card from '../../../components/card'
-import Projects from '../../../vars/projects'
+import Layout from '/components/layout'
+import Sidebar from '/components/sidebar'
+import Styles from '/styles/grid.module.css'
+import Card from '/components/card'
+import Projects from '/vars/projects'
 
 export default function DSHome() {
   return (

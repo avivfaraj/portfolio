@@ -1,8 +1,7 @@
-import Layout from '../../../components/layout'
-import Sidebar from '../../../components/sidebar'
-import React, { Component } from 'react';
+import Layout from '/components/layout'
+import Sidebar from '/components/sidebar'
 import GithubCorner from 'react-github-corner';
-import Styles from '../../../styles/layout.module.css';
+import Styles from '/styles/layout.module.css';
 import Gist from "react-gist";
 
 export default function Page() {

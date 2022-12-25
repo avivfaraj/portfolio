@@ -1,6 +1,5 @@
-import '../styles/global.css'
+import '/styles/global.css'
 import Head from "next/head";
-import {Fragment} from "react";
 
 export default function MyApp({ Component, pageProps }) {
   // Use the layout defined at the page level, if available

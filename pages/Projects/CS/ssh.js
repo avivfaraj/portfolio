@@ -1,6 +1,6 @@
-import Layout from '../../../components/layout'
-import Sidebar from '../../../components/sidebar'
-import Styles from '../../../styles/layout.module.css'
+import Layout from '/components/layout'
+import Sidebar from '/components/sidebar'
+import Styles from '/styles/layout.module.css'
 import Image from 'next/image';
 
 export default function Page() {
@@ -66,7 +66,11 @@ export default function Page() {
                           AuthorizedKeysFile &emsp; &emsp;.ssh/authorized_keys
                     </code>
                     Now try SSH again, it shouldn't ask for password, and use keys instead.
-                    For more information on those settings, visit <a href ="https://linux.die.net/man/5/ssh_config"> ssh-config manual page</a>.
+                    &nbsp; For more information on those settings, visit <a href ="https://linux.die.net/man/5/ssh_config" target="_blank"> ssh-config manual page</a>.
+                    <br /><br/>
+                    SSH session can be limited to 5 minutes (300 seconds) without activity by adding the following line to /etc/ssh/sshd_config:
+                    <code>ClientAliveInterval 300</code>
+                    For more information, vist <a href="https://serverauth.com/posts/how-to-configure-ssh-session-timeouts" target="_blank"> session timeouts</a>
                     </li>
 
                 </ol>
@@ -132,6 +136,9 @@ export default function Page() {
                         </code>
                         Replace SENDER_EMAIL and RECEIVER_EMAIL with email addresses. Also, the PASSWORD should be replaced with the app password. &nbsp;
                         The -s -o /dev/null options are utilized for silent execution meaning there will be no output in terminal.
+                        <br/ ><br/>
+                        <strong>Note: </strong> It is a better practice to use envorinment variables in the code, so instead of writing sensitive information such as password in the file,
+                        &nbsp; it is better to read a variable that is defined locally. However, I tried to do so, and it didn't read the variable at all, so login was denied.
                     </li>
 
                     <li>Create rc file that will execute the above .sh programs and send an email for every connection:
@@ -149,10 +156,17 @@ export default function Page() {
                         Third line executes email_temp.sh and creates the .txt file (email content), which is sent by the fouth line.
                     </li>
                 </ol>
-                <figure>
-                    <img src="/images/acloud/email_notification.png" className={Styles.notification} />
-                    <figcaption> <b>Fig. 1</b> - Email Received </figcaption>
-                </figure>
+
+                <section id = "test">
+                    <h2> Test </h2>
+                    <p>
+                    To test it, I connected through SSH and checked my email:
+                    </p>
+                    <figure>
+                        <img src="/images/acloud/email_notification.png" className={Styles.notification} />
+                        <figcaption> <b>Fig. 1</b> - Email Received </figcaption>
+                    </figure>
+                </section>
             </section>
 
         </section>

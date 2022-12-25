@@ -1,10 +1,10 @@
-import Layout from '../components/layout'
-import Sidebar from '../components/sidebar'
+import Layout from '/components/layout'
+import Sidebar from '/components/sidebar'
 import Image from 'next/image';
-import Styles from '../styles/certificates.module.css'
-import Honors from '../vars/honors'
-import LImage from '../components/linkedImage'
-import HoverLink from '../components/hoverLink'
+import Styles from '/styles/certificates.module.css'
+import Honors from '/vars/honors'
+import LImage from '/components/linkedImage'
+import HoverLink from '/components/hoverLink'
 
 const name = 'Aviv Faraj';
 export default function Contact() {

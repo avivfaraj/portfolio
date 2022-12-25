@@ -2,11 +2,11 @@
 https://github.com/Borges53/Timeline/blob/main/components/Timeline/index.js
 */
 
-import Layout from '../components/layout'
-import Sidebar from '../components/sidebar'
-import items from '../vars/about_timeline'
-import Item from '../components/timelineItem'
-import Styles from '../styles/timeline.module.css'
+import Layout from '/components/layout'
+import Sidebar from '/components/sidebar'
+import Items from '/vars/about_timeline'
+import Item from '/components/timelineItem'
+import Styles from '/styles/timeline.module.css'
 
 export default function About() {
   return (
@@ -16,7 +16,7 @@ export default function About() {
       <div className={Styles['container-timeline']}>
 
 
-        {items.map((item) => (
+        {Items.map((item) => (
           <Item data={item} key={item.title}/>
           ))}
       </div>

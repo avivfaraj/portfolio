@@ -1,5 +1,5 @@
-import Styles from '../styles/timeline.module.css'
-import HoverLink from '../components/hoverLink'
+import Styles from '/styles/timeline.module.css'
+import HoverLink from '/components/hoverLink'
 
 const steps =[
   {

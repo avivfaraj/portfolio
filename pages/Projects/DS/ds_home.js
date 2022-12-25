@@ -1,22 +1,22 @@
-import Layout from '../../../components/layout'
-import Sidebar from '../../../components/sidebar'
-import styles from '../../../styles/grid.module.css'
-import Card from '../../../components/card'
-import Projects from '../../../vars/projects'
+import Layout from '/components/layout'
+import Sidebar from '/components/sidebar'
+import Styles from '/styles/grid.module.css'
+import Card from '/components/card'
+import Projects from '/vars/projects'
 
 export default function DSHome() {
   return (
     <section>
-      
-      <div className={styles.container}>
+
+      <div className={Styles.container}>
         <h2> Data Science Projects</h2>
-          <div className={styles.grid}>
+          <div className={Styles.grid}>
           {Projects["ds"].map(ds =>(
             <Card {...ds} />
           ))}
-            
+
           </div>
-          
+
         </div>
     </section>
   )

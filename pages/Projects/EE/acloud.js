@@ -1,6 +1,7 @@
-import Layout from '../../../components/layout'
-import Sidebar from '../../../components/sidebar'
-import Styles from '../../../styles/layout.module.css'
+// import Layout from '../../../components/layout'
+import Layout from '/components/layout'
+import Sidebar from '/components/sidebar'
+import Styles from '/styles/layout.module.css'
 import Image from 'next/image';
 
 export default function Page() {
@@ -111,6 +112,7 @@ export default function Page() {
                 </p>
                 <figure>
                     <img src="/images/acloud/read_speed.png" className={Styles.performance} />
+                    <br/>
                     <img src="/images/acloud/write_speed.png" className={Styles.performance}/>
                     <figcaption> <b>Fig. 1</b> - Read (Top) and Write (Bottom) speed tests.&nbsp;
                     <a href="https://www.shellhacks.com/disk-speed-test-read-write-hdd-ssd-perfomance-linux/" target="_blank">Code Source</a></figcaption>
@@ -124,7 +126,6 @@ export default function Page() {
 
             <section id = "issues">
                 <h3> issues </h3>
-
             </section>
         </section>
     </>
