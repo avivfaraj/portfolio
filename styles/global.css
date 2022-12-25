@@ -14,3 +14,101 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
+
+code,.main section > code{
+    border-radius: 10px;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    padding-left: 1%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    background: gray;
+    color: white;
+}
+
+li{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+ul,ol{
+  text-align: left;
+  margin-top: 2%;
+  width: 70%;
+  padding-left: 20%;
+  margin-bottom: 2%;
+  line-height: 35px;
+}
+
+section {
+  padding: 32px;
+  color:  black;
+  overflow-y: scroll;
+  width: 100%;
+  display: block;
+}
+
+section > p{
+  text-align: left;
+  margin-top: 2%;
+  width: 70%;
+  padding-left: 15%;
+  margin-bottom: 2%;
+  line-height: 35px;
+}
+
+section > h2,section > h3{
+  margin-top: 7%;
+  position: relative;
+  text-align: center;
+}
+
+section > h4{
+  margin-top: 2%;
+  padding-left: 20%;
+  position: relative;
+  text-align: left;
+  margin-bottom: -1%;
+}
+
+section > figure{
+  text-align: center;
+  align-content: center;
+  width: 80%;
+  margin-top: 2%;
+  padding-left: 7%;
+  margin-bottom: 2%;
+
+}
+
+/* Nested CSS doesn't work in NextJS,
+   so this is just a workaround */
+section > figure > figcaption{
+      font-size: 80%;
+}
+
+hr{
+  width: 80%;
+  margin-left: 15%;
+}
+
+@media screen and (max-width: 720px) {
+    section{
+      font-size: 75%;
+    }
+
+    section > h2{
+      font-size: 95%;
+    }
+
+   section > figure > figcaption{
+      padding-left: 10%;
+      font-size: 50%;
+    }
+    section > figure > img{
+      width: 70%;
+      height: 70%;
+    }
+
+}
