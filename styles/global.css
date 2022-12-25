@@ -42,10 +42,8 @@ ul,ol{
 }
 
 section {
-  padding: 32px;
-  color:  black;
+  padding-top: 20px;
   overflow-y: scroll;
-  width: 100%;
   display: block;
 }
 
@@ -60,13 +58,13 @@ section > p{
 
 section > h2,section > h3{
   margin-top: 7%;
-  position: relative;
+  /* position: relative; */
   text-align: center;
 }
 
 section > h4{
   margin-top: 2%;
-  padding-left: 20%;
+  padding-left: 15%;
   position: relative;
   text-align: left;
   margin-bottom: -1%;
@@ -74,10 +72,11 @@ section > h4{
 
 section > figure{
   text-align: center;
+  position:relative;
   align-content: center;
   width: 80%;
   margin-top: 2%;
-  padding-left: 7%;
+  padding-left: 9%;
   margin-bottom: 2%;
 
 }
@@ -85,7 +84,8 @@ section > figure{
 /* Nested CSS doesn't work in NextJS,
    so this is just a workaround */
 section > figure > figcaption{
-      font-size: 80%;
+    margin-top: 10px;
+    font-size: 80%;
 }
 
 hr{
