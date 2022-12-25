@@ -4,6 +4,7 @@
   max-height: calc(100vh + 35vh);
   background: #d9d9d9;
   overflow-y: hidden;
+  width:100%;
 }
 
 .list{
@@ -44,6 +45,11 @@
 .performance{
   width: 850px;
   height: 100px;
+}
+
+.notification{
+  width: 800px;
+  height: 150px;
 }
 
 @media screen and (max-width: 1280px) {

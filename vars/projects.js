@@ -5,7 +5,7 @@ const projects ={
     href: "./fakeNewsDetectionPage",
     desc: "Classification of news into categories of real and fake based on Natural Language Processing (NLP) in PySpark",
     keywords: "NLP, Fake News, Classification, Naive Bayes, PySpark"
-  }, 
+  },
   {
     name: "NYC Property Sales",
     href: "https://github.com/avivfaraj/DSCI631-project",
@@ -33,6 +33,12 @@ const projects ={
     keywords: "Python3, CLI, argparse, package"
   },
   {
+    name: "SSH",
+    href: "./ssh",
+    desc: "Created a secure SSH connection to a FTP server (aCloud project).",
+    keywords: "SSH, terminal"
+  },
+  {
     name: "Cash Flow",
     href: "https://github.com/avivfaraj/money-flow",
     desc: "An Object Oriented Program (OOP) to Monitor account balance and transactions. Sqlite3 was utilized to store data in a database that was initially designed in ERD. GUI is under development.",
@@ -43,9 +49,17 @@ const projects ={
     href: "https://github.com/avivfaraj/cs570-health-tracker",
     desc: "An Object Oriented Program (OOP) written in Java that helps the user to keep track of both calories consumed and workouts done. The program also fetches data from FoodData Central Database (USDA) through their API to get accurate nutrition facts of real products.",
     keywords: "Java, API, OOP "
-  },
+  }],
+
+  ee:[
+  {
+    name: "aCloud",
+    href: "./acloud",
+    desc: "Created a FTP (File Transfer Protocol) server using ROC-RK3328-CC (similar to Raspberry Pi), SSH and Samba.",
+    keywords: "SSH, Samba, Cloud"
+    }
   ]
 }
- 
+
 
 export default projects

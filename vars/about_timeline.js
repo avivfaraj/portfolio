@@ -20,7 +20,7 @@ const steps =[
   {
     title: "Webmaster",
     description: <p>Webmaster of two Virginia Beach local clubs: <HoverLink href = {"https://pagardenclub.org"} alt = {"Princess Anne Garden Club"} /> and <HoverLink href = {"https://gallery1932.com"} alt = {"Gallery1932"} /> </p>,
-    start_date: "Sep 2022",
+    start_date: "June 2021",
   },
   {
     title: <HoverLink href = {"https://drexel.edu"} alt = {"Drexel University"} />,

@@ -1,19 +1,23 @@
 .main{
-  display: flex;
-  flex-direction: column;
-  margin: 5% auto;
-  justify-content: center;
-  text-align: center;
+    display: block;
+    overflow-y: auto;
+    justify-content: center;
+    text-align: center;
+    width:100%;
+}
+.main > h2{
+    margin-top: 10%;
 }
 
 .horizontalCertificate{
-  margin: 0% 15%;
+  margin-top: 10%;
 }
 
 .verticalCertificate{
   display: inline-block;
   margin: 0% 10%;
   padding-top: 50px;
+  width:80%
 }
 
 .ul{

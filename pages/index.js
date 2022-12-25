@@ -18,7 +18,6 @@ export default function Index() {
           <h2> Sample Projects</h2>
           <div className={styles.grid}>
           {Projects.map(proj => (<Card {...proj} />))}
-          
           </div>
     </div>
     </section>
