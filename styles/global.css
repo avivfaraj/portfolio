@@ -28,7 +28,7 @@ code,.main section > code{
 }
 
 li{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     margin-top: 20px;
 }
 
@@ -43,7 +43,6 @@ ul,ol{
 }
 
 section {
-  padding-top: 20px;
   overflow-y: auto;
   display: block;
 }
