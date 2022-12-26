@@ -2,6 +2,7 @@ import Layout from '/components/layout'
 import Sidebar from '/components/sidebar'
 import Styles from '/styles/layout.module.css'
 import Image from 'next/image';
+import HoverLink from '/components/hoverLink'
 
 export default function Page() {
   return (
@@ -16,8 +17,8 @@ export default function Page() {
                 <p>
                     Samba is a free tool for sharing files through network and also enables user management. &nbsp;
                     It comes pre-installed in Raspbian, so installation part is not covered in this guide. &nbsp;
-                    In this project, I followed <a href ="https://superuser.com/a/1400920">user creation guide (jaunerg)</a> in order to create two users and shared different folders, so one user doesn't affect the other. &nbsp;
-                    Additionally, I used bash code (.sh files) similar to the one I used in the <a href= "Project/CS/ssh">SSH</a> page in order to send email notifications.
+                    In this project, I followed <HoverLink href ={"https://superuser.com/a/1400920"} alt={"user creation guide (jaunerg)"} /> in order to create two users and shared different folders, so one user doesn't affect the other. &nbsp;
+                    Additionally, I used bash code (.sh files) similar to the one I used in the <HoverLink href={"Project/CS/ssh"} alt={"SSH"} /> page in order to send email notifications.
 
                 </p>
             </section>
@@ -74,10 +75,10 @@ export default function Page() {
                         &emsp;&emsp;&emsp;create mask = 0777 &emsp;# Can change permissions here<br/>
                         &emsp;&emsp;&emsp;directory mask = 0777 &emsp;# Directory permissions here<br/>
                         &emsp;&emsp;&emsp;writable = yes<br/>
-                        &emsp;&emsp;&emsp;valid users = rachel &emsp;# List of users that are allowed to access this directory<br/>
-                        &emsp;&emsp;&emsp;force user = rachel &emsp;# Default user assigned when connecting to this share<br/>
+                        &emsp;&emsp;&emsp;valid users = USERNAME &emsp;# List of users that are allowed to access this directory<br/>
+                        &emsp;&emsp;&emsp;force user = USERNAME &emsp;# Default user assigned when connecting to this share<br/>
                         </code>
-                        For more information on smb.conf, visit <a href="https://www.samba.org/samba/docs/current/man-html/smb.conf.5.html"> Samba documentation</a>
+                        For more information on smb.conf, visit <HoverLink href={"https://www.samba.org/samba/docs/current/man-html/smb.conf.5.html"} alt={"Samba documentation"} />
                     </li>
 
                     <li> Restart samba and try to log in:
@@ -90,8 +91,8 @@ export default function Page() {
                 <h3> Email Notification (Optional)</h3>
                 <p>
                     This step is crucial for monitoring Samba sessions and enhance security. &nbsp;
-                    Samba has a few <a href = "www.samba.org/samba/docs/current/man-html/smb.conf.5.html"> variables (VARIABLE SUBSTITUTIONS)</a> we can utilize in order to create log files &nbsp;
-                    Email notifications are sent for each connection to or disconnection from a shared directory, so it allows a quick response in case that someone penetrated the server. &nbsp;
+                    Samba has a few <HoverLink href = {"https://www.samba.org/samba/docs/current/man-html/smb.conf.5.html"} alt={"variables (VARIABLE SUBSTITUTIONS)"} /> we can utilize in order to create log files &nbsp;
+                    Email notifications are sent for each login to or logout from a shared directory, so it allows a quick response in case that someone penetrated the server. &nbsp;
                     Additionaly, you will need an email service that allows third party apps (app password in Gmail). I also tried Yahoo, but their third party service is down.
                 </p>
                 <ol>
@@ -151,6 +152,33 @@ export default function Page() {
                                 fi<br/>
                         </code>
                         Note that $1 can be either 2 for connection or 3 for disconnection.
+                    </li>
+
+                    <li>
+                    Finally, add <i>root prexec</i> and <i>root postexec</i> parameters under the shared folder in smb.conf:
+                    <code>root preexec = sh /usr/local/bin/custom_log.sh 2 %T %S %h %u %m %a %R %I <br />
+                    root postexec = sh /usr/local/bin/custom_log.sh 3 %T %S %h %u %m %a %R %I
+                    </code>
+                    Those parameters are executed as root at login (preexec) and logout (postexec).
+                    Please note that you can place them under [global] (without the root) in order to affect all users, but it didn't work as expected.
+                    In other words, both preexec and postexec were executed at login. Therefore, I place these two lines under every share I create as can be seen in the code below:
+                    <code> [SHARE_NAME]<br/>
+                    &emsp;&emsp;&emsp;comment = Shared folder called SHARE_NAME<br/>
+                    &emsp;&emsp;&emsp;path = PATH_TO_DIRECTORY<br/>
+                    &emsp;&emsp;&emsp;browseable = yes<br/>
+                    &emsp;&emsp;&emsp;read only = no  <br/>
+                    &emsp;&emsp;&emsp;guest ok = no &emsp;# No guests allowed<br/>
+                    &emsp;&emsp;&emsp;create mask = 0777 &emsp;# Can change permissions here<br/>
+                    &emsp;&emsp;&emsp;directory mask = 0777 &emsp;# Directory permissions here<br/>
+                    &emsp;&emsp;&emsp;writable = yes<br/>
+                    &emsp;&emsp;&emsp;valid users = USERNAME &emsp;# List of users that are allowed to access this directory<br/>
+                    &emsp;&emsp;&emsp;force user = USERNAME &emsp;# Default user assigned when connecting to this share<br/>
+                    &emsp;&emsp;&emsp;root preexec = sh /usr/local/bin/custom_log.sh 2 %T %S %h %u %m %a %R %I <br />
+                    &emsp;&emsp;&emsp;root postexec = sh /usr/local/bin/custom_log.sh 3 %T %S %h %u %m %a %R %I
+                    </code>
+
+                    Also, %T, %S, %h, etc. are all samba variables, for instance, %T is time and date. Please note that %T is unique since it returns two values: one for date, and one for time.
+                    It means that $2, $3 in custom_log.sh represent date and time respectively.
                     </li>
                 </ol>
 

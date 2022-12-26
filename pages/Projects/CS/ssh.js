@@ -2,6 +2,7 @@ import Layout from '/components/layout'
 import Sidebar from '/components/sidebar'
 import Styles from '/styles/layout.module.css'
 import Image from 'next/image';
+import HoverLink from '/components/hoverLink'
 
 export default function Page() {
   return (
@@ -14,7 +15,7 @@ export default function Page() {
             <section id = "introduction">
                 <h3> Introduction </h3>
                 <p>
-                    In this project, SSH connection was enabled in <a href="/Projects/EE/acloud">aCloud</a>, and it was configured
+                    In this project, SSH connection was enabled in <HoverLink href={"/Projects/EE/acloud"} alt={"aCloud"} />, and it was configured
                     to authenticate with keys (public and private) for enhanced security. This webpage is a step-by-step guide to
                     enable and configure SSH in a server.
 
@@ -42,7 +43,7 @@ export default function Page() {
                     <code>ssh-keygen -t rsa</code>
                     or to make a larger key (more secure):
                     <code>ssh-keygen -t rsa 4096</code>
-                    For more information, visit <a href= "https://linux.die.net/man/1/ssh-keygen"> ssh-keygen manual page</a>.
+                    For more information, visit <HoverLink href={"https://linux.die.net/man/1/ssh-keygen"} alt={"ssh-keygen manual page"} />.
                     </li>
 
                     <li>It will ask for a directory, press enter for the default directory (~/.ssh/id_rsa).
@@ -66,11 +67,11 @@ export default function Page() {
                           AuthorizedKeysFile &emsp; &emsp;.ssh/authorized_keys
                     </code>
                     Now try SSH again, it shouldn't ask for password, and use keys instead.
-                    &nbsp; For more information on those settings, visit <a href ="https://linux.die.net/man/5/ssh_config" target="_blank"> ssh-config manual page</a>.
+                    &nbsp; For more information on those settings, visit <HoverLink href ={"https://linux.die.net/man/5/ssh_config"} alt={"ssh-config manual page"} />.
                     <br /><br/>
                     SSH session can be limited to 5 minutes (300 seconds) without activity by adding the following line to /etc/ssh/sshd_config:
                     <code>ClientAliveInterval 300</code>
-                    For more information, vist <a href="https://serverauth.com/posts/how-to-configure-ssh-session-timeouts" target="_blank"> session timeouts</a>
+                    For more information, vist <HoverLink href={"https://serverauth.com/posts/how-to-configure-ssh-session-timeouts"} alt={"session timeouts"} />.
                     </li>
 
                 </ol>

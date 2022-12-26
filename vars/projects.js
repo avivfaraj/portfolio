@@ -33,7 +33,7 @@ const projects ={
     keywords: "Python3, CLI, argparse, package"
   },
   {
-    name: "SSH",
+    name: "Secure SSH Connection",
     href: "./ssh",
     desc: "Created a secure SSH connection to a FTP server (aCloud project).",
     keywords: "SSH, terminal"
