@@ -18,24 +18,6 @@ export default function Page() {
 
 
         <br />
-        <ul className={`${Styles['toc']}`}>
-        <h2 className={Styles['toc-header']}>Table of Contents</h2>
-          <li> <a href="#dataset">Dataset</a> </li>
-          <li> <a href="#EDA">Exploratory Data Analysis (EDA)</a> </li>
-            <ul className={Styles['toc-sub-links']}>
-              <li> <a href="#class-balance">Class Balance</a> </li>
-              <li> <a href="#missing">Missing Values</a> </li>
-            </ul>
-          <li> <a href="#methods">Methodology</a> </li>
-          <ul className={Styles['toc-sub-links']}>
-              <li> <a href="#baseline">Baseline</a> </li>
-              <li> <a href="#pre-processing">Data Pre-Processing</a> </li>
-              <li> <a href="#pipeline">Pipeline</a> </li>
-          </ul>
-          <li> <a href="#ML"> ML Model</a> </li>
-          <li> <a href="#results">Results</a> </li>
-          <li> <a href="#conclusions">Conclusions</a> </li>
-        </ul>
 
         <section id = "dataset">
             <h2> Dataset </h2>
@@ -206,3 +188,23 @@ Page.getLayout = function getLayout(page) {
     </Layout>
   )
 }
+
+//
+// <ul className={`${Styles['toc']}`}>
+// <h2 className={Styles['toc-header']}>Table of Contents</h2>
+//   <li> <a href="#dataset">Dataset</a> </li>
+//   <li> <a href="#EDA">Exploratory Data Analysis (EDA)</a> </li>
+//     <ul className={Styles['toc-sub-links']}>
+//       <li> <a href="#class-balance">Class Balance</a> </li>
+//       <li> <a href="#missing">Missing Values</a> </li>
+//     </ul>
+//   <li> <a href="#methods">Methodology</a> </li>
+//   <ul className={Styles['toc-sub-links']}>
+//       <li> <a href="#baseline">Baseline</a> </li>
+//       <li> <a href="#pre-processing">Data Pre-Processing</a> </li>
+//       <li> <a href="#pipeline">Pipeline</a> </li>
+//   </ul>
+//   <li> <a href="#ML"> ML Model</a> </li>
+//   <li> <a href="#results">Results</a> </li>
+//   <li> <a href="#conclusions">Conclusions</a> </li>
+// </ul>
