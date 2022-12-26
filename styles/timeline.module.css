@@ -108,6 +108,10 @@ https://github.com/Borges53/Timeline/blob/main/components/Timeline/item.module.c
   font-style: italic;
 }
 
+.gap{
+    height:100px;
+}
+
 @media screen and (max-width: 720px) {
 
     .container-timeline > h2{

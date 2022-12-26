@@ -164,6 +164,7 @@ export default function Page() {
                         <figcaption> <b>Fig. 1</b> - Email Received </figcaption>
                     </figure>
                 </section>
+                <div className={Styles.gap}/>
             </section>
 
         </section>

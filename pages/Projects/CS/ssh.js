@@ -168,7 +168,7 @@ export default function Page() {
                     </figure>
                 </section>
             </section>
-
+            <div className={Styles.gap}/>
         </section>
     </>
   )

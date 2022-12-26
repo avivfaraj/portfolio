@@ -20,6 +20,7 @@ export default function About() {
           <Item data={item} key={item.title}/>
           ))}
       </div>
+      <div className={Styles.gap}/>
     </div>
   );
 }

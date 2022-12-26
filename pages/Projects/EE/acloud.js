@@ -2,6 +2,7 @@ import Layout from '/components/layout'
 import Sidebar from '/components/sidebar'
 import Styles from '/styles/layout.module.css'
 import Image from 'next/image';
+import HoverLink from '/components/hoverLink'
 
 export default function Page() {
   return (
@@ -18,7 +19,7 @@ export default function Page() {
                     files in the server, and access them from any computer. Additionally,
                     I created different users, each of which has access to his own folder.
                     This page is an overview of the hardware that was used in this project.
-                    There are also SSH and Samba pages unders CS projects where I explain
+                    There are also <HoverLink href={"/Projects/CS/ssh"} alt={"SSH"}/> and <HoverLink href={"/Projects/EE/samba"} alt={"Samba"} /> pages where I explain
                     how to configure secure connection via SSH, enable FTP server using samba,
                     and manage users.
                 </p>
@@ -28,13 +29,24 @@ export default function Page() {
                 <h3> Hardware </h3>
                 <p>
                     While working on the idea, I planned on using Raspberry Pi 4 with 8GB RAM.
-                    However, this board was not available because of shortage crisis (2022).
+                    However, this board was not available because of supply chain crisis (2022).
                     So I searched for another board that is similar, and found one with NVMe port,
                     so theoretically is faster than USB 3.0. Unfortunatley, this board was also not available,
-                    so I kept searching until I found ROC-RK3328-CC (Renegade). This board has 4GM RAM and a USB 3.0 port,
-                    so performace was compromised. Other things I bought were 1TB SSD with SATA connection,
-                    SATA to USB3.0 converter, SD card and RPi Case with fan.
+                    so I kept searching until I found <HoverLink href={"https://libre.computer/products/roc-rk3328-cc/"} alt={"ROC-RK3328-CC (Renegade)"} />. This board has 4GM RAM and a USB 3.0 port,
+                    so performace was compromised. Here is a list of all hardware components for that project:
                 </p>
+                <ul>
+                    <li> <HoverLink href={"https://libre.computer/products/roc-rk3328-cc/"} alt={"ROC-RK3328-CC (Renegade)"} /> - SBC board with 4GB RAM, USB3.0, HDMI, microSD card slot, etc.
+                    </li>
+
+                    <li>1TB 2.5-inch SSD with SATA connection</li>
+
+                    <li>SATA to USB3.0 cable</li>
+
+                    <li>microSD card 64GB </li>
+
+                    <li>RPi case with fan (optional)</li>
+                </ul>
             </section>
 
             <section id = "Flash">
@@ -43,9 +55,9 @@ export default function Page() {
                     At first I installed Ubuntu 22.04 because I thought it is more stable than Raspbian, but this was a mistake.
                     Ubuntu was very slow, and it never gotten any faster. Also, there were many bugs, such as USB port doesn't work, and
                     a black screen when using GNOME to share screen. Then I deleted Ubuntu and installed Raspbian, and I was surprised by
-                    how faster it is than Ubuntu. To flash OS on an SD card, you need to download the <a href = "https://libre.computer/products/roc-rk3328-cc/">OS Image</a>&nbsp;
+                    how faster it is than Ubuntu. To flash OS on an SD card, you need to download the <HoverLink href = {"https://libre.computer/products/roc-rk3328-cc/"} alt={"OS Image"} />&nbsp;
                     and you can either use terminal (dd command), or a program to flash image on the SD card.
-                    I recommend using <a href = "https://www.balena.io/etcher/">balenaEtcher</a>, very easy and quick.
+                    I recommend using <HoverLink href = {"https://www.balena.io/etcher/"} alt={"balenaEtcher"} />, very easy and quick.
                 </p>
             </section>
 
@@ -56,7 +68,7 @@ export default function Page() {
                             Once the OS image is installed on the SD Card, you can connect it to the board. A keyboard, a mouse, Ethernet and HDMI connections are also required
                             until SSH is configured. Then, turn on the board using microUSB port and installation process should appear on the connected screen. Once completed, I recommend
                             enabling and configuring SSH to enable remote connection, so the HDMI, keyboard and mouse are no longer required. To make it more secured, I recommend
-                            configuring SSH to keys only, so access with password will be denied. More details in <a href = "/Projects/CS/ssh">SSH</a> page.
+                            configuring SSH to keys only, so access with password will be denied. More details in <HoverLink href = {"/Projects/CS/ssh"} alt={"SSH"} /> page.
                     </li>
 
                     <li> <strong> Format Disk - </strong>
@@ -65,12 +77,12 @@ export default function Page() {
                             At first, the disk was formatted as ExFAT on my mac because it was an easy process, but it was a mistake. In this case, read and write could
                             done by only one user. Trying to change ownership (chown command) and change permissions (chmod command) didn't work at all. ExFAT is compatible
                             with Windows, and therefore Linux cannot change either ownership or permissions.
-                            For that purpose, I used <a href="https://gparted.org">gparted</a> which is a program to manage partitions.
+                            For that purpose, I used <HoverLink href={"https://gparted.org"} alt={"gparted"} /> which is a program to manage partitions.
                             Another option is to use terminal, but gparted has a great GUI (Graphic User Interface), so it is easier to avoid critical mistakes.
                     </li>
 
                     <li> <strong> Samba - </strong>
-                            <a href="https://www.samba.org/samba/">Samba</a> is a free tool that provides file and print sharing services.
+                            <HoverLink href={"https://www.samba.org/samba/"} alt={"Samba"} /> is a free tool that provides file and print sharing services.
                             There could be many users with access to different folders within the shared disk. The users access the server
                             with their username and password which are, currently, generated by the root user through an SSH connection.
                             Samba was also configured to send an email for both connecting to and disconnecting from the server. More on that in the Samba page.
@@ -79,10 +91,10 @@ export default function Page() {
                     <li> <strong> Sharing Screen (Optional) - </strong>
                             This step is not necessary since almost everything can be done through SSH. However, it might be more convenient
                             to be able to control the server from another computer by sharing the screen. While looking for services, I noticed that
-                            Raspbian uses a tool that is subscription based. So I searched for a free tool and found <a href="https://www.dwservice.net">DWS</a> and is very easy to use.
+                            Raspbian uses a tool that is subscription based. So I searched for a free tool and found <HoverLink href={"https://www.dwservice.net"} alt={"DWS"} /> and is very easy to use.
                             Simply downloaded Raspberry version (.sh file) and copied it to the server. To share screen, the file must be executed on terminal which will
                             create a session and generate temporary username and password. On local machine, go to dws and enter username and password to gain full control.
-                            To prevent access from hackers, the .sh file was encrypted with password using <a href="https://www.gnupg.org/documentation/manpage.html">GnuPG</a>.
+                            To prevent access from hackers, the .sh file was encrypted with password using <HoverLink href={"https://www.gnupg.org/documentation/manpage.html"} alt={"GnuPG"} />.
                     </li>
                 </ul>
             </section>
@@ -106,7 +118,7 @@ export default function Page() {
             <section id = "performance">
                 <h3> Performance </h3>
                 <p>
-                Read and write speeds are around 340MB/s and 80MB/s respectivley
+                Read and write speeds in the server are around 340MB/s and 80MB/s respectivley
                 as shown in the images below:
                 </p>
                 <figure>
@@ -114,18 +126,42 @@ export default function Page() {
                     <br/>
                     <img src="/images/acloud/write_speed.png" className={Styles.performance}/>
                     <figcaption> <b>Fig. 1</b> - Read (Top) and Write (Bottom) speed tests.&nbsp;
-                    <a href="https://www.shellhacks.com/disk-speed-test-read-write-hdd-ssd-perfomance-linux/" target="_blank">Code Source</a></figcaption>
+                    <HoverLink href={"https://www.shellhacks.com/disk-speed-test-read-write-hdd-ssd-perfomance-linux/"} alt={"Code Source"} /></figcaption>
                 </figure>
 
                 <p>
-                As mentioned in the introduction, performance was compromised since the disk is connected to USB3.0 which is slower than NVMe.
+                These test results follows the expected values of read/write speeds of USB3.0. &nbsp;
+                However, the same test should be done on another machine connected to the Samba server in order to evaluate speed over the internet. &nbsp;
+                </p>
+
+                <figure>
+                    <img src="/images/acloud/read_samba.png" className={Styles.performance} />
+                    <br/>
+                    <img src="/images/acloud/write_samba.png" className={Styles.performance}/>
+                    <figcaption> <b>Fig. 2</b> - Read (Top) and Write (Bottom) speed tests over the internet.&nbsp;
+                    <HoverLink href={"https://www.shellhacks.com/disk-speed-test-read-write-hdd-ssd-perfomance-linux/"} alt={"Code Source"} /></figcaption>
+                </figure>
+                <p>
+                As can be seen in the images above, performance is worse than the one performed on the server itself. &nbsp;
+                Over the internet, read speed is 11,587,146 bytes/second which is ~11 MB/s, and write speed 10,101,961 bytes/second which is ~9.6 MB/s. &nbsp;
+                This test shows that both writing to and reading from this server don't max out the read and write speeds of USB3.0. &nbsp;
+                With that in mind, choosing NVMe over USB3.0 would probably not affect this test much. &nbsp;
+                Instead, better network speeds, as well as greater RAM will probably increase performance. &nbsp;
                 </p>
             </section>
 
 
-            <section id = "issues">
-                <h3> issues </h3>
+            <section id = "summary">
+                <h3> Summary </h3>
+                <p>
+                Server is up and running, email notifications for both SSH and Samba are working well, so I get notified in real-time.
+                The goal of the project was achieved, as I wrote those lines by connecting to the Samba server remotley.
+                Read and write speeds are slower than those evaluated on the server, but it is good enough since I am using it for files that are small in size
+                such as Python projects, or storing pdf documents.
+
+                </p>
             </section>
+            <div className={Styles.gap}/>
         </section>
     </>
   )

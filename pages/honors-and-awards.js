@@ -38,6 +38,7 @@ export default function Contact() {
             <LImage {...Honors[6]} />
         </div>
 
+        <div className={Styles.gap}/>
       </div>
 
   )

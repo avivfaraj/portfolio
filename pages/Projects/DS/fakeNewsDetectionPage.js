@@ -193,6 +193,7 @@ export default function Page() {
               Implementation of this program will greatly decrease the prevalence of fake news, thus improving news quality and trust amongst consumers.
             </p>
         </section>
+        <div className={Styles.gap}/>
     </section>
   )
 }
