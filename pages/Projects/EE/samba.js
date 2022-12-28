@@ -60,7 +60,7 @@ export default function Page() {
                     </li>
 
                     <li> Add users to Samba configuration file. Before doing so, make sure you have a copy of the original file (backup):
-                        <code>sudo cp /etc/samba/smb.conf /etc/samba/smb_backup.conf</code>
+                        <code>sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.backup</code>
                         You can use "ls" command to verify backup exists:
                         <code>sudo ls /etc/samba/</code>
                         Then open config file as super user:
@@ -155,7 +155,7 @@ export default function Page() {
                     </li>
 
                     <li>
-                    Finally, add <i>root prexec</i> and <i>root postexec</i> parameters under the shared folder in smb.conf:
+                    Finally, add <i>root prexec</i> and <i>root postexec</i> parameters under the shared folder in /etc/samba/smb.conf:
                     <code>root preexec = sh /usr/local/bin/custom_log.sh 2 %T %S %h %u %m %a %R %I <br />
                     root postexec = sh /usr/local/bin/custom_log.sh 3 %T %S %h %u %m %a %R %I
                     </code>
@@ -182,16 +182,6 @@ export default function Page() {
                     </li>
                 </ol>
 
-                <section id = "test">
-                    <h2> Test </h2>
-                    <p>
-                    To test it, I connected through SSH and checked my email:
-                    </p>
-                    <figure>
-                        <img src="/images/acloud/email_notification.png" className={Styles.notification} />
-                        <figcaption> <b>Fig. 1</b> - Email Received </figcaption>
-                    </figure>
-                </section>
                 <div className={Styles.gap}/>
             </section>
 
@@ -208,3 +198,15 @@ Page.getLayout = function getLayout(page) {
     </Layout>
   )
 }
+
+
+// <section id = "test">
+//     <h2> Test </h2>
+//     <p>
+//     To test it, I connected through SSH and checked my email:
+//     </p>
+//     <figure>
+//         <img src="/images/acloud/email_notification.png" className={Styles.notification} />
+//         <figcaption> <b>Fig. 1</b> - Email Received </figcaption>
+//     </figure>
+// </section>
