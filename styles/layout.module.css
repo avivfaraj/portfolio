@@ -75,17 +75,17 @@
   height: 150px;
 }
 
+.accessDeniedImg{
+  width: 800px;
+  height: 50px;
+}
+
 .gap{
     height:100px;
 }
 
 @media screen and (max-width: 1280px) {
-    .graph{
-      width: 65%;
-      height: 100%;
-    }
-
-    .performance{
+    .graph, .performance, .notification, .accessDeniedImg{
       width: 65%;
       height: 100%;
     }

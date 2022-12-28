@@ -6,7 +6,7 @@
 
 import Link from 'next/link';
 import React, { useState } from "react";
-import styles from '../styles/social.module.css';
+import Styles from '/styles/social.module.css';
 
 export default function HoverLink({href, alt}){
 
@@ -15,7 +15,7 @@ export default function HoverLink({href, alt}){
   	const onMouseLeaveLink = () => setIsHoveredLink(false);
   	return(
         <>
-      <Link  href={href} ><a className={styles.link} target="_blank" onMouseEnter={onMouseEnterLink} onMouseLeave={onMouseLeaveLink}>{alt}</a></Link>
+      <Link  href={href} ><a className={Styles.link} target="_blank" onMouseEnter={onMouseEnterLink} onMouseLeave={onMouseLeaveLink}>{alt}</a></Link>
       </>
 	)
 }

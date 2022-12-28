@@ -45,6 +45,7 @@ ul,ol{
 section {
   overflow-y: auto;
   display: block;
+  overflow-x: hidden;
 }
 
 section > p{

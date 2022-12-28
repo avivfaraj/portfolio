@@ -167,6 +167,17 @@ export default function Page() {
                         <img src="/images/acloud/email_notification.png" className={Styles.notification} />
                         <figcaption> <b>Fig. 1</b> - Email Received </figcaption>
                     </figure>
+
+                    <p> Then, I tried to connect from a different computer to test authentication without keys. Since password authentication
+                    was disabled, I expect SSH login to be denied.
+                    </p>
+                    <figure>
+                        <img src="/images/acloud/access_denied.png" className={Styles.accessDeniedImg} />
+                        <figcaption> <b>Fig. 2</b> - Access Denied </figcaption>
+                    </figure>
+
+                    <p> I also tried to copy-paste both public and private authentication keys from the authorized computer to another computer, and login was denied, so server is secured.
+                    </p>
                 </section>
             </section>
             <div className={Styles.gap}/>
