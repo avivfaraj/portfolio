@@ -47,6 +47,29 @@
   height: 100px;
 }
 
+.hardware-pic{
+  width: 350px;
+  height: 500px;
+}
+
+.left{
+    float:left;
+    width: 50%;
+}
+.right{
+    float:right;
+    width: 50%;
+    text-align:center;
+}
+
+.tableImageContainer{
+    text-align: left;
+    margin-top: 2%;
+    width: 70%;
+    padding-left: 15%;
+    margin-bottom: 2%;
+}
+
 .notification{
   width: 800px;
   height: 150px;

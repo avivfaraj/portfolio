@@ -19,7 +19,7 @@ export default function Page() {
                     files in the server, and access them from any computer. Additionally,
                     I created different users, each of which has access to his own folder.
                     This page is an overview of the hardware that was used in this project.
-                    There are also <HoverLink href={"/Projects/CS/ssh"} alt={"SSH"}/> and <HoverLink href={"/Projects/EE/samba"} alt={"Samba"} /> pages where I explain
+                    There are also <HoverLink href={"/Projects/CS/ssh"} alt={"SSH"} /> and <HoverLink href={"/Projects/EE/samba"} alt={"Samba"} /> pages where I explain
                     how to configure secure connection via SSH, enable FTP server using samba,
                     and manage users.
                 </p>
@@ -35,18 +35,38 @@ export default function Page() {
                     so I kept searching until I found <HoverLink href={"https://libre.computer/products/roc-rk3328-cc/"} alt={"ROC-RK3328-CC (Renegade)"} />. This board has 4GM RAM and a USB 3.0 port,
                     so performace was compromised. Here is a list of all hardware components for that project:
                 </p>
-                <ul>
-                    <li> <HoverLink href={"https://libre.computer/products/roc-rk3328-cc/"} alt={"ROC-RK3328-CC (Renegade)"} /> - SBC board with 4GB RAM, USB3.0, HDMI, microSD card slot, etc.
-                    </li>
+                <div className={Styles.tableImageContainer}>
+                    <div className={Styles.left}>
 
-                    <li>1TB 2.5-inch SSD with SATA connection</li>
+                        <ol>
+                            <li> <HoverLink href={"https://libre.computer/products/roc-rk3328-cc/"} alt={"ROC-RK3328-CC (Renegade)"} /> - SBC board with 4GB RAM, USB3.0, HDMI, microSD card slot, etc.
+                            </li>
 
-                    <li>SATA to USB3.0 cable</li>
+                            <li>1TB 2.5-inch SSD with SATA connection</li>
 
-                    <li>microSD card 64GB </li>
+                            <li>SATA to USB3.0 cable</li>
 
-                    <li>RPi case with fan (optional)</li>
-                </ul>
+                            <li>MicroSD card (64GB) </li>
+
+                            <li>RPi case with a cooling fan (optional)</li>
+
+                            <li>Ethernet connection</li>
+
+                            <li>HDMI (only required for the installation)</li>
+
+                            <li>MicroUSB (power source)</li>
+                        </ol>
+                    </div>
+
+                    <div className={Styles.right}>
+                        <figure>
+                            <img src="/images/acloud/hardware.png" className={Styles['hardware-pic']} />
+
+                            <figcaption> <b>Fig. 1</b> - Hardware.</figcaption>
+                        </figure>
+                    </div>
+            </div>
+
             </section>
 
             <section id = "Flash">
@@ -125,7 +145,7 @@ export default function Page() {
                     <img src="/images/acloud/read_speed.png" className={Styles.performance} />
                     <br/>
                     <img src="/images/acloud/write_speed.png" className={Styles.performance}/>
-                    <figcaption> <b>Fig. 1</b> - Read (Top) and Write (Bottom) speed tests.&nbsp;
+                    <figcaption> <b>Fig. 2</b> - Read (Top) and Write (Bottom) speed tests.&nbsp;
                     <HoverLink href={"https://www.shellhacks.com/disk-speed-test-read-write-hdd-ssd-perfomance-linux/"} alt={"Code Source"} /></figcaption>
                 </figure>
 
@@ -138,7 +158,7 @@ export default function Page() {
                     <img src="/images/acloud/read_samba.png" className={Styles.performance} />
                     <br/>
                     <img src="/images/acloud/write_samba.png" className={Styles.performance}/>
-                    <figcaption> <b>Fig. 2</b> - Read (Top) and Write (Bottom) speed tests over the internet.&nbsp;
+                    <figcaption> <b>Fig. 3</b> - Read (Top) and Write (Bottom) speed tests over the internet.&nbsp;
                     <HoverLink href={"https://www.shellhacks.com/disk-speed-test-read-write-hdd-ssd-perfomance-linux/"} alt={"Code Source"} /></figcaption>
                 </figure>
                 <p>

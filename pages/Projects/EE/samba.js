@@ -18,7 +18,7 @@ export default function Page() {
                     Samba is a free tool for sharing files through network and also enables user management. &nbsp;
                     It comes pre-installed in Raspbian, so installation part is not covered in this guide. &nbsp;
                     In this project, I followed <HoverLink href ={"https://superuser.com/a/1400920"} alt={"user creation guide (jaunerg)"} /> in order to create two users and shared different folders, so one user doesn't affect the other. &nbsp;
-                    Additionally, I used bash code (.sh files) similar to the one I used in the <HoverLink href={"Project/CS/ssh"} alt={"SSH"} /> page in order to send email notifications.
+                    Additionally, I used bash code (.sh files) similar to the one I used in the <HoverLink href={"/Projects/CS/ssh"} alt={"SSH"} /> page in order to send email notifications.
 
                 </p>
             </section>

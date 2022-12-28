@@ -80,11 +80,10 @@ section > figure{
 
 }
 
-/* Nested CSS doesn't work in NextJS,
-   so this is just a workaround */
-section > figure > figcaption{
+figcaption{
     margin-top: 10px;
     font-size: 80%;
+    text-align: center;
 }
 
 hr{
