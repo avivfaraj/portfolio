@@ -14,6 +14,8 @@ export default function HoverLink({href, alt}){
   	const onMouseEnterLink = () => setIsHoveredLink(true);
   	const onMouseLeaveLink = () => setIsHoveredLink(false);
   	return(
-      <Link onMouseEnter={onMouseEnterLink} onMouseLeave={onMouseLeaveLink} href={href} ><a className={styles.link} target="_blank">{alt}</a></Link>
+        <>
+      <Link  href={href} ><a className={styles.link} target="_blank" onMouseEnter={onMouseEnterLink} onMouseLeave={onMouseLeaveLink}>{alt}</a></Link>
+      </>
 	)
 }
