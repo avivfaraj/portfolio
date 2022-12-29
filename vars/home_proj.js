@@ -8,8 +8,8 @@ const sampleProjects =[
   {
     name: "aCloud",
     href: "/Projects/EE/acloud",
-    desc: "Built FTP server using SBC (Single Board Computer), Raspbian, SSH and Samba",
-    keywords: "SBC, Raspbian, SSH, Samba, GnuPG"
+    desc: "Created a SMB (Server Message Block) server using ROC-RK3328-CC (similar to Raspberry Pi), SSH and Samba.",
+    keywords: "SSH, Samba, Cloud, SMB, SBC, GnuPG"
   },
   {
     name: "Secure SSH connection",

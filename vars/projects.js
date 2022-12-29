@@ -55,14 +55,14 @@ const projects ={
   {
     name: "aCloud",
     href: "./acloud",
-    desc: "Created a FTP (File Transfer Protocol) server using ROC-RK3328-CC (similar to Raspberry Pi), SSH and Samba.",
-    keywords: "SSH, Samba, Cloud"
+    desc: "Created a SMB (Server Message Block) server using ROC-RK3328-CC (similar to Raspberry Pi), SSH and Samba.",
+    keywords: "SSH, Samba, Cloud, SMB, SBC, GnuPG"
     },
     {
       name: "Samba Configuration",
       href: "./samba",
       desc: "Utilized Samba to share storage (cloud). It was configured to share folders with different users, and to send email notification for better protection.",
-      keywords: "Samba, Cloud"
+      keywords: "Samba, Cloud, SMB"
      }
   ]
 }

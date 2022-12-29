@@ -15,12 +15,12 @@ export default function Page() {
             <section id = "introduction">
                 <h3> Introduction </h3>
                 <p>
-                    In this project I created FTP server at home, so I can store
+                    In this project I created SMB server at home, so I can store
                     files in the server, and access them from any computer. Additionally,
                     I created different users, each of which has access to his own folder.
                     This page is an overview of the hardware that was used in this project.
                     There are also <HoverLink href={"/Projects/CS/ssh"} alt={"SSH"} /> and <HoverLink href={"/Projects/EE/samba"} alt={"Samba"} /> pages where I explain
-                    how to configure secure connection via SSH, enable FTP server using samba,
+                    how to configure secure connection via SSH, enable SMB server using samba,
                     and manage users.
                 </p>
             </section>
