@@ -8,6 +8,8 @@ export default function Page() {
   return (
     <>
         <section>
+            <div className={Styles.gap} />
+            
             <section>
                 <h2> Secure SSH Connection </h2>
             </section>

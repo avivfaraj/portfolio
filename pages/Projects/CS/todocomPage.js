@@ -6,6 +6,8 @@ import Styles from '/styles/layout.module.css'
 export default function Page() {
   return (
     <section>
+        <div className={Styles.gap} />
+        
         <GithubCorner href="https://github.com/avivfaraj/todocom" />
 
         <h2> todocom (Todo Comments) </h2>

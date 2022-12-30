@@ -7,15 +7,16 @@ import Projects from '/vars/projects'
 export default function DSHome() {
   return (
     <section>
+        <div className={Styles.gap}/>
 
-      <div className={Styles.container}>
-        <h2> Data Science Projects</h2>
-          <div className={Styles.grid}>
-          {Projects["ee"].map(ee =>(
-            <Card {...ee} />
-          ))}
+        <div className={Styles.container}>
+            <h2> Engineering Projects</h2>
+            <div className={Styles.grid}>
+              {Projects["ee"].map(ee =>(
+                <Card {...ee} />
+              ))}
 
-          </div>
+            </div>
 
         </div>
     </section>

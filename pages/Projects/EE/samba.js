@@ -6,8 +6,9 @@ import HoverLink from '/components/hoverLink'
 
 export default function Page() {
   return (
-    <>
         <section>
+            <div className={Styles.gap}/>
+
             <section>
                 <h2> Samba Connection</h2>
             </section>
@@ -186,7 +187,6 @@ export default function Page() {
             </section>
 
         </section>
-    </>
   )
 }
 

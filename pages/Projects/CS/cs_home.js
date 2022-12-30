@@ -7,6 +7,8 @@ import Projects from '/vars/projects'
 export default function CSHome() {
   return (
     <section>
+        <div className={Styles.gap} />
+        
         <div className={Styles.container}>
             <h2> Computer Science Projects</h2>
               <div className={Styles.grid}>

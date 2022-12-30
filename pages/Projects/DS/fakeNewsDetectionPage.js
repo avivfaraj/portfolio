@@ -7,6 +7,8 @@ import Gist from "react-gist";
 export default function Page() {
   return (
     <section>
+        <div className={Styles.gap} />
+
         <GithubCorner href="https://github.com/avivfaraj/Fake-News-Detection-PySpark" />
 
         <h2> Fake News Detection in PySpark </h2>
