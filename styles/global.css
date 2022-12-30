@@ -92,6 +92,15 @@ hr{
   margin-left: 15%;
 }
 
+iframe{
+    /* margin-left:15%;
+    margin-top: 10%; */
+    height:100%;
+    width:100%;
+    position:relative;
+
+}
+
 @media screen and (max-width: 720px) {
     section{
       font-size: 75%;

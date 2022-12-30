@@ -63,7 +63,13 @@ const projects ={
       href: "./samba",
       desc: "Utilized Samba to share storage (cloud). It was configured to share folders with different users, and to send email notification for better protection.",
       keywords: "Samba, Cloud, SMB"
-     }
+  },
+  {
+    name: "Ultra-fast laser pulse measurement",
+    href: "/publication",
+    desc: "My Capstone project for Physics & Electrical Engineering Bachleor degree in which I created a program in LabVIEW that controls optical components in order to measure ultra-fast laser pulse using autocorrelation.",
+    keywords: "Autocorrelation, femtosecond laser, LabVIEW"
+   }
   ]
 }
 

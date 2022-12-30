@@ -58,7 +58,9 @@ export default function Sidebar() {
       {showAll &&
       <ButtonList buttons={Cards}/>}
 
-      <Button id={4} name={"Honors & Awards"} reference={"/honors-and-awards"} />
+      <Button id={4} name={"Publication"} reference={"/publication"} />
+
+      <Button id={5} name={"Honors & Awards"} reference={"/honors-and-awards"} />
 
       <div className={Styles.banner}>
         <EnlargeImage src="/images/github_32px.png"
