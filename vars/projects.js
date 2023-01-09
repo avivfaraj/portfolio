@@ -23,6 +23,18 @@ const projects ={
     href: "https://github.com/avivfaraj/DSCI521-project",
     desc: "Utilized Python libraries such as Pandas to identify symptoms and risk factors of heart disease.",
     keywords: "Data Analysis, Classification, Pandas, Histogram"
+  },
+  {
+    name: "Floods Visualization",
+    href: "./floods",
+    desc: "A group project as part of MSDS at Drexel University in which Floods data was visualized using Tableau Public in order to gain insights.",
+    keywords: "Information Visualization, Tableau Public, Floods"
+  },
+  {
+    name: "Workflows",
+    href: "./workflows",
+    desc: "Utilized both Orange software and python3 in order to implement clustering of two datasets: MNIST handwritten digits and movies.",
+    keywords: "Orange, Workflows, MNIST digits, clustering, Python3"
   }],
 
   cs:[

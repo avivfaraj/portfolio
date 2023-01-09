@@ -7,7 +7,7 @@ import Projects from '/vars/projects'
 export default function DSHome() {
   return (
     <section>
-    
+
         <div className={Styles.gap} />
 
         <div className={Styles.container}>
@@ -20,6 +20,8 @@ export default function DSHome() {
             </div>
 
         </div>
+
+        <div className={Styles.gap} />
     </section>
   )
 }

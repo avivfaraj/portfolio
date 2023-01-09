@@ -8,6 +8,7 @@ import GithubCorner from 'react-github-corner';
 export default function Index() {
   return (
     <section>
+        <div className={Styles.gap} />
         <GithubCorner href="https://github.com/avivfaraj/portfolio" />
         <h2> Welcome </h2>
         <p> I am a Data Science Graduate Student at Drexel University. I have a dual Bachelor degree in
@@ -20,6 +21,7 @@ export default function Index() {
               {Projects.map((proj, index) => (<Card key={index} {...proj} />))}
               </div>
         </div>
+        <div className={Styles.gap} />
     </section>
   )
 }
