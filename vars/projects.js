@@ -49,6 +49,18 @@ const projects ={
     href: "https://github.com/avivfaraj/cs570-health-tracker",
     desc: "An Object Oriented Program (OOP) written in Java that helps the user to keep track of both calories consumed and workouts done. The program also fetches data from FoodData Central Database (USDA) through their API to get accurate nutrition facts of real products.",
     keywords: "Java, API, OOP "
+  },
+  {
+    name: "Karp-Rabin Algorithm",
+    href: "./karp_rabin_algorithm",
+    desc: "A research paper that was written as part of CS502 - Data Structures and Algorithms at Drexel University in which Karp-Rabin algorithm was reviewed and implemented in Python3 ",
+    keywords: "Python3, String Matching, Karp-Rabin algorithm"
+  },
+  {
+    name: "Hierholzer Algorithm",
+    href: "./hierholzer_algorithm",
+    desc: "A research paper that was written as part of CS502 - Data Structures and Algorithms at Drexel University in which Hierholzer's algorithm was reviewed",
+    keywords: "Python3, Eulerian Circuit, Eulerian Path, Hierholzer's algorithm, Graph Theory"
   }],
 
   ee:[
