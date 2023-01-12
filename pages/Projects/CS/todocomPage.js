@@ -2,23 +2,25 @@ import Layout from '/components/layout'
 import Sidebar from '/components/sidebar'
 import GithubCorner from 'react-github-corner'
 import Styles from '/styles/layout.module.css'
+import GIF from '/components/gifs'
 
 export default function Page() {
   return (
     <section>
         <div className={Styles.gap} />
-        
+
         <GithubCorner href="https://github.com/avivfaraj/todocom" />
 
         <h2> todocom (Todo Comments) </h2>
         <p>
             CLI program that retrieves all TODO comments from file(s) and prints them in terminal/shell.
             It was created in order to automatically update a list of TODO tasks by simply adding "TODO:" comments in the code (<a href="#format">Comments Format</a>).
-              It also enables prioritization of tasks by using "TODO soon:" or "TODO urgent".
+            It also enables prioritization of tasks by using "TODO soon:" or "TODO urgent" and assign tasks to a specific teammate.
             To create the TODO list, simply open terminal and run the following command:
             <code>
             todo [folder/file]
             </code>
+            <GIF id = "gen-todo" src="https://user-images.githubusercontent.com/73610201/211216011-27e057b0-0420-4d90-8950-999f75583566.gif" title="General TODO command" />
         </p>
 
 
@@ -30,12 +32,22 @@ export default function Page() {
             <br />
             todo -u [folder/file]
             </code>
+            <GIF id = "urgent-todo" src="https://user-images.githubusercontent.com/73610201/211216002-c00860d3-7a61-425f-8cb2-939de85c01ec.gif" title="Urgent TODO command" />
             or:
             <code>
             # Prints soon TODOs
             <br />
             todo -s [folder/file]
             </code>
+            <GIF id = "soon-todo" src="https://user-images.githubusercontent.com/73610201/211216007-f4eabb81-76d0-42c5-9334-0f13857e809b.gif" title="Soon TODO command" />
+
+            Comments can also be assigned to a user by adding "Todo @username" comment:
+            <code>
+            # Prints Assigned TODOs <br />
+            todo -a [USERNAME] [folder/file]
+            </code>
+            <GIF id = "assigned-todo" src="https://user-images.githubusercontent.com/73610201/211216263-ca453589-e490-49b3-a839-65315366f34f.gif" title="Assigned TODO command" />
+
             Finally, there is an option to save the list in a text file (stores as regular text without colors):
             <code>
             # Store results in a txt file
@@ -55,25 +67,44 @@ export default function Page() {
         Format is flexible and can be lower-case, upper-case or a combination of both. Below are several examples:
         </p>
 
-        <ul className={Styles.list}>
-          <li> TODO: </li>
-          <li> TODo: </li>
-          <li> TOD0: </li>
-          <li> ToD0: </li>
-          <li> To-D0: </li>
-          <li> to-do: </li>
-        </ul>
+        <div className={Styles.tableImageContainer}>
+            <div className={Styles.left}>
+                <ul className={Styles.list}>
+                  <li> TODO: </li>
+                  <li> TODo: </li>
+                  <li> TOD0: </li>
+                </ul>
+            </div>
+
+            <div className={Styles.right}>
+                <ul className={Styles.list}>
+                    <li> ToD0: </li>
+                    <li> To-D0: </li>
+                    <li> to-do: </li>
+                </ul>
+            </div>
+        </div>
+
 
         <p>
         In <i>Urgent</i> and <i>soon</i> comments the TODO part is flexible as shown above, but must be followed by either <i>urgent</i> or <i>soon</i> in lower-case:
         </p>
 
-        <ul className={Styles.list}>
-          <li> TO-DO soon:</li>
-          <li> tODo soon: </li>
-          <li> ToD0 urgent:</li>
-          <li> T0-D0 urgent:</li>
-        </ul>
+        <div className={Styles.tableImageContainer}>
+            <div className={Styles.left}>
+                <ul className={Styles.list}>
+                    <li> TO-DO soon:</li>
+                    <li> tODo soon: </li>
+                </ul>
+            </div>
+
+            <div className={Styles.right}>
+                <ul className={Styles.list}>
+                    <li> ToD0 urgent:</li>
+                    <li> T0-D0 urgent:</li>
+                </ul>
+            </div>
+        </div>
         <div className={Styles.gap}/>
     </section>
   )
@@ -87,3 +118,5 @@ Page.getLayout = function getLayout(page) {
     </Layout>
   )
 }
+
+//<iframe src="https://user-images.githubusercontent.com/73610201/211216011-27e057b0-0420-4d90-8950-999f75583566.gif" title="Automated, Convenient and Compact Auto-correlation Measurement for an Ultra-fast Laser Pulse"></iframe>
