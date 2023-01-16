@@ -13,7 +13,9 @@ body {
   font-size: 24px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
 }
+
 
 code,.main section > code{
     border-radius: 10px;
@@ -35,7 +37,6 @@ li{
 ul,ol{
   text-align: left;
   margin-top: 2%;
-  width: 70%;
   padding-left: 20%;
   margin-bottom: 2%;
   line-height: 35px;
@@ -46,15 +47,21 @@ section {
   overflow-y: auto;
   display: block;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 section > p{
   text-align: left;
   margin-top: 2%;
-  width: 70%;
+  width: 65%;
   padding-left: 15%;
   margin-bottom: 2%;
   line-height: 35px;
+}
+
+section > h1{
+    margin-top: 1%;
+    text-align: center;
 }
 
 section > h2,section > h3{
@@ -74,9 +81,9 @@ section > figure{
   text-align: center;
   position:relative;
   align-content: center;
-  width: 80%;
+  width: 65%;
   margin-top: 2%;
-  padding-left: 9%;
+  padding-left: 15.5%;
   margin-bottom: 2%;
 
 }
@@ -93,8 +100,6 @@ hr{
 }
 
 iframe{
-    /* margin-left:15%;
-    margin-top: 10%; */
     height:100%;
     width:100%;
     position:relative;
