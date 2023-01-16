@@ -8,14 +8,14 @@ const sampleProjects =[
   {
     name: "aCloud",
     href: "/Projects/EE/acloud",
-    desc: "Created a SMB (Server Message Block) server using ROC-RK3328-CC (similar to Raspberry Pi), SSH and Samba.",
+    desc: "Created a SMB (Server Message Block) based storage server using ROC-RK3328-CC (similar to Raspberry Pi), SSH and Samba.",
     keywords: "SSH, Samba, Cloud, SMB, SBC, GnuPG"
   },
   {
     name: "Secure SSH connection",
     href: "/Projects/CS/ssh",
     desc: "Enabled and configured secure SSH connection to aCloud to access remotley, and to send email notifications when connection is established.",
-    keywords: "Raspbian, SSH, "
+    keywords: "Raspbian OS, SSH, Terminal"
   },
   {
     name: "TODOCOM",

@@ -3,6 +3,7 @@ import Sidebar from '/components/sidebar'
 import Styles from '/styles/layout.module.css'
 import Image from 'next/image';
 import HoverLink from '/components/hoverLink'
+import TOC from '/components/toc'
 
 export default function Page() {
   return (
@@ -10,15 +11,15 @@ export default function Page() {
             <div className={Styles.gap}/>
 
             <section>
-                <h2> aCloud </h2>
+                <h1> aCloud </h1>
             </section>
 
-            <section id = "introduction">
-                <h3> Introduction </h3>
+            <section >
+                <h2 id = "introduction"> Introduction </h2>
                 <p>
                     In this project I created SMB server at home, so I can store
-                    files in the server, and access them from any computer. Additionally,
-                    I created different users, each of which has access to his own folder.
+                    files in the server, and access them from any computer (that is connected to home wifi).
+                    Additionally, I created different users, each of which has access to his own folder.
                     This page is an overview of the hardware that was used in this project.
                     There are also <HoverLink href={"/Projects/CS/ssh"} alt={"SSH"} /> and <HoverLink href={"/Projects/EE/samba"} alt={"Samba"} /> pages where I explain
                     how to configure secure connection via SSH, enable SMB server using samba,
@@ -26,8 +27,8 @@ export default function Page() {
                 </p>
             </section>
 
-            <section id = "Hardware">
-                <h3> Hardware </h3>
+            <section >
+                <h2 id = "Hardware"> Hardware </h2>
                 <p>
                     While working on the idea, I planned on using Raspberry Pi 4 with 8GB RAM.
                     However, this board was not available because of supply chain crisis (2022).
@@ -70,8 +71,8 @@ export default function Page() {
 
             </section>
 
-            <section id = "Flash">
-                <h3> Flashing OS on SD Card </h3>
+            <section >
+                <h2 id = "Flash"> Flashing OS on SD Card </h2>
                 <p>
                     At first I installed Ubuntu 22.04 because I thought it is more stable than Raspbian, but this was a mistake.
                     Ubuntu was very slow, and it never gotten any faster. Also, there were many bugs, such as USB port doesn't work, and
@@ -82,8 +83,8 @@ export default function Page() {
                 </p>
             </section>
 
-            <section id = "install-os">
-                <h3> Server Installation </h3>
+            <section >
+                <h2 id = "install-os"> Server Installation </h2>
                 <ul>
                     <li> <strong> SSH - </strong>
                             Once the OS image is installed on the SD Card, you can connect it to the board. A keyboard, a mouse, Ethernet and HDMI connections are also required
@@ -120,8 +121,8 @@ export default function Page() {
                 </ul>
             </section>
 
-            <section id = "access">
-                <h3> Accessing Server </h3>
+            <section >
+                <h2 id = "access"> Accessing Server </h2>
                 <ul>
                     <li> <strong> SSH - </strong>
                     <code>ssh user@IP_Address</code>
@@ -136,8 +137,8 @@ export default function Page() {
                 </ul>
             </section>
 
-            <section id = "performance">
-                <h3> Performance </h3>
+            <section >
+                <h2 id = "performance"> Performance </h2>
                 <p>
                 Read and write speeds in the server are around 340MB/s and 80MB/s respectivley
                 as shown in the images below:
@@ -172,8 +173,8 @@ export default function Page() {
             </section>
 
 
-            <section id = "summary">
-                <h3> Summary </h3>
+            <section >
+                <h2 id = "summary"> Summary </h2>
                 <p>
                 Server is up and running, email notifications for both SSH and Samba are working well, so I get notified in real-time.
                 The goal of the project was achieved, as I wrote those lines by connecting to the Samba server remotley.
@@ -182,7 +183,9 @@ export default function Page() {
 
                 </p>
             </section>
+
             <div className={Styles.gap}/>
+
         </section>
   )
 }
@@ -191,6 +194,7 @@ Page.getLayout = function getLayout(page) {
   return (
     <Layout>
       <Sidebar />
+      <TOC />
       {page}
     </Layout>
   )

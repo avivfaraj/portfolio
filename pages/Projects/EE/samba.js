@@ -3,6 +3,7 @@ import Sidebar from '/components/sidebar'
 import Styles from '/styles/layout.module.css'
 import Image from 'next/image';
 import HoverLink from '/components/hoverLink'
+import TOC from '/components/toc'
 
 export default function Page() {
   return (
@@ -10,11 +11,11 @@ export default function Page() {
             <div className={Styles.gap}/>
 
             <section>
-                <h2> Samba Connection</h2>
+                <h1> Samba Connection</h1>
             </section>
 
-            <section id = "introduction">
-                <h3> Introduction </h3>
+            <section>
+                <h2 id = "introduction"> Introduction </h2>
                 <p>
                     Samba is a free tool for sharing files through network and also enables user management. &nbsp;
                     It comes pre-installed in Raspbian, so installation part is not covered in this guide. &nbsp;
@@ -24,8 +25,8 @@ export default function Page() {
                 </p>
             </section>
 
-            <section id = "users">
-                <h3> Add a user </h3>
+            <section >
+                <h2 id = "users"> Add a user </h2>
 
                 <ol>
                     <li>To add a user to Samba, the user must also be registered in the OS:
@@ -88,8 +89,8 @@ export default function Page() {
                 </ol>
             </section>
 
-            <section id = "email">
-                <h3> Email Notification (Optional)</h3>
+            <section>
+                <h2 id = "email"> Email Notification (Optional)</h2>
                 <p>
                     This step is crucial for monitoring Samba sessions and enhance security. &nbsp;
                     Samba has a few <HoverLink href = {"https://www.samba.org/samba/docs/current/man-html/smb.conf.5.html"} alt={"variables (VARIABLE SUBSTITUTIONS)"} /> we can utilize in order to create log files &nbsp;
@@ -194,6 +195,7 @@ Page.getLayout = function getLayout(page) {
   return (
     <Layout>
       <Sidebar />
+      <TOC />
       {page}
     </Layout>
   )

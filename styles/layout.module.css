@@ -12,31 +12,6 @@
   display: table;
 }
 
-.toc{
-  border-radius: 10px;
-  background-color: #006655;
-  list-style-type: none;
-  margin-left: 30%;
-  width: 40%;
-  opacity: 85%;
- }
-
-.toc-sub-links{
-  list-style-type: none;
-}
-
-.toc-sub-links > li > a, .toc > li > a{
-  text-decoration: none;
-  color: white;
-}
-.toc-sub-links > li > a:hover, .toc > li > a:hover{
-  text-decoration: underline;
-  color: orange;
-}
-.toc-header{
-  color: white;
-}
-
 .graph{
   width: 800px;
   height: 310px;

@@ -8,14 +8,14 @@ import Link from 'next/link';
 import React, { useState } from "react";
 import Styles from '/styles/social.module.css';
 
-export default function HoverLink({href, alt}){
+export default function HoverLink({href, alt, target = "_blank"}){
 
 	const [isHoveringLink, setIsHoveredLink] = useState(false);
   	const onMouseEnterLink = () => setIsHoveredLink(true);
   	const onMouseLeaveLink = () => setIsHoveredLink(false);
   	return(
         <>
-      <Link  href={href} ><a className={Styles.link} target="_blank" onMouseEnter={onMouseEnterLink} onMouseLeave={onMouseLeaveLink}>{alt}</a></Link>
+      <Link  href={href} ><a className={Styles.link} target={target} onMouseEnter={onMouseEnterLink} onMouseLeave={onMouseLeaveLink}>{alt}</a></Link>
       </>
 	)
 }

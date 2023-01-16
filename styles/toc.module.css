@@ -1,0 +1,43 @@
+.section-nav {
+  position: sticky;
+  display: block;
+  border-right: 1px solid #efefef;
+  align-self: start;
+  top: 13rem;
+  width: 40%;
+  margin-left: 15px;
+  z-index: 100;
+}
+
+.section-nav span {
+    padding-left: 5%;
+    color: darkorange;
+    text-shadow: 1px 2px 0px #000000;
+}
+
+.section-nav ul {
+    list-style-type:none;
+    padding-left: 10%;
+    width: 100%;
+}
+
+.section-nav ul li {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.section-nav a {
+  text-decoration: none;
+  font-size: 17px;
+  line-height: normal;
+  display: block;
+  padding: .125rem 0;
+  color: #006666;
+  transition: all 50ms ease-in-out;
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+  font-size: 22px;
+  text-decoration: underline;
+}

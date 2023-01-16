@@ -3,19 +3,19 @@ import Sidebar from '/components/sidebar'
 import Styles from '/styles/layout.module.css'
 import Image from 'next/image';
 import HoverLink from '/components/hoverLink'
-
+import TOC from '/components/toc'
 export default function Page() {
   return (
     <>
         <section>
             <div className={Styles.gap} />
-            
+
             <section>
-                <h2> Secure SSH Connection </h2>
+                <h1> Secure SSH Connection </h1>
             </section>
 
-            <section id = "introduction">
-                <h3> Introduction </h3>
+            <section >
+                <h2 id = "introduction"> Introduction </h2>
                 <p>
                     In this project, SSH connection was enabled in <HoverLink href={"/Projects/EE/acloud"} alt={"aCloud"} />, and it was configured
                     to authenticate with keys (public and private) for enhanced security. This webpage is a step-by-step guide to
@@ -24,8 +24,8 @@ export default function Page() {
                 </p>
             </section>
 
-            <section id = "enable">
-                <h3> Enable SSH on Raspbian </h3>
+            <section >
+                <h2 id = "enable"> Enable SSH on Raspbian </h2>
                 <p>
                     Raspbian comes with SSH installed, so enabling it is through settings:
                     <code>sudo raspi-config</code>
@@ -79,8 +79,8 @@ export default function Page() {
                 </ol>
             </section>
 
-            <section id = "short-ssh">
-                <h3> Shorter SSH Command </h3>
+            <section >
+                <h2 id = "short-ssh"> Shorter SSH Command </h2>
                 <p>
                     One can create an alias, so to avoid writing user@IP_ADDRESS everytime we would like to connect through SSH.
                     To do so, in your local machine (not the server), open terminal and run the following command:
@@ -97,8 +97,8 @@ export default function Page() {
                 </p>
             </section>
 
-            <section id = "email">
-                <h3> Email Notification (Optional)</h3>
+            <section >
+                <h2 id = "email"> Email Notification (Optional)</h2>
                 <p>
                     This step is crucial for monitoring SSH sessions and enhance security. &nbsp;
                     The sessions are automatically logged in the system log file (/var/log/auth.log), and that's where I get the information from. &nbsp;
@@ -159,9 +159,9 @@ export default function Page() {
                         Third line executes email_temp.sh and creates the .txt file (email content), which is sent by the fouth line.
                     </li>
                 </ol>
-
-                <section id = "test">
-                    <h2> Test </h2>
+                </section>
+                <section >
+                    <h2 id = "test"> Test </h2>
                     <p>
                     To test it, I connected through SSH and checked my email:
                     </p>
@@ -181,7 +181,7 @@ export default function Page() {
                     <p> I also tried to copy-paste both public and private authentication keys from the authorized computer to another computer, and login was denied, so server is secured.
                     </p>
                 </section>
-            </section>
+
             <div className={Styles.gap}/>
         </section>
     </>
@@ -192,6 +192,7 @@ Page.getLayout = function getLayout(page) {
   return (
     <Layout>
       <Sidebar />
+      <TOC />
       {page}
     </Layout>
   )
