@@ -1,5 +1,6 @@
 :root {
     --nav-pad: 32px;
+    --par-space: 14%;
 }
 
 #__next {
@@ -15,7 +16,6 @@ body {
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
 }
-
 
 code,.main section > code{
     border-radius: 10px;
@@ -54,24 +54,24 @@ section > p{
   text-align: left;
   margin-top: 2%;
   width: 65%;
-  padding-left: 15%;
+  padding-left: var(--par-space);
   margin-bottom: 2%;
   line-height: 35px;
 }
 
-section > h1{
-    margin-top: 1%;
+/* section > h1{
+    margin-top: 2%;
     text-align: center;
-}
+} */
 
-section > h2,section > h3{
+section > h1, section > h2,section > h3{
   margin-top: 7%;
   text-align: center;
 }
 
 section > h4{
   margin-top: 2%;
-  padding-left: 15%;
+  padding-left: var(--par-space);
   position: relative;
   text-align: left;
   margin-bottom: -1%;

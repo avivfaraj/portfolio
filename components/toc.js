@@ -3,10 +3,8 @@ import TocStyles from '/styles/toc.module.css'
 
 export default function TOC() {
   return (
-    <>
-    <div className={TocStyles['section-nav']}>
-        <nav id = "TOC" >
-
+      <>
+    <nav id = "TOC" className={TocStyles['section-nav']}>
         <Script id="my-script">{
           `
             var toc = document.getElementById('TOC');
@@ -59,8 +57,7 @@ export default function TOC() {
 
             toc.appendChild(unorder_ls);
           `}</Script>
-         </nav>
-    </div>
+    </nav>
     </>
   )
 }

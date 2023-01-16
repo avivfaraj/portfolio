@@ -1,9 +1,10 @@
-import Layout from '/components/layout'
-import Sidebar from '/components/sidebar'
+import Layout from '/components/layout';
+import Sidebar from '/components/sidebar';
 import GithubCorner from 'react-github-corner';
 import Styles from '/styles/layout.module.css';
 import Gist from "react-gist";
-import TOC from '/components/toc'
+import HoverLink from '/components/hoverLink';
+import TOC from '/components/toc';
 
 export default function Page() {
   return (
@@ -12,8 +13,8 @@ export default function Page() {
 
         <section>
 
-            <TOC />
             <section>
+                <div className={Styles.gap} />
 
                 <GithubCorner href="https://github.com/avivfaraj/Fake-News-Detection-PySpark" />
 
@@ -29,8 +30,8 @@ export default function Page() {
                 <section>
                     <h2 id = "dataset"> Dataset </h2>
                     <p>
-                      The news dataset was found at <a href='https://www.kaggle.com/c/fake-news/data'>Kaggle </a>
-                      contains three attributes (author, title and text) and the target column (0 - reliable, 1 - fake).
+                      The news dataset was found at <HoverLink href={"https://www.kaggle.com/c/fake-news/data"} alt={"Kaggle"} /> contains
+                      three attributes (author, title and text) and the target column (0 - reliable, 1 - fake).
                       There are 20,800 rows, each of which describes one article.
                       Also, there are 4,194 unique authors in this dataset.
                     </p>
@@ -194,7 +195,9 @@ export default function Page() {
 Page.getLayout = function getLayout(page) {
   return (
     <Layout>
+
       <Sidebar />
+      <TOC />
       {page}
 
     </Layout>

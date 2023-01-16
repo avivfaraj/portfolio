@@ -47,8 +47,8 @@ const projects ={
   {
     name: "Secure SSH Connection",
     href: "./ssh",
-    desc: "Created a secure SSH connection to a FTP server (aCloud project).",
-    keywords: "SSH, terminal"
+    desc: "Enabled and configured secure SSH connection to aCloud to access remotley, and to send email notifications when connection is established.",
+    keywords: "Raspbian OS, SSH, Terminal"
   },
   {
     name: "Cash Flow",
@@ -79,7 +79,7 @@ const projects ={
   {
     name: "aCloud",
     href: "./acloud",
-    desc: "Created a SMB (Server Message Block) server using ROC-RK3328-CC (similar to Raspberry Pi), SSH and Samba.",
+    desc: "Created a SMB (Server Message Block) based storage server using ROC-RK3328-CC (similar to Raspberry Pi), SSH and Samba.",
     keywords: "SSH, Samba, Cloud, SMB, SBC, GnuPG"
     },
     {
