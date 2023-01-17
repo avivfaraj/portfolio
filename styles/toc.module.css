@@ -41,3 +41,11 @@
   font-size: 22px;
   text-decoration: underline;
 }
+
+.active {
+    font-weight: 500;
+}
+
+.active a{
+    color:blue;
+}
