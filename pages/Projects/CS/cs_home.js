@@ -10,7 +10,7 @@ export default function CSHome() {
         <div className={Styles.gap} />
 
         <div className={Styles.container}>
-            <h2> Computer Science Projects</h2>
+            <h1> Computer Science Projects</h1>
               <div className={Styles.grid}>
                   {Projects.hasOwnProperty("cs") && (Projects["cs"].map(cs =>(
                         <Card {...cs} />

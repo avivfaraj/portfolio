@@ -11,7 +11,7 @@ export default function DSHome() {
         <div className={Styles.gap} />
 
         <div className={Styles.container}>
-            <h2> Data Science Projects</h2>
+            <h1> Data Science Projects</h1>
             <div className={Styles.grid}>
               {Projects["ds"].map(ds =>(
                 <Card {...ds} />

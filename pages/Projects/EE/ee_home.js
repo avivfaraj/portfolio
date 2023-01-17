@@ -10,7 +10,7 @@ export default function DSHome() {
         <div className={Styles.gap}/>
 
         <div className={Styles.container}>
-            <h2> Engineering Projects</h2>
+            <h1> Engineering Projects</h1>
             <div className={Styles.grid}>
               {Projects["ee"].map(ee =>(
                 <Card {...ee} />
