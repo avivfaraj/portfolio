@@ -15,18 +15,22 @@ export default function TOC() {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 const id = entry.target.getAttribute('id');
-                if (entry.isIntersecting ) {
-                    document.querySelector(`a[href="#${id}"]`).parentElement.classList.add(`${TocStyles.active}`);
+                if (document.querySelector(`a[href="#${id}"]`) != null)
+                {
+                    if (entry.isIntersecting ) {
+                        document.querySelector(`a[href="#${id}"]`).parentElement.classList.add(`${TocStyles.active}`);
 
-                } else {
-                    document.querySelector(`a[href="#${id}"]`).parentElement.classList.remove(`${TocStyles.active}`);
+                    } else {
+                        document.querySelector(`a[href="#${id}"]`).parentElement.classList.remove(`${TocStyles.active}`);
+                    }
                 }
+
             });
         });
+            document.querySelectorAll('h2[id], h4[id]').forEach((header) => {
+            observer.observe(header);
+            });
 
-        document.querySelectorAll('h2[id], h4[id]').forEach((header) => {
-        observer.observe(header);
-        });
 
         },
      []);
