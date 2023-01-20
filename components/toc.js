@@ -1,10 +1,43 @@
 import Script from 'next/script'
 import TocStyles from '/styles/toc.module.css'
+import { useEffect } from "react";
 
-export default function TOC() {
+
+export default function TOC({width = '40%'}) {
+
+    /* Thanks to Chris Coyier for the IntersectionObserver and css (toc.module.css) code:
+    "Sticky Table of Contents with Scrolling Active States" published on Jan 30, 2020.
+    https://css-tricks.com/sticky-table-of-contents-with-scrolling-active-states/
+
+    *** Several changes were made to work with NextJS. ***
+    */
+    useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (document.querySelector(`a[href="#${id}"]`) != null)
+                {
+                    if (entry.isIntersecting ) {
+                        document.querySelector(`a[href="#${id}"]`).parentElement.classList.add(`${TocStyles.active}`);
+
+                    } else {
+                        document.querySelector(`a[href="#${id}"]`).parentElement.classList.remove(`${TocStyles.active}`);
+                    }
+                }
+
+            });
+        });
+            document.querySelectorAll('h2[id], h4[id]').forEach((header) => {
+            observer.observe(header);
+            });
+
+
+        },
+     []);
+
   return (
       <>
-    <nav id = "TOC" className={TocStyles['section-nav']}>
+    <nav id = "TOC" className={TocStyles['section-nav']} style={{ '--toc-width': width }}>
         <Script id="my-script">{
           `
             var toc = document.getElementById('TOC');
@@ -37,7 +70,9 @@ export default function TOC() {
                                     sub_list = 1;
                                     temp_ls = document.createElement('ul');
                                 }
-                                temp_ls.appendChild(link)
+                                var temp_ul = document.createElement('ul');
+                                temp_ul.appendChild(link);
+                                temp_ls.appendChild(temp_ul);
                                 if (j == h.length -1 ){
                                     temp_section.appendChild(temp_ls);
                                 }

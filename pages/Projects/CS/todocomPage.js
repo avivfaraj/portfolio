@@ -9,13 +9,15 @@ import HoverLink from '/components/hoverLink'
 export default function Page() {
   return (
     <section>
+        <GithubCorner href="https://github.com/avivfaraj/todocom" />
+        <div className={Styles.gap} />
 
         <section>
-            <div className={Styles.gap} />
-
-            <GithubCorner href="https://github.com/avivfaraj/todocom" />
-
             <h1> todocom (Todo Comments) </h1>
+        </section>
+
+        <section>
+            <h2 id = "introduction"> Introduction </h2>
             <p>
                 CLI program that retrieves all TODO comments from file(s) and prints them in terminal/shell.
                 It was created in order to automatically update a list of TODO tasks by simply adding "TODO:" comments in the code (<HoverLink href={"#format"} alt={"Comments Format"} target={""} />).
@@ -137,11 +139,9 @@ Page.getLayout = function getLayout(page) {
   return (
     <Layout>
       <Sidebar />
-      <TOC />
+      <TOC width={"500px"}/>
       {page}
 
     </Layout>
   )
 }
-
-//<iframe src="https://user-images.githubusercontent.com/73610201/211216011-27e057b0-0420-4d90-8950-999f75583566.gif" title="Automated, Convenient and Compact Auto-correlation Measurement for an Ultra-fast Laser Pulse"></iframe>

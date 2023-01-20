@@ -1,6 +1,7 @@
 :root {
     --nav-pad: 32px;
     --par-space: 14%;
+    --toc-width: 40%;
 }
 
 #__next {
@@ -37,7 +38,7 @@ li{
 ul,ol{
   text-align: left;
   margin-top: 2%;
-  padding-left: 20%;
+  padding-left: var(--par-space);
   margin-bottom: 2%;
   line-height: 35px;
   width: 65%;
