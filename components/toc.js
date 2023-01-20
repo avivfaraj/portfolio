@@ -3,7 +3,7 @@ import TocStyles from '/styles/toc.module.css'
 import { useEffect } from "react";
 
 
-export default function TOC() {
+export default function TOC({width = '40%'}) {
 
     /* Thanks to Chris Coyier for the IntersectionObserver and css (toc.module.css) code:
     "Sticky Table of Contents with Scrolling Active States" published on Jan 30, 2020.
@@ -37,7 +37,7 @@ export default function TOC() {
 
   return (
       <>
-    <nav id = "TOC" className={TocStyles['section-nav']}>
+    <nav id = "TOC" className={TocStyles['section-nav']} style={{ '--toc-width': width }}>
         <Script id="my-script">{
           `
             var toc = document.getElementById('TOC');

@@ -4,7 +4,7 @@
   border-right: 1px solid #efefef;
   align-self: start;
   top: 13rem;
-  width: 40%;
+  width: var(--toc-width);
   margin-left: 15px;
   z-index: 100;
 }
@@ -18,7 +18,7 @@
 .section-nav ul {
     list-style-type:none;
     padding-left: 10%;
-    width: 100%;
+    width:90%;
 }
 
 .section-nav ul li {
@@ -30,7 +30,7 @@
   text-decoration: none;
   font-size: 17px;
   line-height: normal;
-  display: block;
+  display: inline-block;
   padding: .125rem 0;
   color: #006666;
   transition: all 50ms ease-in-out;
@@ -47,5 +47,5 @@
 }
 
 .active a{
-    color:blue;
+    color: #e2725b;
 }
