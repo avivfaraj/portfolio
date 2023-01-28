@@ -27,6 +27,8 @@ export default function Page() {
                 </p>
             </section>
 
+            <hr />
+
             <section >
                 <h2 id = "Hardware"> Hardware </h2>
                 <p>
@@ -68,8 +70,9 @@ export default function Page() {
                         </figure>
                     </div>
             </div>
-
             </section>
+
+            <hr />
 
             <section >
                 <h2 id = "Flash"> Flashing OS on SD Card </h2>
@@ -82,6 +85,8 @@ export default function Page() {
                     I recommend using <HoverLink href = {"https://www.balena.io/etcher/"} alt={"balenaEtcher"} />, very easy and quick.
                 </p>
             </section>
+
+            <hr />
 
             <section >
                 <h2 id = "install-os"> Server Installation </h2>
@@ -121,6 +126,8 @@ export default function Page() {
                 </ul>
             </section>
 
+            <hr />
+
             <section >
                 <h2 id = "access"> Accessing Server </h2>
                 <ul>
@@ -136,6 +143,8 @@ export default function Page() {
                     </li>
                 </ul>
             </section>
+
+            <hr />
 
             <section >
                 <h2 id = "performance"> Performance </h2>
@@ -171,7 +180,8 @@ export default function Page() {
                 Instead, better network speeds, as well as greater RAM will probably increase performance. &nbsp;
                 </p>
             </section>
-
+            
+            <hr />
 
             <section >
                 <h2 id = "summary"> Summary </h2>

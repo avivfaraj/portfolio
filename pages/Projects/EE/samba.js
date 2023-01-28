@@ -25,6 +25,8 @@ export default function Page() {
                 </p>
             </section>
 
+            <hr />
+
             <section >
                 <h2 id = "users"> Add a user </h2>
 
@@ -89,6 +91,8 @@ export default function Page() {
                 </ol>
             </section>
 
+            <hr />
+            
             <section>
                 <h2 id = "email"> Email Notification (Optional)</h2>
                 <p>

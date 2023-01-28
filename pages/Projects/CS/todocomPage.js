@@ -25,6 +25,8 @@ export default function Page() {
             </p>
         </section>
 
+        <hr />
+
         <section>
 
 
@@ -39,6 +41,8 @@ export default function Page() {
                 <GIF id = "gen-todo" src="https://user-images.githubusercontent.com/73610201/211216011-27e057b0-0420-4d90-8950-999f75583566.gif" title="General TODO command" />
             </p>
         </section>
+
+        <hr />
 
         <section>
             <h2 id = "types"> Types </h2>
@@ -75,12 +79,16 @@ export default function Page() {
             </p>
         </section>
 
+        <hr />
+
         <section>
             <h2 id="install"> Setup </h2>
 
             <p><code>pip install todocom</code></p>
         </section>
 
+        <hr />
+        
         <section>
             <h2 id="format"> Comments Format </h2>
             <p>

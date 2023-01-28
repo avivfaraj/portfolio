@@ -3,7 +3,7 @@
   display: block;
   border-right: 1px solid #efefef;
   align-self: start;
-  top: 13rem;
+  top: 12%;
   width: var(--toc-width);
   margin-left: 15px;
   z-index: 100;
@@ -12,6 +12,7 @@
 .section-nav span {
     padding-left: 5%;
     color: darkorange;
+    font-size: 70%;
     text-shadow: 1px 2px 0px #000000;
 }
 
@@ -28,7 +29,7 @@
 
 .section-nav a {
   text-decoration: none;
-  font-size: 17px;
+  font-size: 60%;
   line-height: normal;
   display: inline-block;
   padding: .125rem 0;
@@ -38,7 +39,7 @@
 
 .section-nav a:hover,
 .section-nav a:focus {
-  font-size: 22px;
+  font-size: 75%;
   text-decoration: underline;
 }
 
@@ -49,3 +50,11 @@
 .active a{
     color: #e2725b;
 }
+
+@media screen and (max-width: 720px) {
+    .section-nav{
+        display: none;
+    }
+
+}
+

@@ -25,7 +25,7 @@ export default function Page() {
                 </p>
             </section>
 
-                <br />
+                <hr />
 
                 <section>
                     <h2 id = "dataset"> Dataset </h2>
@@ -36,6 +36,8 @@ export default function Page() {
                       Also, there are 4,194 unique authors in this dataset.
                     </p>
                 </section>
+
+                <hr />
 
                 <section>
                     <h2 id = "EDA"> Exploratory Data Analysis (EDA) </h2>
@@ -70,6 +72,8 @@ export default function Page() {
                       Additionally, all 39 rows that are missing both the text and the author will be deleted because there is no content to process in those instances.
                     </p>
                 </section>
+
+                <hr />
 
                 <section>
                     <h2 id = "methods"> Methodology </h2>
@@ -146,6 +150,8 @@ export default function Page() {
                     <p><Gist id="61919f2c3569363eab2a9a19b39d88c8" /></p>
                 </section>
 
+                <hr />
+
                 <section>
                     <h2 id = "ML"> ML Model </h2>
                     <p>
@@ -159,6 +165,7 @@ export default function Page() {
                     </p>
                 </section>
 
+                <hr />
 
                 <section>
                     <h2 id = "results"> Results </h2>
@@ -173,6 +180,8 @@ export default function Page() {
                       F1 score can be viewed as the harmonic mean of precision and recall, thus proving this model’s reliability.
                     </p>
                 </section>
+
+                <hr />
 
                 <section>
                     <h2 id = "conclusions"> Conclusions </h2>
