@@ -35,15 +35,7 @@ export default function Sidebar() {
   return (
     <nav className={Styles.nav}>
     <div className={Styles.profile}>
-      <Image
-              priority
-              src="/images/profile.png"
-              className={Styles.borderCircle}
-              layout={'fixed'}
-              height={138}
-              width={144}
-              alt={name}
-        />
+      <img src = {"/images/profile.png"} className={Styles.borderCircle} />
 
       </div>
       <h1 className={Styles.heading2Xl}>{name}</h1>
