@@ -88,7 +88,7 @@ export default function Page() {
         </section>
 
         <hr />
-        
+
         <section>
             <h2 id="format"> Comments Format </h2>
             <p>
@@ -147,7 +147,7 @@ Page.getLayout = function getLayout(page) {
   return (
     <Layout>
       <Sidebar />
-      <TOC width={"500px"}/>
+      <TOC />
       {page}
 
     </Layout>
