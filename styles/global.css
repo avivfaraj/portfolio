@@ -1,7 +1,7 @@
 :root {
     --nav-pad: 32px;
     --par-space: 14%;
-    --toc-width: 40%;
+    --toc-width: 10%;
 }
 
 #__next {
@@ -49,7 +49,14 @@ section {
   display: block;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  width: 100%;
 }
+
+/* Invisible scrollbar */
+section::-webkit-scrollbar{
+    display:none;
+}
+
 
 section > p{
   text-align: left;

@@ -3,7 +3,7 @@ import TocStyles from '/styles/toc.module.css'
 import { useEffect } from "react";
 
 
-export default function TOC({width = '40%'}) {
+export default function TOC({width = '15%'}) {
 
     /* Thanks to Chris Coyier for the IntersectionObserver and css (toc.module.css) code:
     "Sticky Table of Contents with Scrolling Active States" published on Jan 30, 2020.
@@ -15,6 +15,8 @@ export default function TOC({width = '40%'}) {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 const id = entry.target.getAttribute('id');
+
+                // Temporary fix to prevent this code from running on every single page and raising an error
                 if (document.querySelector(`a[href="#${id}"]`) != null)
                 {
                     if (entry.isIntersecting ) {
