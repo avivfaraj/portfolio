@@ -3,12 +3,22 @@ import HoverLink from '/components/hoverLink'
 
 const steps =[
   {
+    title: <span>Graduated  <HoverLink href = {"https://drexel.edu"} alt = {"Drexel University"} /></span>,
+    description: <p>Graduated Master of Science in Data Science from Drexel University with 4.0 GPA.</p>,
+    start_date: "March 2023",
+  },
+  {
+    title: <span> Data Scientist II at <HoverLink href = {"https://www.usaa.com"} alt = {"USAA"} /></span>,
+    description: <p>Joined USAA as a data scientist.</p>,
+    start_date: "Jan 2023",
+  },
+  {
     title: "Course Assistant",
-    description: <p>CA for Data Acquisition and Pre-Processing at Drexel University</p>,
+    description: <p>CA for Data Acquisition and Pre-Processing at Drexel University.</p>,
     start_date: "Sep 2022",
   },
   {
-    title: "Data Analyst Intern at USAA",
+    title: <span>Data Analyst Intern at <HoverLink href = {"https://www.usaa.com"} alt = {"USAA"} /></span>,
     description: <p>Developed ML classification model during a 10-week internship at USAA, San Antonio.</p>,
     start_date: "Jun 2022",
   },

@@ -30,7 +30,7 @@ https://github.com/Borges53/Timeline/blob/main/components/Timeline/item.module.c
   border-left-width: 3px;
   border-left-style: solid;
   top: 0;
-  height: 45px;
+  /*height: 45px;*/
   position: absolute;
   content: "";
 }
