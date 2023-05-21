@@ -1,6 +1,6 @@
 import Layout from '/components/layout';
 import Sidebar from '/components/sidebar';
-import Styles from '/styles/layout.module.css'
+import Styles from '/styles/layout.module.css';
 
 export default function Index() {
   return (

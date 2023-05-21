@@ -1,6 +1,12 @@
 const projects ={
   ds:[
   {
+    name: "MSDS - Capstone Project",
+    href: "./capstone",
+    desc: "Capstone project (I & II) as part of my Masters in Data Science from Drexel University. Website is hosted directly from GitHub repository using Bootstrap and Tableau JavaScript API.",
+    keywords: "Regression, Random Forest, Clusters, EDA, Tableau"
+  },
+  {
     name: "Fake News Detection",
     href: "./fakeNewsDetectionPage",
     desc: "Classification of news into categories of real and fake based on Natural Language Processing (NLP) in PySpark",
