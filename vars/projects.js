@@ -1,107 +1,109 @@
-const projects ={
-  ds:[
-  {
-    name: "MSDS - Capstone Project",
-    href: "./capstone",
-    desc: "Capstone project (I & II) as part of my Masters in Data Science from Drexel University. Website is hosted directly from GitHub repository using Bootstrap and Tableau JavaScript API.",
-    keywords: "Regression, Random Forest, Clusters, EDA, Tableau"
-  },
-  {
-    name: "Fake News Detection",
-    href: "./fakeNewsDetectionPage",
-    desc: "Classification of news into categories of real and fake based on Natural Language Processing (NLP) in PySpark",
-    keywords: "NLP, Fake News, Classification, Naive Bayes, PySpark"
-  },
-  {
-    name: "NYC Property Sales",
-    href: "https://github.com/avivfaraj/DSCI631-project",
-    desc: "Linear Regression and Random Forest were utilized to predict price of Real Estate properties in New York City",
-    keywords: "Linear Regression, Random Forest, Fake News"
-  },
-  {
-    name: "Retail Store Database",
-    href: "https://github.com/avivfaraj/INFO605-Project",
-    desc: "Designed and implemented a database system for an online retail store. Designed ERD, RI and Relation Schema, and implemented in SQL (Oracle)",
-    keywords: "SQL, ERD, Referential Integrity, Relational Schema"
-  },
-  {
-    name: "Heart Disease Analysis",
-    href: "https://github.com/avivfaraj/DSCI521-project",
-    desc: "Utilized Python libraries such as Pandas to identify symptoms and risk factors of heart disease.",
-    keywords: "Data Analysis, Classification, Pandas, Histogram"
-  },
-  {
-    name: "Floods Visualization",
-    href: "./floods",
-    desc: "A group project as part of MSDS at Drexel University in which Floods data was visualized using Tableau Public in order to gain insights.",
-    keywords: "Information Visualization, Tableau Public, Floods"
-  },
-  {
-    name: "Workflows",
-    href: "./workflows",
-    desc: "Utilized both Orange software and python3 in order to implement clustering of two datasets: MNIST handwritten digits and movies.",
-    keywords: "Orange, Workflows, MNIST digits, clustering, Python3"
-  }],
+const projects = {
+  ds: [
+    {
+      name: "MSDS - Capstone Project",
+      href: "./DS/capstone",
+      desc: "Capstone project (I & II) as part of my Masters in Data Science from Drexel University. Website is hosted directly from GitHub repository using Bootstrap and Tableau JavaScript API.",
+      keywords: "Regression, Random Forest, Clusters, EDA, Tableau",
+    },
+    {
+      name: "Fake News Detection",
+      href: "./DS/fakeNewsDetectionPage",
+      desc: "Classification of news into categories of real and fake based on Natural Language Processing (NLP) in PySpark",
+      keywords: "NLP, Fake News, Classification, Naive Bayes, PySpark",
+    },
+    {
+      name: "NYC Property Sales",
+      href: "https://github.com/avivfaraj/DSCI631-project",
+      desc: "Linear Regression and Random Forest were utilized to predict price of Real Estate properties in New York City",
+      keywords: "Linear Regression, Random Forest, Fake News",
+    },
+    {
+      name: "Retail Store Database",
+      href: "https://github.com/avivfaraj/INFO605-Project",
+      desc: "Designed and implemented a database system for an online retail store. Designed ERD, RI and Relation Schema, and implemented in SQL (Oracle)",
+      keywords: "SQL, ERD, Referential Integrity, Relational Schema",
+    },
+    {
+      name: "Heart Disease Analysis",
+      href: "https://github.com/avivfaraj/DSCI521-project",
+      desc: "Utilized Python libraries such as Pandas to identify symptoms and risk factors of heart disease.",
+      keywords: "Data Analysis, Classification, Pandas, Histogram",
+    },
+    {
+      name: "Floods Visualization",
+      href: "./DS/floods",
+      desc: "A group project as part of MSDS at Drexel University in which Floods data was visualized using Tableau Public in order to gain insights.",
+      keywords: "Information Visualization, Tableau Public, Floods",
+    },
+    {
+      name: "Workflows",
+      href: "./DS/workflows",
+      desc: "Utilized both Orange software and python3 in order to implement clustering of two datasets: MNIST handwritten digits and movies.",
+      keywords: "Orange, Workflows, MNIST digits, clustering, Python3",
+    },
+  ],
 
-  cs:[
-  {
-    name: "TODOCOM",
-    href: "./todocomPage",
-    desc: "Command Line Interface (CLI) program to extract all TODO comments from a file/folder. It also enable to prioritize tasks by simply adding special TODO comments in the code.",
-    keywords: "Python3, CLI, argparse, package"
-  },
-  {
-    name: "Secure SSH Connection",
-    href: "./ssh",
-    desc: "Enabled and configured secure SSH connection to aCloud to access remotley, and to send email notifications when connection is established.",
-    keywords: "Raspbian OS, SSH, Terminal"
-  },
-  {
-    name: "Cash Flow",
-    href: "https://github.com/avivfaraj/money-flow",
-    desc: "An Object Oriented Program (OOP) to Monitor account balance and transactions. Sqlite3 was utilized to store data in a database that was initially designed in ERD. GUI is under development.",
-    keywords: "Python3, OOP, Sqlite3, SQL, ERD, Database"
-  },
-  {
-    name: "Health Tracker",
-    href: "https://github.com/avivfaraj/cs570-health-tracker",
-    desc: "An Object Oriented Program (OOP) written in Java that helps the user to keep track of both calories consumed and workouts done. The program also fetches data from FoodData Central Database (USDA) through their API to get accurate nutrition facts of real products.",
-    keywords: "Java, API, OOP "
-  },
-  {
-    name: "Karp-Rabin Algorithm",
-    href: "./karp_rabin_algorithm",
-    desc: "A research paper that was written as part of CS502 - Data Structures and Algorithms at Drexel University in which Karp-Rabin algorithm was reviewed and implemented in Python3 ",
-    keywords: "Python3, String Matching, Karp-Rabin algorithm"
-  },
-  {
-    name: "Hierholzer Algorithm",
-    href: "./hierholzer_algorithm",
-    desc: "A research paper that was written as part of CS502 - Data Structures and Algorithms at Drexel University in which Hierholzer's algorithm was reviewed",
-    keywords: "Python3, Eulerian Circuit, Eulerian Path, Hierholzer's algorithm, Graph Theory"
-  }],
+  cs: [
+    {
+      name: "TODOCOM",
+      href: "./CS/todocomPage",
+      desc: "Command Line Interface (CLI) program to extract all TODO comments from a file/folder. It also enable to prioritize tasks by simply adding special TODO comments in the code.",
+      keywords: "Python3, CLI, argparse, package",
+    },
+    {
+      name: "Secure SSH Connection",
+      href: "./CS/ssh",
+      desc: "Enabled and configured secure SSH connection to aCloud to access remotley, and to send email notifications when connection is established.",
+      keywords: "Raspbian OS, SSH, Terminal",
+    },
+    {
+      name: "Cash Flow",
+      href: "https://github.com/avivfaraj/money-flow",
+      desc: "An Object Oriented Program (OOP) to Monitor account balance and transactions. Sqlite3 was utilized to store data in a database that was initially designed in ERD. GUI is under development.",
+      keywords: "Python3, OOP, Sqlite3, SQL, ERD, Database",
+    },
+    {
+      name: "Health Tracker",
+      href: "https://github.com/avivfaraj/cs570-health-tracker",
+      desc: "An Object Oriented Program (OOP) written in Java that helps the user to keep track of both calories consumed and workouts done. The program also fetches data from FoodData Central Database (USDA) through their API to get accurate nutrition facts of real products.",
+      keywords: "Java, API, OOP ",
+    },
+    {
+      name: "Karp-Rabin Algorithm",
+      href: "./CS/karp_rabin_algorithm",
+      desc: "A research paper that was written as part of CS502 - Data Structures and Algorithms at Drexel University in which Karp-Rabin algorithm was reviewed and implemented in Python3 ",
+      keywords: "Python3, String Matching, Karp-Rabin algorithm",
+    },
+    {
+      name: "Hierholzer Algorithm",
+      href: "./CS/hierholzer_algorithm",
+      desc: "A research paper that was written as part of CS502 - Data Structures and Algorithms at Drexel University in which Hierholzer's algorithm was reviewed",
+      keywords:
+        "Python3, Eulerian Circuit, Eulerian Path, Hierholzer's algorithm, Graph Theory",
+    },
+  ],
 
-  ee:[
-  {
-    name: "aCloud",
-    href: "./acloud",
-    desc: "Created a SMB (Server Message Block) based storage server using ROC-RK3328-CC (similar to Raspberry Pi), SSH and Samba.",
-    keywords: "SSH, Samba, Cloud, SMB, SBC, GnuPG"
+  ee: [
+    {
+      name: "aCloud",
+      href: "./EE/acloud",
+      desc: "Created a SMB (Server Message Block) based storage server using ROC-RK3328-CC (similar to Raspberry Pi), SSH and Samba.",
+      keywords: "SSH, Samba, Cloud, SMB, SBC, GnuPG",
     },
     {
       name: "Samba Configuration",
-      href: "./samba",
+      href: "./EE/samba",
       desc: "Utilized Samba to share storage (cloud). It was configured to share folders with different users, and to send email notification for better protection.",
-      keywords: "Samba, Cloud, SMB"
-  },
-  {
-    name: "Ultra-fast laser pulse measurement",
-    href: "/publication",
-    desc: "My Capstone project for Physics & Electrical Engineering Bachleor degree in which I created a program in LabVIEW that controls optical components in order to measure ultra-fast laser pulse using autocorrelation.",
-    keywords: "Autocorrelation, femtosecond laser, LabVIEW"
-   }
-  ]
-}
+      keywords: "Samba, Cloud, SMB",
+    },
+    {
+      name: "Ultra-fast laser pulse measurement",
+      href: "/publication",
+      desc: "My Capstone project for Physics & Electrical Engineering Bachleor degree in which I created a program in LabVIEW that controls optical components in order to measure ultra-fast laser pulse using autocorrelation.",
+      keywords: "Autocorrelation, femtosecond laser, LabVIEW",
+    },
+  ],
+};
 
-
-export default projects
+export default projects;
