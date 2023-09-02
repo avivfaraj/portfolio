@@ -1,10 +1,8 @@
-import Script from 'next/script'
-import TocStyles from '/styles/toc.module.css'
+import Script from "next/script";
+import TocStyles from "./toc.module.css";
 import { useEffect } from "react";
 
-
-export default function TOC({width = '15%'}) {
-
+export default function TOC({ width = "15%" }) {
     /* Thanks to Chris Coyier for the IntersectionObserver and css (toc.module.css) code:
     "Sticky Table of Contents with Scrolling Active States" published on Jan 30, 2020.
     https://css-tricks.com/sticky-table-of-contents-with-scrolling-active-states/
@@ -12,36 +10,39 @@ export default function TOC({width = '15%'}) {
     *** Several changes were made to work with NextJS. ***
     */
     useEffect(() => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                const id = entry.target.getAttribute('id');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                const id = entry.target.getAttribute("id");
 
                 // Temporary fix to prevent this code from running on every single page and raising an error
-                if (document.querySelector(`a[href="#${id}"]`) != null)
-                {
-                    if (entry.isIntersecting ) {
-                        document.querySelector(`a[href="#${id}"]`).parentElement.classList.add(`${TocStyles.active}`);
-
+                if (document.querySelector(`a[href="#${id}"]`) != null) {
+                    if (entry.isIntersecting) {
+                        document
+                            .querySelector(`a[href="#${id}"]`)
+                            .parentElement.classList.add(`${TocStyles.active}`);
                     } else {
-                        document.querySelector(`a[href="#${id}"]`).parentElement.classList.remove(`${TocStyles.active}`);
+                        document
+                            .querySelector(`a[href="#${id}"]`)
+                            .parentElement.classList.remove(
+                                `${TocStyles.active}`
+                            );
                     }
                 }
-
             });
         });
-            document.querySelectorAll('h2[id], h4[id]').forEach((header) => {
+        document.querySelectorAll("h2[id], h4[id]").forEach((header) => {
             observer.observe(header);
-            });
+        });
+    }, []);
 
-
-        },
-     []);
-
-  return (
-      <>
-    <nav id = "TOC" className={TocStyles['section-nav']} style={{ '--toc-width': width }}>
-        <Script id="my-script">{
-          `
+    return (
+        <>
+            <nav
+                id="TOC"
+                className={TocStyles["section-nav"]}
+                style={{ "--toc-width": width }}
+            >
+                <Script id="my-script">{`
             var toc = document.getElementById('TOC');
             var header = document.createElement('span');
             header.innerHTML="Table of Contents";
@@ -94,7 +95,7 @@ export default function TOC({width = '15%'}) {
 
             toc.appendChild(unorder_ls);
           `}</Script>
-    </nav>
-    </>
-  )
+            </nav>
+        </>
+    );
 }

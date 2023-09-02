@@ -1,36 +1,7 @@
-import Layout from '/components/layout'
-import Sidebar from '/components/sidebar'
-import Styles from '/styles/grid.module.css'
-import Card from '/components/card'
-import Projects from '/vars/projects'
+import { Fragment } from "react";
 
-export default function DSHome() {
-  return (
-    <section>
-
-        <div className={Styles.gap} />
-
-        <div className={Styles.container}>
-            <h1> Data Science Projects</h1>
-            <div className={Styles.grid}>
-              {Projects["ds"].map(ds =>(
-                <Card {...ds} />
-              ))}
-
-            </div>
-
-        </div>
-
-        <div className={Styles.gap} />
-    </section>
-  )
+function Index() {
+    return <Fragment>coming soon</Fragment>;
 }
 
-DSHome.getLayout = function getLayout(page) {
-  return (
-    <Layout>
-      <Sidebar />
-      {page}
-    </Layout>
-  )
-}
+export default Index;

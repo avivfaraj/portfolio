@@ -1,6 +1,5 @@
-import Link from "next/link";
 import Button from "./button";
-import Styles from "../styles/sidebar.module.css";
+import Styles from "./button.module.css";
 
 export default function ButtonList({ buttons }) {
   return (

@@ -35,32 +35,6 @@
   background-color: lightsteelblue;
 }
 
-.test {
-  height: clac(100vh - var(--nav-pad));
-  display: flex;
-  flex-direction: column;
-  width:  80%;
-  padding: 0% 20%;
-  border-right: 1px dash #eaeaea;
-}
-
-.test > a {
-  text-decoration: none;
-  background-color:  inherit;
-  border-radius: 4px;
-  font-size: 14px;
-  padding: 12% 0%;
-  font-weight: 600;
-  letter-spacing: 0.025em;
-  color: white;
-  text-shadow: 2px 2px 4px #000000;
-  transition: all 0.125s ease;
-}
-
-.test > a:hover {
-  background-color: lightsteelblue;
-}
-
 .content {
   padding: 0 18px;
   display: none;

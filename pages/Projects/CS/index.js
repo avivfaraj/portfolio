@@ -1,31 +1,7 @@
-import Layout from "/components/layout";
-import Sidebar from "/components/sidebar";
-import Styles from "/styles/grid.module.css";
-import Card from "/components/card";
-import Projects from "/vars/projects";
+import { Fragment } from "react";
 
-export default function CSHome() {
-  return (
-    <section>
-      <div className={Styles.gap} />
-
-      <div className={Styles.container}>
-        <h1> Computer Science Projects</h1>
-        <div className={Styles.grid}>
-          {Projects.hasOwnProperty("cs") &&
-            Projects["cs"].map((cs) => <Card {...cs} />)}
-        </div>
-      </div>
-      <div className={Styles.gap} />
-    </section>
-  );
+function Index() {
+    return <Fragment>coming soon</Fragment>;
 }
 
-CSHome.getLayout = function getLayout(page) {
-  return (
-    <Layout>
-      <Sidebar />
-      {page}
-    </Layout>
-  );
-};
+export default Index;
