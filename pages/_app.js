@@ -4,18 +4,15 @@ import "/styles/global.css";
 import Sidebar from "/components/sidebar/sidebar";
 
 function MyApp({ Component, pageProps }) {
-    return (
-        <Layout>
-            <Head>
-                <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1"
-                />
-            </Head>
-            <Sidebar />
-            <Component {...pageProps} />
-        </Layout>
-    );
+  return (
+    <Layout>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      {/* <Sidebar /> */}
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
 
 export default MyApp;

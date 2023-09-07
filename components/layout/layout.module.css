@@ -1,68 +1,8 @@
 .main {
-  display: flex;
-  height: 100vh;
-  max-height: calc(100vh + 35vh);
-  background: #d9d9d9;
-  overflow-y: hidden;
-  width:100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: var(--back-color);
 }
 
-.list{
-  padding-left: 22%;
-  display: table;
-}
 
-.graph{
-  width: 800px;
-  height: 310px;
-}
-
-.performance{
-  width: 850px;
-  height: 100px;
-}
-
-.hardware-pic{
-  width: 350px;
-  height: 500px;
-}
-
-.left{
-    float:left;
-    width: 50%;
-}
-.right{
-    float:right;
-    width: 50%;
-    text-align:center;
-}
-
-.tableImageContainer{
-    text-align: left;
-    margin-top: 2%;
-    width: 70%;
-    padding-left: 15%;
-    margin-bottom: 2%;
-}
-
-.notification{
-  width: 800px;
-  height: 150px;
-}
-
-.accessDeniedImg{
-  width: 800px;
-  height: 50px;
-}
-
-.gap{
-    height:100px;
-}
-
-@media screen and (max-width: 1280px) {
-    .graph, .performance, .notification, .accessDeniedImg{
-      width: 65%;
-      height: 100%;
-    }
-
-}

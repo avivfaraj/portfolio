@@ -5,8 +5,8 @@ https://github.com/Borges53/Timeline/blob/main/components/Timeline/item.module.c
 .main{
     display: block;
     overflow-y: auto;
-    justify-content: left;
-    width:100%;
+    margin-left: 20%;
+    width:90%;
 }
 
 .main > h2{
@@ -17,7 +17,7 @@ https://github.com/Borges53/Timeline/blob/main/components/Timeline/item.module.c
 
 .container-timeline{
   position: relative;
-  width:  60%;
+  width:  100%;
   display: flex;
   flex-direction: column;
   padding-left: 20%;
