@@ -9,24 +9,23 @@ import React, { Fragment, useState } from "react";
 import Styles from "./hover-link.module.css";
 
 function HoverLink(props) {
-    const { href, alt, target = "_blank" } = props;
-    const [isHoveringLink, setIsHoveredLink] = useState(false);
-    const onMouseEnterLink = () => setIsHoveredLink(true);
-    const onMouseLeaveLink = () => setIsHoveredLink(false);
-    return (
-        <Fragment>
-            <Link href={href}>
-                <a
-                    className={Styles.link}
-                    target={target}
-                    onMouseEnter={onMouseEnterLink}
-                    onMouseLeave={onMouseLeaveLink}
-                >
-                    {alt}
-                </a>
-            </Link>
-        </Fragment>
-    );
+  const { href, alt, target = "_blank" } = props;
+  const [isHoveringLink, setIsHoveredLink] = useState(false);
+  const onMouseEnterLink = () => setIsHoveredLink(true);
+  const onMouseLeaveLink = () => setIsHoveredLink(false);
+  return (
+    <Fragment>
+      <Link
+        href={href}
+        target={target}
+        className={Styles.link}
+        onMouseEnter={onMouseEnterLink}
+        onMouseLeave={onMouseLeaveLink}
+      >
+        {alt}
+      </Link>
+    </Fragment>
+  );
 }
 
 export default HoverLink;

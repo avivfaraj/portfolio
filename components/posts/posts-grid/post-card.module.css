@@ -30,6 +30,11 @@ border-radius: 10px 10px 0 0;
 object-fit: cover;
 }
 
+.link{
+    text-decoration: none;
+    color: black;
+}
+
 .content {
 padding: var(--size-4);
 }

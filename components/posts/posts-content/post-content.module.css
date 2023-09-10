@@ -1,0 +1,38 @@
+.content{
+    padding-right: 10%;
+    /* height:100vh; */
+    width: 80%;
+    margin-top: 7%;
+    text-align: left;
+}
+
+.code{
+    width:100%;
+}
+
+.copy{
+    float:right;
+    opacity: 0;
+
+}
+
+.codeblock:hover > .copy{
+    opacity:1;
+    transition: all .5s ease-out;
+}
+
+
+.fig {
+    counter-increment: figureCounter;
+}
+
+.fig .figcap:before{
+    content: "Fig " counter(figureCounter) ": "
+}
+
+@media screen and (max-width: 720px) {
+    .code{
+        font-size: 15px;
+    }
+
+}

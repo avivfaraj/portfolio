@@ -3,6 +3,21 @@
     padding: 0;
     display: flex;
     background-color: var(--back-color);
+    flex-wrap: wrap;
+    flex-flow: row;
 }
 
+.sidebar{
+    flex-grow: 1;
+}
 
+.content{
+    width: 80%;
+}
+.content p{
+    width: 90%;
+}
+
+.content h2{
+    text-align: center;
+}

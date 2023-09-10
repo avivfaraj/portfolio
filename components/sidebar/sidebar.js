@@ -42,8 +42,8 @@ export default function Sidebar() {
 
         <Button id={2} name={"About"} reference={"/about"} />
 
-        <Link key={3} href="">
-          <a onClick={toggleAll}> Projects </a>
+        <Link key={3} href="" onClick={toggleAll}>
+          Projects
         </Link>
         {showAll && <ButtonList buttons={Cards} />}
 

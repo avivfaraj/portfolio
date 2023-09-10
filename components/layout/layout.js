@@ -11,10 +11,10 @@ export default function Layout({ children }) {
         <meta description="Aviv Faraj Portfolio." />
       </Head>
       <main className={Styles.main}>
-        <aside>
+        <aside className={Styles.sidebar}>
           <Sidebar />
         </aside>
-        {children}
+        <div className={Styles.content}>{children}</div>
       </main>
     </Fragment>
   );

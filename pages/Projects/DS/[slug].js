@@ -1,9 +1,8 @@
 import { Fragment } from "react";
 import { getPostData, getPostsFiles } from "/helpers/posts-utils";
 import PostContent from "/components/posts/posts-content/post-content";
-import GithubCorner from "react-github-corner";
 
-function CSPage(props) {
+function DSPage(props) {
   const { post } = props;
   return (
     <Fragment>
@@ -17,7 +16,7 @@ export function getStaticProps(context) {
   const { params } = context;
   const { slug } = params;
 
-  const postData = getPostData(slug, "cs");
+  const postData = getPostData(slug, "ds");
 
   if (!postData) {
     return {
@@ -29,11 +28,12 @@ export function getStaticProps(context) {
     props: {
       post: postData,
     },
+    revalidate: 600,
   };
 }
 
 export function getStaticPaths() {
-  const postFilenames = getPostsFiles("cs");
+  const postFilenames = getPostsFiles("ds");
 
   const slugs = postFilenames.map((fileName) => fileName.replace(/\.md$/, ""));
 
@@ -43,4 +43,4 @@ export function getStaticPaths() {
   };
 }
 
-export default CSPage;
+export default DSPage;

@@ -20,7 +20,7 @@ function Index(props) {
 }
 
 export function getStaticProps() {
-  const featuredPosts = getAllPosts("cs");
+  const featuredPosts = getAllPosts("ds");
 
   return {
     props: {

@@ -13,5 +13,8 @@ body {
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   margin: 0;
   --back-color: #d9d9d9;
+
+
+  counter-reset: figureCounter;
 }
 
