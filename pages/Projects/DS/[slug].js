@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { getPostData, getPostsFiles } from "/helpers/posts-utils";
 import PostContent from "/components/posts/posts-content/post-content";
+import GithubCorner from "react-github-corner";
 
 function DSPage(props) {
   const { post } = props;

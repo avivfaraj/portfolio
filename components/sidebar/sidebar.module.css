@@ -7,8 +7,8 @@
   position: fixed;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 150px;
-  max-width: 150px;
+  width: 30%;
+  max-width: 200px;
   background-color: #006666;
   padding: var(--nav-pad);
   border-right: 1px dash #eaeaea;
@@ -20,13 +20,13 @@
 }
 
 .nav > a {
-  margin: 4% 0;
+  /* margin: 2% 0; */
   text-decoration: none;
   background-color: inherit;
   border-radius: 4px;
-  width: 80%;
+  width: 75%;
   font-size: 14px;
-  padding: 10% 7%;
+  padding: 10% 3%;
   font-weight: 600;
   letter-spacing: 0.025em;
   color: white;
@@ -60,7 +60,7 @@
   line-height: 1.2;
   font-weight: 600;
   letter-spacing: 0.05;
-  margin: -20px 0 10px 0;
+  margin: -20px 0 0 0;
   color: #ffe066;
   text-shadow: 4px 8px 4px #000000;
 
@@ -83,10 +83,14 @@
   height: 28px;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1024px) {
     .nav {
-      width: 20%;
+      max-width: 20%;
       padding-left: 2%;
+    }
+
+    .heading2Xl{
+      margin-top: 25%;
     }
 
     .profile{

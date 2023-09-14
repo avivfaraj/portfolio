@@ -1,13 +1,12 @@
 .content{
-    padding-right: 10%;
-    /* height:100vh; */
-    width: 80%;
+    width: 90%;
     margin-top: 7%;
+    padding-left: 6%;
     text-align: left;
 }
 
-.code{
-    width:100%;
+.codeblock{
+    width:80%;
 }
 
 .copy{
@@ -21,18 +20,29 @@
     transition: all .5s ease-out;
 }
 
+/* Thanks to NotQuiteHere for the figure counter code below.
+https://tamarisk.it/automatically-numbering-figures-in-markdown/
+*/
 
 .fig {
     counter-increment: figureCounter;
 }
 
 .fig .figcap:before{
-    content: "Fig " counter(figureCounter) ": "
+    content: "Figure " counter(figureCounter) ": "
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1024px) {
     .code{
         font-size: 15px;
     }
 
+    .content{
+        padding-left: 18%;
+    }
+
+    .image{
+        width:90%;
+        height: 90%;
+    }
 }

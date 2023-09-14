@@ -1,20 +1,17 @@
-/* .container {
-    box-sizing: border-box;
-    width: 90%;
-} */
-
-/* .test{
-    width: 90%;
-    margin-left: 20%;
-}
-.container h2, .latest h2{
-    text-align: center;
-} */
-
 .big_gap{
     height:125px;
 }
 
 .single_gap{
     height:100px;
+}
+
+.container, .latest {
+    padding-left: 20px;
+ }
+
+@media screen and (max-width: 1024px) {
+    .container, .latest {
+      padding-left: 50px;
+    }
 }

@@ -58,6 +58,7 @@ function PostContent(props) {
               alt={alt}
               width={width}
               height={height}
+              className={Styles.image}
             />
             {hasCaption && (
               <>

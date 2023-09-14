@@ -5,6 +5,7 @@ image: logo.jpeg
 desc: Machine learning program that detect fake news.
 keywords: PySpark, Fake news.
 isFeatured: true
+github: https://github.com/avivfaraj/Fake-News-Detection-PySpark
 ---
 
 

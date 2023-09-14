@@ -2,19 +2,22 @@ import path from "path";
 import matter from "gray-matter";
 import fs from "fs";
 
-const postsDirectory = path.join(process.cwd(), "posts");
-
 export function getPostsFiles(subDir) {
   if (subDir === "cs" || subDir === "ds" || subDir === "ee") {
+    const postsDirectory = path.join(process.cwd(), "posts");
     const subDirectory = path.join(postsDirectory, subDir);
-    return fs.readdirSync(subDirectory);
+    try {
+      return fs.readdirSync(subDirectory);
+    } catch (error) {
+      return;
+    }
   }
-
   return;
 }
 
 export function getPostData(postIdentifier, subDir) {
   const postSlug = postIdentifier.replace(/\.md$/, ""); // removes the file extension
+  const postsDirectory = path.join(process.cwd(), "posts");
   const filePath = path.join(postsDirectory, subDir, `${postSlug}.md`);
   let fileContent;
   try {
@@ -31,7 +34,7 @@ export function getPostData(postIdentifier, subDir) {
 
   const postData = {
     slug: postSlug,
-    field: subDir,
+    field: subDir.toUpperCase(),
     ...data,
     content,
   };
@@ -54,4 +57,29 @@ export function getFeaturedPosts(subDir) {
   const featuredPosts = allPosts.filter((post) => post.isFeatured);
 
   return featuredPosts;
+}
+
+export function getProjects(featured = false) {
+  // const postFiles = getPostsFiles(subDir);
+  let data = [];
+  ["cs", "ds"].map((subDir) => {
+    const postFiles = getPostsFiles(subDir);
+
+    if (postFiles) {
+      const postsArray = postFiles.map((postFile) => {
+        const postData = getPostData(postFile, subDir);
+        if (postData) {
+          return postData;
+        }
+      });
+
+      for (const post of postsArray) {
+        if ((featured && post.isFeatured) || !featured) {
+          data.push(post);
+        }
+      }
+    }
+  });
+
+  return data;
 }

@@ -9,12 +9,12 @@ function LinkedImage(props) {
       {/* Note: NextJS has deprecated <a> within Link, but
                       target="_blank" didn't work, so I had to add <a> */}
       <Image
-        priority
         src={src}
         layout={"fixed"}
         height={height}
         width={width}
         alt={alt}
+        loading="lazy"
       />
     </Link>
   );

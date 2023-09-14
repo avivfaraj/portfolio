@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Styles from "./post-card.module.css";
 import Link from "next/link";
 import Image from "next/legacy/image";
@@ -14,11 +14,11 @@ function PostCard(props) {
 
   const imagePath = `/images/${slug}/${image}`;
 
-  const linkPath = `/Projects/${field.toUpperCase()}/${slug}`;
+  const linkPath = `/Projects/${field}/${slug}`;
 
   return (
     <li>
-      <Link href={linkPath} className={Styles.link}>
+      <Link key={slug} href={linkPath} className={Styles.link}>
         <div className={Styles.card}>
           <div className={Styles.image}>
             <Image

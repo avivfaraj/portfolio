@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import Intro from "/components/home-page/intro";
-import { getAllPosts } from "/helpers/posts-utils";
+import { getProjects } from "/helpers/posts-utils";
 import Head from "next/head";
 
 function Index(props) {
@@ -20,8 +20,7 @@ function Index(props) {
 }
 
 export function getStaticProps() {
-  const featuredPosts = getAllPosts("ds");
-
+  const featuredPosts = getProjects(true);
   return {
     props: {
       projects: featuredPosts,

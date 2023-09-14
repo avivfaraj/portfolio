@@ -8,7 +8,7 @@ const projects = {
     },
     {
       name: "Fake News Detection",
-      href: "./DS/fakeNewsDetectionPage",
+      href: "fakeNewsDetectionPage",
       desc: "Classification of news into categories of real and fake based on Natural Language Processing (NLP) in PySpark",
       keywords: "NLP, Fake News, Classification, Naive Bayes, PySpark",
     },
