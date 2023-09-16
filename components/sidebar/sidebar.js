@@ -9,40 +9,47 @@ const Cards = [
     id: 1,
     name: "Home",
     reference: "/",
+    target: "",
   },
   {
     id: 2,
     name: "About",
     reference: "/about",
+    target: "",
   },
   {
     id: 3,
     name: "Data Science",
     reference: "/Projects/DS/",
+    target: "",
   },
   {
     id: 4,
     name: "Computer Science",
     reference: "/Projects/CS/",
+    target: "",
   },
   {
     id: 5,
     name: "Engineering",
     reference: "/Projects/EE/",
+    target: "",
   },
   {
     id: 6,
     name: "Awards",
-    reference: "/honors-and-awards/",
+    reference: "/honors-and-awards",
+    target: "",
+  },
+  {
+    id: 6,
+    name: "Publication",
+    reference: "http://rdcu.be/b5Vhh",
+    target: "_blank",
   },
 ];
 
 export default function Sidebar() {
-  const [showAll, setShowAll] = useState(false);
-  const toggleAll = () => {
-    setShowAll((val) => !val);
-  };
-
   return (
     <nav className={Styles.nav}>
       <div className={Styles.profile}>

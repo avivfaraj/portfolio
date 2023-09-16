@@ -1,7 +1,23 @@
 import { Fragment } from "react";
+import { getAllPosts } from "/helpers/posts-utils";
+import PostGrid from "/components/posts/posts-grid/grid";
 
-function Index() {
-    return <Fragment>coming soon</Fragment>;
+function DataSciencePage(props) {
+  return (
+    <Fragment>
+      <h1>Data Science Projects</h1>
+      <PostGrid projects={props.projects} />
+    </Fragment>
+  );
 }
 
-export default Index;
+export function getStaticProps() {
+  const csProjects = getAllPosts("ds");
+  return {
+    props: {
+      projects: csProjects,
+    },
+  };
+}
+
+export default DataSciencePage;

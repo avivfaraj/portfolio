@@ -4,14 +4,13 @@ box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 background-color: var(--back-color);
 text-align: center;
 border-radius: 10px;
-transition: width 0.35s, box-shadow 0.35s;
+transition: all 10s;
+
 }
 
 .card:hover{
     width:102%;
-    /* font-size: 25px; */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-
 }
 
 .card:active {
@@ -33,10 +32,7 @@ object-fit: cover;
 .link{
     text-decoration: none;
     color: black;
-}
 
-.content {
-padding: var(--size-4);
 }
 
 .content h3 {
@@ -46,9 +42,4 @@ font-size: var(--size-6);
 
 .content time {
 font-style: italic;
-color: var(--color-grey-300);
-}
-
-.content p {
-line-height: var(--size-6);
 }

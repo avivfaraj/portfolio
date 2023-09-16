@@ -1,12 +1,20 @@
 .content{
     width: 90%;
-    margin-top: 7%;
-    padding-left: 6%;
     text-align: left;
+}
+
+.content p {
+    width: 85%;
+    margin-left: var(--margin-post-12);
+}
+
+.content h4{
+    margin-left: var(--margin-post-12);
 }
 
 .codeblock{
     width:80%;
+    margin-left: var(--margin-post-12);
 }
 
 .copy{
@@ -25,11 +33,20 @@ https://tamarisk.it/automatically-numbering-figures-in-markdown/
 */
 
 .fig {
+    text-align:center;
     counter-increment: figureCounter;
+}
+.fig .figcap{
+    margin-top: 20px;
 }
 
 .fig .figcap:before{
+
     content: "Figure " counter(figureCounter) ": "
+}
+
+.gap{
+    height: var( --gap-bottom-100);
 }
 
 @media screen and (max-width: 1024px) {
