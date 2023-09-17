@@ -1,6 +1,5 @@
 import HoverLink from "/components/hover-link/hover-link";
 import Image from "next/image";
-import Gist from "react-gist";
 import Styles from "/components/posts/posts-content/post-content.module.css";
 import python from "react-syntax-highlighter/dist/cjs/languages/prism/python";
 import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
@@ -52,14 +51,14 @@ const customComponents = {
 
       const text = link.children[0].value;
 
-      if (text === "Gist") {
-        const id = '"' + link.properties.href + '"';
-        return (
-          <p>
-            <Gist id={id} />
-          </p>
-        );
-      }
+      // if (text === "Gist") {
+      //   const id = '"' + link.properties.href + '"';
+      //   return (
+      //     <p>
+      //       <Gist id={id} />
+      //     </p>
+      //   );
+      // }
       if (text.includes("iframe")) {
         const title = text.match(/{title: (.*?)}/)?.pop();
         const ref = link.properties.href;

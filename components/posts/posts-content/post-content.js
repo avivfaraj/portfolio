@@ -10,8 +10,12 @@ function PostContent(props) {
       <header className={Styles.header}>
         <title>{project.title}</title>
       </header>
-
-      <ReactMarkdown children={project.content} components={customComponents} />
+      <div className={Styles.cont}>
+        <ReactMarkdown
+          children={project.content}
+          components={customComponents}
+        />
+      </div>
       <div className={Styles.gap} />
     </article>
   );

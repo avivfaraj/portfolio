@@ -8,4 +8,5 @@ isFeatured: true
 github:
 ---
 
+[iframe {caption: "Karp-Rabin Algorithm"}](/karp-rabin-algorithm/karp_rabin_algorithm_review.pdf)
 

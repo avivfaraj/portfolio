@@ -8,6 +8,11 @@
     margin-left: var(--margin-post-12);
 }
 
+.cont iframe {
+    width: calc(100vw * 0.88);
+    height:calc(100vh * 1.02);
+}
+
 .content h4{
     margin-left: var(--margin-post-12);
 }
@@ -72,5 +77,32 @@ https://tamarisk.it/automatically-numbering-figures-in-markdown/
     .image{
         width:90%;
         height: 90%;
+    }
+
+
+    .cont iframe{
+        margin-left: calc(var(--margin-post-12) * -3);
+        width:85vw;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .code{
+        font-size: 15px;
+    }
+
+    .content{
+        padding-left: 18%;
+    }
+
+    .image{
+        width:90%;
+        height: 90%;
+    }
+
+
+    .cont iframe{
+        margin-left: calc(var(--margin-post-12) * -3.2);
+        width:85vw;
     }
 }
