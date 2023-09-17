@@ -4,8 +4,9 @@ box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 background-color: var(--back-color);
 text-align: center;
 border-radius: 10px;
-transition: all 10s;
-
+overflow:hidden;
+height:425px;
+display: block;
 }
 
 .card:hover{
@@ -32,14 +33,35 @@ object-fit: cover;
 .link{
     text-decoration: none;
     color: black;
-
 }
 
 .content h3 {
 margin: var(--size-2) 0;
-font-size: var(--size-6);
+font-size: 20px;
+
 }
 
 .content time {
 font-style: italic;
+font-size: 18px;
 }
+
+.content{
+    align-items: center;
+    justify-content: center;
+}
+
+.content p{
+    display: -webkit-box;
+    max-width: 300px;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 20px;
+}
+
+.span{
+    font-size: 18px;
+}
+

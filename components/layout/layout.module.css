@@ -6,6 +6,7 @@
     background-color: var(--back-color);
     flex-wrap: wrap;
     flex-flow: row;
+
 }
 
 .sidebar{
@@ -13,7 +14,8 @@
 }
 
 .content{
-    width: 80%;
+    width: 100%;
+    margin-left: 20%;
 }
 .content p{
     width: 90%;
@@ -22,3 +24,28 @@
 .content h1, .content h2{
     text-align: center;
 }
+
+.content iframe{
+    margin-left: -8%;
+    height:102%;
+    margin-top:-0.5%;
+    width:109%;
+}
+
+@media screen and (max-width: 1280px) {
+    .content iframe{
+        width:106%;
+        height:102%;
+        margin-left:-5.5%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .content iframe{
+        width:100%;
+        margin-left:-1%;
+    }
+}
+
+
+

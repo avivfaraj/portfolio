@@ -19,9 +19,9 @@ and in doing so gain power. In this work, I propose ML model to classify news in
 The news dataset was found at [Kaggle](https://www.kaggle.com/c/fake-news/data) contains three attributes (author, title and text) and the target column (0 - reliable, 1 - fake). There are 20,800 rows, each of which describes one article.
 Also, there are 4,194 unique authors in this dataset.
 
-## Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA){#eda}
 
-#### Class Balance
+#### Class Balance {#calss-balance}
 
 A data set that contains significantly more instances of one class than other classes is considered to be im- balanced.
 In such case, a machine learning algorithm might tend toward the major class.
@@ -35,7 +35,7 @@ There are 10,387 (49.93%) reliable articles and 10,413 (50.07%) unreliable artic
 Therefore, our data set is balanced.
 
 
-#### Missing Values
+#### Missing Values {#missing}
 
 Missing values could lead to several errors that might lead to either termination of the program, or unreliable results.
 Therefore, it is required to identify rows that are missing attributes as well as determine a proper way to deal with them.
@@ -48,9 +48,9 @@ To sum up, more than 98% of the rows that are missing one or more attribute are 
 This will be helpful in creating a good baseline for the machine learning model.
 Additionally, all 39 rows that are missing both the text and the author will be deleted because there is no content to process in those instances.
 
-## Methodology
+## Methodology {#methods}
 
-#### Baseline
+#### Baseline {#basline}
 
 A baseline is a guess that could be done easily by anyone,
 and which the machine learning model is trying to improve.

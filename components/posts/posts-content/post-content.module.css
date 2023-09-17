@@ -31,6 +31,17 @@
 /* Thanks to NotQuiteHere for the figure counter code below.
 https://tamarisk.it/automatically-numbering-figures-in-markdown/
 */
+.pdf{
+    width:100%;
+    height:200%;
+}
+
+.gif{
+    counter-increment: gifCounter;
+}
+.test{
+    content: counter(gifCounter);
+}
 
 .fig {
     text-align:center;

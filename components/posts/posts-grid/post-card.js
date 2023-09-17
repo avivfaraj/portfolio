@@ -33,10 +33,10 @@ function PostCard(props) {
             <h3>{title}</h3>
             <time>{formattedDate}</time>
             <p>{desc}</p>
-            <p>
-              <b>Keywords: </b> {keywords}
-            </p>
           </div>
+          <footer className={Styles.span}>
+            <b>Keywords: </b> {keywords}
+          </footer>
         </div>
       </Link>
     </li>

@@ -2,6 +2,17 @@ import HoverLink from "/components/hover-link/hover-link";
 import Image from "next/image";
 import Gist from "react-gist";
 import Styles from "/components/posts/posts-content/post-content.module.css";
+import python from "react-syntax-highlighter/dist/cjs/languages/prism/python";
+import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
+import atomDark from "react-syntax-highlighter/dist/cjs/styles/prism/atom-dark";
+import js from "react-syntax-highlighter/dist/cjs/languages/prism/javascript";
+import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
+import GIF from "/components/gif/gif";
+import { Fragment } from "react";
+
+SyntaxHighlighter.registerLanguage("javascript", js);
+SyntaxHighlighter.registerLanguage("python", python);
+SyntaxHighlighter.registerLanguage("shell", bash);
 
 export function getID(header) {
   const idTag = header.match(/\{\#([a-zA-z0-9\-]+)\}/g);
@@ -49,6 +60,28 @@ const customComponents = {
           </p>
         );
       }
+      if (text.includes("iframe")) {
+        const title = text.match(/{title: (.*?)}/)?.pop();
+        const ref = link.properties.href;
+        return (
+          <Fragment>
+            <iframe
+              src={"/images/" + ref}
+              title={title}
+              className={Styles.pdf}
+            />
+          </Fragment>
+        );
+      }
+
+      if (text.match(/gif/)) {
+        const title = text.match(/{title: (.*?)}/)?.pop();
+        if (title && link.properties.href) {
+          return (
+            <GIF id={Styles.test} src={link.properties.href} title={title} />
+          );
+        }
+      }
     }
 
     /* Thanks to Amir Ardalan for the paragraph code below.
@@ -86,7 +119,13 @@ const customComponents = {
   },
 
   a(props) {
-    return <HoverLink href={props.href} alt={props.children} />;
+    const ref = props.href;
+    const text = props.children;
+
+    if (ref[0] === "#") {
+      return <HoverLink href={ref} alt={text} target="" />;
+    }
+    return <HoverLink href={ref} alt={text} />;
   },
 
   /* Thanks to @conorhastings (https://github.com/conorhastings)
