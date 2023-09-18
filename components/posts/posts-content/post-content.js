@@ -6,17 +6,24 @@ function PostContent(props) {
   const { project } = props;
 
   return (
-    <article className={Styles.content}>
+    <article className={Styles.container}>
       <header className={Styles.header}>
         <title>{project.title}</title>
       </header>
-      <div className={Styles.cont}>
+      <div className={Styles.content}>
         <ReactMarkdown
           children={project.content}
           components={customComponents}
         />
       </div>
-      <div className={Styles.gap} />
+
+      {/* Create gap in the bottom of the page besides pages
+          that contain iframes (articles) */}
+      {!project.content.includes("iframe") ? (
+        <div className={Styles.gap} />
+      ) : (
+        ""
+      )}
     </article>
   );
 }

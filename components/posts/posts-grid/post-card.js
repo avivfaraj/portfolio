@@ -6,11 +6,13 @@ import Image from "next/legacy/image";
 function PostCard(props) {
   const { title, field, desc, date, image, keywords, slug } = props.project;
 
-  const formattedDate = new Date(date).toLocaleDateString("en-US", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
+  // Removed date from cards.
+  // TODO: Add date back and format css files.
+  // const formattedDate = new Date(date).toLocaleDateString("en-US", {
+  //   day: "numeric",
+  //   month: "long",
+  //   year: "numeric",
+  // });
 
   const imagePath = `/images/${slug}/${image}`;
 
@@ -31,7 +33,7 @@ function PostCard(props) {
           </div>
           <div className={Styles.content}>
             <h3>{title}</h3>
-            <time>{formattedDate}</time>
+            {/* <time>{formattedDate}</time> */}
             <p>{desc}</p>
           </div>
           <footer className={Styles.span}>

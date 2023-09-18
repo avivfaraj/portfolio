@@ -62,13 +62,22 @@ const customComponents = {
       if (text.includes("iframe")) {
         const title = text.match(/{title: (.*?)}/)?.pop();
         const ref = link.properties.href;
+
+        if (!ref.includes("https")) {
+          return (
+            <Fragment>
+              <iframe
+                src={"/images/" + ref}
+                title={title}
+                className={Styles.pdf}
+              />
+            </Fragment>
+          );
+        }
+
         return (
           <Fragment>
-            <iframe
-              src={"/images/" + ref}
-              title={title}
-              className={Styles.pdf}
-            />
+            <iframe src={ref} title={title} className={Styles.pdf} />
           </Fragment>
         );
       }

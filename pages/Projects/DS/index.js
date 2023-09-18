@@ -12,10 +12,10 @@ function DataSciencePage(props) {
 }
 
 export function getStaticProps() {
-  const csProjects = getAllPosts("ds");
+  const dsProjects = getAllPosts("ds");
   return {
     props: {
-      projects: csProjects,
+      projects: dsProjects,
     },
   };
 }
