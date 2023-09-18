@@ -25,6 +25,7 @@ export function getPostData(postIdentifier, subDir) {
   } catch (error) {
     return;
   }
+
   if (!fileContent) {
     console.log("no file");
     return;
