@@ -24,6 +24,19 @@ export function getID(header) {
 }
 
 const customComponents = {
+  ol(props) {
+    return <ol className={Styles.customol}>{props.children}</ol>;
+  },
+  li(props) {
+    return (
+      <li className={Styles.customli}>
+        <span className={Styles.licontent}>{props.children}</span>
+      </li>
+    );
+  },
+  ul(props) {
+    return <ul className={Styles.customol}>{props.children}</ul>;
+  },
   h2(props) {
     try {
       const { idTag, header } = getID(props.children[0]);

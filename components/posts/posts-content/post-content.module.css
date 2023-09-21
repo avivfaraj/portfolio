@@ -10,7 +10,7 @@
 
 .content iframe {
     width: 120%;
-    height: 100vh;
+    height: 101vh;
     margin-top: -0.5%;
     margin-left: calc(var(--margin-post-12) * -0.86);
 }
@@ -20,8 +20,9 @@
 }
 
 .codeblock{
-    width:80%;
+    width:88%;
     margin-left: var(--margin-post-12);
+    font-size:16px;
 }
 
 .copy{
@@ -56,6 +57,28 @@ https://tamarisk.it/automatically-numbering-figures-in-markdown/
     height: var( --gap-bottom-100);
 }
 
+/* Credit to A Haworth: https://stackoverflow.com/a/74754230
+   for the cutomol and customli css code below */
+.customol{
+  counter-reset: item;
+  list-style: none;
+  list-style-position: outside;
+  padding: 0;
+  margin: 0;
+}
+
+.customol .customli {
+    position: relative;
+}
+
+.customol .customli::before {
+counter-increment: item;
+content: counter(item) ".";
+position: absolute;
+margin-left:60px;
+
+/* margin-top: 1em; */
+}
 
 @media screen and (max-width: 1024px) {
     .code{
@@ -70,12 +93,12 @@ https://tamarisk.it/automatically-numbering-figures-in-markdown/
 
 
     .content iframe{
-        margin-left: calc(var(--margin-post-12) * -3);
-        width:85vw;
+        margin-left: calc(var(--margin-post-12) * -0.75);
+        width:82vw;
     }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1280px )and (min-width: 1024px){
     .code{
         font-size: 15px;
     }
@@ -91,7 +114,8 @@ https://tamarisk.it/automatically-numbering-figures-in-markdown/
 
 
     .content iframe{
-        margin-left: calc(var(--margin-post-12) * -3.2);
-        width:85vw;
+        margin-left: calc(var(--margin-post-12) * -1.23);
+        width:86vw;
+        height:101vh;
     }
 }

@@ -38,10 +38,3 @@ h1{
   font-style: italic;
   font-family: "Times New Roman", Times, serif;
 }
-
-ul, ol{
-  margin-left: var(--margin-post-12);
-}
-ol li, ul li{
-text-indent: -70px;
-}
