@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout from "/components/layout/layout";
 import "/styles/global.css";
-import Sidebar from "/components/sidebar/sidebar";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function MyApp({ Component, pageProps }) {
   return (

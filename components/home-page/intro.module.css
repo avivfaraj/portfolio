@@ -5,6 +5,10 @@
 .single_gap{
     height:100px;
 }
+.container h2, .latest  h2{
+    margin-left: -10%;
+}
+
 
 .container, .latest {
     padding-left: 20px;

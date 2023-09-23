@@ -33,8 +33,8 @@ body {
 }
 
 h1{
-  margin-top: var(--margin-top-12);
-  margin-bottom: var(--margin-bottom-5);
+  padding-top: var(--margin-top-12);
+  padding-bottom: var(--margin-bottom-5);
   font-style: italic;
   font-family: "Times New Roman", Times, serif;
 }

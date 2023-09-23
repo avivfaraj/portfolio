@@ -1,6 +1,6 @@
 import Styles from "./intro.module.css";
 import GithubCorner from "react-github-corner";
-import PostGrid from "../posts/posts-grid/grid";
+import PostGrid from "/components/posts/posts-grid/grid";
 
 function Intro(props) {
   return (
@@ -13,16 +13,20 @@ function Intro(props) {
       />
       <div className={Styles.container}>
         <h2> Welcome </h2>
-        <p>
-          I am a Data Science Graduate Student at Drexel University. I have a
-          dual Bachelor degree in Physics & Electrical Engineering, and in this
-          portfolio I aim to showcase a wide variety of projects in Data
-          Science, Computer Science, Physics and Engineering.
+        <div style={{ height: "50px" }} />
+        <p style={{ fontSize: "20px" }}>
+          I am a Data Scientist at USAA Federal Savings Bank. I Graduated from
+          Drexel University with Master of Science in Data Science with 4.0 GPA.
+          I also have a dual Bachelor degree in Physics & Electrical
+          Engineering, and in this portfolio I aim to showcase a wide variety of
+          projects in Data Science, Computer Science, Physics and Engineering.
         </p>
       </div>
       <div className={Styles.single_gap} />
       <div className={Styles.latest}>
         <h2>Featured Posts</h2>
+        <div style={{ height: "50px" }} />
+
         <PostGrid projects={props.projects} />
       </div>
       <div className={Styles.single_gap} />

@@ -7,7 +7,7 @@ import atomDark from "react-syntax-highlighter/dist/cjs/styles/prism/atom-dark";
 import js from "react-syntax-highlighter/dist/cjs/languages/prism/javascript";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import GIF from "/components/gif/gif";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 
 SyntaxHighlighter.registerLanguage("javascript", js);
 SyntaxHighlighter.registerLanguage("python", python);
@@ -35,14 +35,19 @@ const customComponents = {
     );
   },
   ul(props) {
+    console.log(props.children[0]);
     return <ul className={Styles.customol}>{props.children}</ul>;
   },
   h2(props) {
     try {
       const { idTag, header } = getID(props.children[0]);
-      return <h2 id={idTag}>{header}</h2>;
+      return (
+        <h2 id={idTag} className={Styles.h2}>
+          {header}
+        </h2>
+      );
     } catch {
-      return <h2>{props.children[0]}</h2>;
+      return <h2 className={Styles.h2}>{props.children[0]}</h2>;
     }
   },
   h4(props) {
@@ -136,7 +141,26 @@ const customComponents = {
         </figure>
       );
     }
+
+    /* Spacers - used by inserting '{gap: value}' in markdown */
+    if (
+      node.children[0].type === "text" &&
+      node.children[0].value.includes("{gap:")
+    ) {
+      const value = node.children[0].value.match(/{gap: (.*?)}/)?.pop();
+      if (value) {
+        return <div style={{ height: value }}></div>;
+      }
+    }
     return <p>{paragraph.children}</p>;
+  },
+
+  hr(props) {
+    return (
+      <div className={Styles.hr}>
+        <hr></hr>
+      </div>
+    );
   },
 
   a(props) {
@@ -154,14 +178,26 @@ const customComponents = {
     */
   code({ node, inline, className, children, ...props }) {
     const match = /language-(\w+)/.exec(className || "");
+    const [lineNumbersOn, setLineNumbers] = useState(false);
     return (
       <div className={Styles.codeblock}>
-        <button
-          className={Styles.copy}
-          onClick={() => navigator.clipboard.writeText(children)}
-        >
-          test
-        </button>
+        <div className={Styles.copy}>
+          <button
+            type="button"
+            className="btn btn-outline-secondary"
+            onClick={() => navigator.clipboard.writeText(children)}
+          >
+            Copy
+          </button>
+          <button
+            type="button"
+            className="btn btn-outline-secondary"
+            style={{ marginLeft: "6px" }}
+            onClick={() => setLineNumbers((val) => !val)}
+          >
+            Show Line Numbers
+          </button>
+        </div>
         {!inline && match ? (
           <SyntaxHighlighter
             {...props}
@@ -169,9 +205,10 @@ const customComponents = {
             style={atomDark}
             language={match[1]}
             className={Styles.code}
+            showLineNumbers={lineNumbersOn}
           />
         ) : (
-          <code {...props} className={Styles.code}>
+          <code {...props} className={Styles.plaincode}>
             {children}
           </code>
         )}
