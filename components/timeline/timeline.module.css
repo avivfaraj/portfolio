@@ -1,0 +1,126 @@
+/*Thanks to Borges53 for the Timeline code:
+https://github.com/Borges53/Timeline/blob/main/components/Timeline/item.module.css
+*/
+
+.main{
+    display: block;
+    overflow-y: auto;
+    width:90%;
+}
+
+.main > h2{
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.container-timeline{
+  position: relative;
+  width:  100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20%;
+
+}
+
+.container-item::before{
+  border-color: rgba(241, 64, 64, 0.8);
+  left: 0;
+  border-left-width: 3px;
+  border-left-style: solid;
+  top: 0;
+  /*height: 45px;*/
+  position: absolute;
+  content: "";
+}
+
+.container-item::after{
+  border-image: linear-gradient(
+    0deg,
+    #C4F3C4 8%,
+    #4F934D 30%,
+    #4F934D 70%,
+    #C4F3C4 100%)
+  5;
+  left: 0;
+  border-left-width: 3px;
+  border-left-style: solid;
+  top: 38px;
+  height: calc(100% - 45px);
+  right: auto;
+  position: absolute;
+  content: "";
+}
+
+.container-item {
+    position: relative;
+    padding-bottom: 35px;
+    color: #e4e1ff;
+    width: 80%;
+    border-radius: 5px;
+    position: relative;
+    padding-left: 1rem;
+  }
+
+.container-content-item {
+    margin-left: 0;
+    border: none;
+    padding-top: 0;
+    padding-right: 25px;
+    padding-left: 25px;
+    max-width: 100%;
+  }
+
+.container-content-header-time {
+    color: #294D28;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.5rem;
+    position: relative;
+    line-height: 20px;
+    text-transform: Capitalize;
+  }
+.container-content-header-background{
+    position: absolute;
+    background-color: #006666;
+    width: 50px;
+    height: 50px;
+    margin-left: -65.5px;
+    margin-top: -12px;
+    border-radius: 50%;
+  }
+
+.container-content-desc-item {
+    display: flex;
+    flex-direction: row;
+    color: rgba(10, 10, 4, 0.7);
+    font-size: 1rem;
+    margin-left: 20px;
+    min-height: 40px;
+  }
+
+.start-date {
+  color: white;
+  font-size: 15px;
+  padding-top: 5px;
+  text-align: center;
+  font-style: italic;
+}
+
+.gap{
+    height:100px;
+}
+
+@media screen and (max-width: 720px) {
+
+    .container-timeline > h2{
+      margin-bottom: 20px;
+    }
+
+    .container-content-header-time {
+      font-size: 1rem;
+    }
+
+    .container-content-header-background {
+      font-size: 75%;
+    }
+}

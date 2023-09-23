@@ -1,0 +1,15 @@
+.grid {
+    list-style: none;
+    margin-top: 0;
+    padding: 0;
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 2rem;
+    align-content: center;
+
+}
+
+.gap{
+    height: var(--gap-bottom-100);
+}

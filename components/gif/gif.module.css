@@ -1,0 +1,22 @@
+.gif{
+    width: 85%;
+    margin-bottom: 3%;
+    margin-left: var(--margin-post-12);
+    margin-top: 1%;
+    border-radius: 25px;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .gif{
+        width: 75%;
+    }
+}
+
+@media screen and (min-height: 1024px) {
+
+    .gif{
+        /* width: 75%; */
+        margin-left: 6%;
+    }
+}

@@ -1,40 +1,31 @@
-import Layout from '/components/layout';
-import Sidebar from '/components/sidebar';
-import Styles from '/styles/grid.module.css';
-import Card from '/components/card';
-import Projects from '/vars/home_proj';
-import GithubCorner from 'react-github-corner';
+import { Fragment } from "react";
+import Intro from "/components/home-page/intro";
+import { getProjects } from "/helpers/posts-utils";
+import Head from "next/head";
 
-export default function Index() {
+function Index(props) {
   return (
-    <section>
-        <div className={Styles.gap} />
-        <div className={Styles.gap} />
-        
-        <GithubCorner href="https://github.com/avivfaraj/portfolio" />
-        <div className={Styles.container}>
-        <h2> Welcome </h2>
-        </div>
-        <p> I am a Data Science Graduate Student at Drexel University. I have a dual Bachelor degree in
-        Physics & Electrical Engineering, and in this portfolio I aim to showcase a wide variety of projects in Data Science,
-        Computer Science, Physics and Engineering.
-        </p>
-        <div className={Styles.container}>
-              <h2> Sample Projects</h2>
-              <div className={Styles.grid}>
-              {Projects.map((proj, index) => (<Card key={index} {...proj} />))}
-              </div>
-        </div>
-        <div className={Styles.gap} />
-    </section>
-  )
+    <Fragment>
+      <Head>
+        <title> Aviv Faraj | Data Scientist</title>
+        <meta
+          name="description"
+          content="Sharing personal projects in programming, data science and electrical engineering"
+        />
+      </Head>
+
+      <Intro projects={props.projects} />
+    </Fragment>
+  );
 }
 
-Index.getLayout = function getLayout(page) {
-  return (
-    <Layout>
-      <Sidebar />
-      {page}
-    </Layout>
-  )
+export function getStaticProps() {
+  const featuredPosts = getProjects(true);
+  return {
+    props: {
+      projects: featuredPosts,
+    },
+  };
 }
+
+export default Index;

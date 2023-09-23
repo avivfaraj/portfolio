@@ -1,0 +1,210 @@
+.container{
+    width: 90%;
+    text-align: left;
+}
+
+.container p {
+    width: 85%;
+    margin-left: var(--margin-post-12);
+}
+
+.content iframe {
+    width: 120%;
+    height: 101vh;
+    margin-top: -0.5%;
+    margin-left: calc(var(--margin-post-12) * -0.86);
+}
+
+.container h4{
+    margin-left: var(--margin-post-12);
+}
+
+.codeblock{
+    width:85%;
+    margin-left: var(--margin-post-12);
+    font-size:16px;
+    border-radius: 25px;
+}
+
+.h2{
+    margin-bottom: 3%;
+}
+
+.hr{
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    align-content: center;
+    padding-left: 15%;
+    width: 80%;
+}
+
+.copy{
+    float:top;
+    opacity: 0;
+    height: 0;
+    transition: all .5s;
+}
+
+
+.plaincode{
+    font-size: 20px;
+}
+
+.codeblock:hover > .copy{
+    opacity:1;
+    height: 40px;
+}
+
+
+/* Thanks to NotQuiteHere for the figure counter code below.
+https://tamarisk.it/automatically-numbering-figures-in-markdown/
+*/
+
+.fig {
+    text-align:center;
+    counter-increment: figureCounter;
+    display: block;
+    align-items: center;
+}
+
+.fig .figcap{
+    margin-top: 20px;
+}
+
+.fig .figcap:before{
+
+    content: "Figure " counter(figureCounter) ": "
+}
+
+.gap{
+    height: var( --gap-bottom-100);
+}
+
+/* Credit to A Haworth: https://stackoverflow.com/a/74754230
+   for the cutomol and customli css code below */
+.customol{
+  counter-reset: item;
+  list-style: none;
+  list-style-position: outside;
+  padding: 0;
+  margin: 0;
+}
+
+.customol .customli {
+    position: relative;
+}
+
+.customol .customli::before {
+counter-increment: item;
+content: counter(item) ".";
+position: absolute;
+margin-left:60px;
+
+}
+
+@media screen and (max-width: 1024px) {
+    .code, .plaincode{
+        font-size: 10px;
+    }
+
+
+    .image{
+        width:90%;
+        height: 90%;
+    }
+
+    .content p{
+        width: 70%;
+        margin-left: 4%;
+
+    }
+
+    .h2{
+        margin-left:-24%;
+    }
+
+
+    .content iframe{
+        margin-left: calc(var(--margin-post-12) * -0.75);
+        width:82vw;
+    }
+
+    .hr{
+        padding-left: 5%;
+    }
+    .codeblock {
+        width:75%;
+    }
+
+    .image{
+        width:60%;
+        height: 60%;
+    }
+
+    .copy button{
+        font-size: 11px;
+        height: 25px;
+        margin-bottom: -10%;
+    }
+}
+
+@media screen and (max-width: 1280px )and (min-width: 1024px){
+    .code, .plaincode{
+        font-size: 15px;
+    }
+
+    .container p {
+        width: 85%;
+    }
+
+    .image{
+        width:80%;
+        height: 80%;
+    }
+
+
+    .content iframe{
+        margin-left: calc(var(--margin-post-12) * -1.23);
+        width:86vw;
+        height:101vh;
+    }
+    .codeblock{
+        width: 80%;
+    }
+}
+
+@media screen and (min-height: 1024px) {
+    .plaincode, .code{
+      font-size: 24px;
+    }
+    .codeblock{
+        margin-left: 6%;
+    }
+
+    .content p{
+        font-size: 24px;
+        margin-left: 6%;
+    }
+
+    .h2{
+        margin-left: -10%;
+    }
+
+  }
+  
+  @media screen and (min-width: 1720px) {
+    .content iframe{
+        margin-left: -12vw;
+        width:91.5vw;
+        height:101vh;
+    }
+
+    .fig{
+        margin-left: -10%;
+    }
+
+    .content h4{
+        margin-left: 6%;
+    }
+}

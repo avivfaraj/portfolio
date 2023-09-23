@@ -1,0 +1,47 @@
+.test {
+  /* height: calc(100vh - var(--nav-pad)); */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  padding: 0% 15%;
+  margin-top: -50%;
+  border-right: 1px dash #eaeaea;
+}
+
+.test > a {
+  text-align:left;
+  text-decoration: none;
+  background-color:  inherit;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 15% 0%;
+  font-weight: 600;
+  line-height: 150%;
+  padding-left: 2px;
+  letter-spacing: 0.025em;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  transition: all 0.125s ease;
+  margin-left: -7%;
+}
+
+.test > a:hover {
+  background-color: lightsteelblue;
+  width: 120%;
+}
+
+@media screen and (min-height: 1024px) {
+  .test{
+    margin-top: -270%;
+  }
+
+}
+
+@media screen and (max-height: 360px) {
+  .test{
+    margin-top: -10%;
+    margin-left: 7%;
+  }
+
+}

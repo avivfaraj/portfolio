@@ -1,9 +1,17 @@
-import '/styles/global.css'
 import Head from "next/head";
+import Layout from "/components/layout/layout";
+import "/styles/global.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function MyApp({ Component, pageProps }) {
-  // Use the layout defined at the page level, if available
-  const getLayout = Component.getLayout || ((page) => page)
-
-  return getLayout(<Component {...pageProps} />)
+function MyApp({ Component, pageProps }) {
+  return (
+    <Layout>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
+
+export default MyApp;
