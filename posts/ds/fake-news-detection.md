@@ -66,8 +66,15 @@ Otherwise, it is labeled as reliable.
 In this case, precision is great since reliable was guessed for the majority of rows in our dataset.
 However, the recall is low (0.56), so the accuracy score is 0.61 and F1 score is 0.77 as shown below:
 
-<!-- [Gist](571ee510d21b70db0d43914605498fd4) -->
-
+```python
+df_dummy = (spark_df
+                .withColumn("prediction", 
+                    when((col("author") == "NaN") | (col("title") == "NaN") , 1.0)
+                    .otherwise(0.0))
+                .withColumn("label", col("label").cast(FloatType()))
+                .select(["label","prediction"])
+            )
+```
 
 ![Dummy Classifier  {400x200} {caption: Dummy Classifier}](fake-news-detection/dummy.png)
 
@@ -115,7 +122,26 @@ This step reduces the dimension of the features3 column.
 For instance, the words ”Playing”, ”Plays”, ”Played”, and ”Play” are all converted to ”play”. Final stage is the Term Frequency (TF) in which the program count the frequency of every term in a document.
 The result of this stage is our features column for the machine learning model.
 
-<!-- <p><Gist id="61919f2c3569363eab2a9a19b39d88c8" /></p> -->
+```python
+# Stage 1 - Tokenizing words
+tokenizer = Tokenizer(inputCol="full_text", outputCol="full_text_words")
+
+# Stage 2 - Removing stop words (using nltk stop words)
+word_remover = StopWordsRemover(stopWords = stopwords_ls,
+                                inputCol = "full_text_words",
+                                outputCol = "full_text_words_clean")
+
+# Stage 3 - Lemmatizing each word using custom lemmatizer class
+stemmer = Stemmer(inputCol = "full_text_words_clean", outputCol = "stemmed")
+
+# Stage 4 - Term Frequency of every word
+tf = CountVectorizer(inputCol="stemmed", outputCol="features", vocabSize = 1e6)
+
+pipeline = Pipeline(stages= [tokenizer, word_remover, stemmer, tf]).fit(train)
+train_df = pipeline.transform(train).select(["full_text","features","label"])
+test_df = pipeline.transform(test).select(["full_text","features","label"])
+```
+
 
 ---
 

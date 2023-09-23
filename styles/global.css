@@ -38,3 +38,10 @@ h1{
   font-style: italic;
   font-family: "Times New Roman", Times, serif;
 }
+
+@media screen and (min-height: 1024px) {
+  h1{
+    margin-left: -10%;
+  }
+  
+}

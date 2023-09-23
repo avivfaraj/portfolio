@@ -173,3 +173,38 @@ margin-left:60px;
         width: 80%;
     }
 }
+
+@media screen and (min-height: 1024px) {
+    .plaincode, .code{
+      font-size: 24px;
+    }
+    .codeblock{
+        margin-left: 6%;
+    }
+
+    .content p{
+        font-size: 24px;
+        margin-left: 6%;
+    }
+
+    .h2{
+        margin-left: -10%;
+    }
+
+  }
+  
+  @media screen and (min-width: 1720px) {
+    .content iframe{
+        margin-left: -12vw;
+        width:91.5vw;
+        height:101vh;
+    }
+
+    .fig{
+        margin-left: -10%;
+    }
+
+    .content h4{
+        margin-left: 6%;
+    }
+}

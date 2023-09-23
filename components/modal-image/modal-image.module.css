@@ -15,3 +15,10 @@
   color: #294D28;
   text-decoration: none;
 }
+
+@media screen and (min-height: 1024px) {
+  .allLinks{
+    margin-top: -170%;
+  }
+  
+}

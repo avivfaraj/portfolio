@@ -7,6 +7,7 @@ border-radius: 10px;
 overflow:hidden;
 height:425px;
 display: block;
+transition: .5s all;
 }
 
 .card:hover{
@@ -16,7 +17,6 @@ display: block;
 
 .card:active {
     border: 4px solid #006666;
-
 }
 
 .image {

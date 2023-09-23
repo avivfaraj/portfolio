@@ -12,3 +12,11 @@
         width: 75%;
     }
 }
+
+@media screen and (min-height: 1024px) {
+
+    .gif{
+        /* width: 75%; */
+        margin-left: 6%;
+    }
+}

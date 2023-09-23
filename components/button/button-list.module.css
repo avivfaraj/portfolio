@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   flex-grow: 1;
   padding: 0% 15%;
+  margin-top: -50%;
   border-right: 1px dash #eaeaea;
 }
 
@@ -28,4 +29,19 @@
 .test > a:hover {
   background-color: lightsteelblue;
   width: 120%;
+}
+
+@media screen and (min-height: 1024px) {
+  .test{
+    margin-top: -270%;
+  }
+
+}
+
+@media screen and (max-height: 360px) {
+  .test{
+    margin-top: -10%;
+    margin-left: 7%;
+  }
+
 }
