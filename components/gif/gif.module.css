@@ -5,3 +5,10 @@
     margin-top: 1%;
     border-radius: 25px;
 }
+
+@media screen and (max-width: 1024px) {
+
+    .gif{
+        width: 75%;
+    }
+}

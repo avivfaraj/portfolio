@@ -20,6 +20,8 @@ There are also [SSH](/Projects/CS/secure-ssh) and [Samba](/Projects/EE/samba) pa
 how to configure secure connection via SSH, enable SMB server using samba,
 and manage users.
 
+***
+
 ## Hardware {#Hardware}
 
 While working on the idea, I planned on using Raspberry Pi 4 with 8GB RAM.
@@ -48,6 +50,7 @@ so I kept searching until I found [ROC-RK3328-CC (Renegade)](https://libre.compu
 
 ![hardware {400x600} {caption: Hardware.}](acloud/hardware.png)
 
+---
 
 ## Flashing OS on SD Card {#Flash}
 
@@ -56,6 +59,7 @@ Ubuntu was very slow, and it never gotten any faster. Also, there were many bugs
 a black screen when using GNOME to share screen. Then I deleted Ubuntu and installed Raspbian, and I was surprised by
 how faster it is than Ubuntu. To flash OS on an SD card, you need to download the [OS Image](https://libre.computer/products/roc-rk3328-cc/) and you can either use terminal (dd command), or a program to flash image on the SD card. I recommend using [balenaEtcher](https://www.balena.io/etcher/), very easy and quick.
 
+---
 
 ## Server Installation {#install-os}
 - **SSH -**
@@ -84,6 +88,7 @@ Simply downloaded Raspberry version (.sh file) and copied it to the server. To s
 create a session and generate temporary username and password. On local machine, go to dws and enter username and password to gain full control.
 To prevent access from hackers, the .sh file was encrypted with password using [GnuPG](https://www.gnupg.org/documentation/manpage.html).
 
+---
 
 ## Accessing Server {#access}
 
@@ -102,6 +107,7 @@ To prevent access from hackers, the .sh file was encrypted with password using [
     will be accessible based on the user that logged in.
 
 
+---
 
 ## Performance {#performance}
 
@@ -118,12 +124,13 @@ However, the same test should be done on another machine connected to the Samba 
 ![read speed samba {600x125} {caption: Read Speed Test Over Internet}](acloud/read_samba.png)
 ![write spped samba {600x125} {caption: Write Speed Test Over Internet}](acloud/write_samba.png)
 
-As can be seen in the images above, performance is worse than the one performed on the server itself. &nbsp;
-Over the internet, read speed is 11,587,146 bytes/second which is ~11 MB/s, and write speed 10,101,961 bytes/second which is ~9.6 MB/s. &nbsp;
-This test shows that both writing to and reading from this server don't max out the read and write speeds of USB3.0. &nbsp;
-With that in mind, choosing NVMe over USB3.0 would probably not affect this test much. &nbsp;
-Instead, better network speeds, as well as greater RAM will probably increase performance. &nbsp;
+As can be seen in the images above, performance is worse than the one performed on the server itself.
+Over the internet, read speed is 11,587,146 bytes/second which is ~11 MB/s, and write speed 10,101,961 bytes/second which is ~9.6 MB/s.
+This test shows that both writing to and reading from this server don't max out the read and write speeds of USB3.0.
+With that in mind, choosing NVMe over USB3.0 would probably not affect this test much.
+Instead, better network speeds, as well as greater RAM will probably increase performance.
 
+---
 
 ## Summary {#summary}
 

@@ -14,10 +14,14 @@ github: https://github.com/avivfaraj/Fake-News-Detection-PySpark
 Fake news is an article contains inaccurate and misleading information aiming to change one's opinion,
 and in doing so gain power. In this work, I propose ML model to classify news into fake and reliable using PySpark
 
+***
+
 ## Dataset {#dataset}
 
 The news dataset was found at [Kaggle](https://www.kaggle.com/c/fake-news/data) contains three attributes (author, title and text) and the target column (0 - reliable, 1 - fake). There are 20,800 rows, each of which describes one article.
 Also, there are 4,194 unique authors in this dataset.
+
+---
 
 ## Exploratory Data Analysis (EDA){#eda}
 
@@ -48,6 +52,9 @@ To sum up, more than 98% of the rows that are missing one or more attribute are 
 This will be helpful in creating a good baseline for the machine learning model.
 Additionally, all 39 rows that are missing both the text and the author will be deleted because there is no content to process in those instances.
 
+
+---
+
 ## Methodology {#methods}
 
 #### Baseline {#basline}
@@ -62,7 +69,7 @@ However, the recall is low (0.56), so the accuracy score is 0.61 and F1 score is
 <!-- [Gist](571ee510d21b70db0d43914605498fd4) -->
 
 
-![Dummy Classifier {caption: Dummy Classifier}](fake-news-detection/dummy.png)
+![Dummy Classifier  {400x200} {caption: Dummy Classifier}](fake-news-detection/dummy.png)
 
 Our goal is to design a pipeline and utilize a machine learning algorithm
 to classify news into either reliable or unreliable,
@@ -110,7 +117,7 @@ The result of this stage is our features column for the machine learning model.
 
 <!-- <p><Gist id="61919f2c3569363eab2a9a19b39d88c8" /></p> -->
 
-
+---
 
 ## ML Model {#ML}
 
@@ -122,6 +129,8 @@ and the last one can handle continuous data 4.
 The features column contains numbers corresponding to the frequency of every term in the dictionary,
 and therefore Multinomial Naive Bayes will be utilized.
 
+---
+
 ## Results  {#results}
 
 ![results {250x200} {caption: Final Results}](fake-news-detection/results.png)
@@ -130,6 +139,8 @@ Precision was down by 0.2 compare to the baseline.
 However, recall was significantly improved from 0.56 to 0.885, and therefore both accuracy and F1 score are much better than in the baseline.
 To be more specific, Accuracy jumped from 0.618 to 0.921 and F1 score changed from 0.723 to 0.927.
 F1 score can be viewed as the harmonic mean of precision and recall, thus proving this model’s reliability.
+
+---
 
 ## Conclusions {#conclusions}
 

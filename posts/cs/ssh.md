@@ -100,11 +100,8 @@ Restart SSH service, then run the following command to connect to server:
 ssh ALIAS_NAME
 ```
 
-{gap: 50px}
 
 ***
-
-{gap: 50px}
 
 ## Email Notification (Optional) {#email}
 

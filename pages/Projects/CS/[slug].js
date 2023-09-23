@@ -2,11 +2,16 @@ import { Fragment } from "react";
 import { getPostData, getPostsFiles } from "/helpers/posts-utils";
 import PostContent from "/components/posts/posts-content/post-content";
 import GithubCorner from "react-github-corner";
+import Head from "next/head";
 
 function CSPage(props) {
   const { post } = props;
   return (
     <Fragment>
+      <Head>
+        <title> Aviv Faraj | Data Scientist</title>
+        <meta name="description" content={post.desc} />
+      </Head>
       {post.github && <GithubCorner href={post.github} />}
       <PostContent project={post} />
     </Fragment>

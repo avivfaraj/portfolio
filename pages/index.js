@@ -10,7 +10,7 @@ function Index(props) {
         <title> Aviv Faraj | Data Scientist</title>
         <meta
           name="description"
-          content="I post projects in programming, data science and electrical engineering"
+          content="Sharing personal projects in programming, data science and electrical engineering"
         />
       </Head>
 

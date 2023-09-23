@@ -29,6 +29,8 @@ todo [folder/file]
 
 [gif {title: "General TODO Command"}](https://user-images.githubusercontent.com/73610201/211216011-27e057b0-0420-4d90-8950-999f75583566.gif)
 
+---
+
 ## Types {#types}
 
 This command will print out all TODO comments that were found in the code, sorted by their prioritization: urgent, soon and regular.
@@ -63,11 +65,15 @@ Finally, there is an option to save the list in a text file (stores as regular t
 todo -o [path/to/sample.txt] [folder/file]
 ```
 
+---
+
 ## Setup {#install}
 
 ```shell
 pip install todocom
 ```
+
+---
 
 ## Comments Format {#format}
 
@@ -80,13 +86,8 @@ Format is flexible and can be lower-case, upper-case or a combination of both. B
                         - TODo:       - TOD0:
 ```
 
-
 In __Urgent__ and __soon__ comments the TODO part is flexible as shown above, but must be followed by either __urgent__ or __soon__ in lower-case:
 ```
                     - TO-DO soon:       - tODo soon:
                     - ToD0 urgent:      - T0-D0 urgent:
 ```
-
-
-
-

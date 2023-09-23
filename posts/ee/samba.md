@@ -16,6 +16,7 @@ github:
 Samba is a free tool for sharing files through network and also enables user management. It comes pre-installed in Raspbian, so installation part is not covered in this guide.
 In this project, I followed [user creation guid (jaunerg)](https://superuser.com/a/1400920) in order to create two users and shared different folders, so one user doesn't affect the other. Additionally, I used bash code (.sh files) similar to the one I used in the [SSH](/Projects/CS/secure-ssh) page in order to send email notifications.
 
+***
 
 ## Add a user {#users}
 
@@ -97,6 +98,8 @@ In this project, I followed [user creation guid (jaunerg)](https://superuser.com
     ```shell
     sudo service smbd restart
     ```
+
+---
 
 ## Email Notification (Optional){#email}
 This step is crucial for monitoring Samba sessions and enhance security.

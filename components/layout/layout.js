@@ -7,8 +7,6 @@ export default function Layout({ children }) {
     <Fragment>
       <Head>
         <title>Aviv Faraj | Data Scientist</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta description="Aviv Faraj Portfolio." />
       </Head>
       <main className={Styles.main}>
         <aside className={Styles.sidebar}>
