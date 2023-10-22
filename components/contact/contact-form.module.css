@@ -1,0 +1,19 @@
+.input{
+    margin: 3% 25%;
+}
+
+.col{
+    width: 90%;
+}
+
+.msg{
+    height: 500px;
+}
+
+.form .actions{
+    margin: 0 45%;
+}
+
+.gap{
+    height: var(--gap-bottom-100);
+}

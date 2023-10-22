@@ -24,6 +24,7 @@
 
 .content h1, .content h2{
     text-align: center;
+    margin-left: -12%;
 }
 
 @media screen and (max-width: 1280px) {

@@ -35,7 +35,6 @@ const customComponents = {
     );
   },
   ul(props) {
-    console.log(props.children[0]);
     return <ul className={Styles.customol}>{props.children}</ul>;
   },
   h2(props) {

@@ -42,10 +42,16 @@ const Cards = [
     target: "",
   },
   {
-    id: 6,
+    id: 7,
     name: "Publication",
     reference: "http://rdcu.be/b5Vhh",
     target: "_blank",
+  },
+  {
+    id: 8,
+    name: "Contact",
+    reference: "/contact",
+    target: "",
   },
 ];
 
