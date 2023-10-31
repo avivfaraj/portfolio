@@ -77,12 +77,6 @@ export default function Sidebar() {
           alt="linkedin"
           href="https://www.linkedin.com/in/aviv-faraj-857278180/"
         />
-
-        <ModalImage
-          src="/images/gmail_logo.png"
-          alt="logo"
-          href="mailto:avivfaraj4@gmail.com"
-        />
       </div>
     </nav>
   );
