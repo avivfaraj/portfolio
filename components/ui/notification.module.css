@@ -1,0 +1,51 @@
+.notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: grey;
+    margin: 0 5.5%;
+    box-shadow: 0 1px 8px rgba(186, 123, 123, 0.2);
+    position: fixed;
+    height: 3rem;
+    bottom: 10px;
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  .notification p {
+    font-size: 24px;
+    margin: auto;
+  }
+
+  .success {
+    background-color: rgb(42, 166, 42);
+    opacity: 0.7;
+    color: white;
+  }
+
+  .error {
+    background-color: red;
+    opacity: 0.7;
+  }
+
+  @media (min-width: 768px) {
+    .notification {
+      width: 40rem;
+      left: calc(50% - 20rem);
+      border-top-right-radius: 6px;
+      border-top-left-radius: 6px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .notification {
+      width: 40%;
+      margin: 0 38%;
+    }
+
+    .notification p {
+      font-size: 15px;
+      margin: auto;
+    }
+  }

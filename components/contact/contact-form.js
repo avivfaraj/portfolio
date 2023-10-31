@@ -1,27 +1,28 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
 import Styles from "./contact-form.module.css";
+import { useRouter } from "next/router";
+import NotificationContext from "../../store/notification-context";
 
 function ContactForm() {
   const fullNameInputRef = useRef();
   const emailInputRef = useRef();
   const contentInputRef = useRef();
+  const router = useRouter();
+  const notificationCtx = useContext(NotificationContext);
 
   const [isEmailValid, setEmailValid] = useState(true);
   const [isName, setName] = useState(true);
   const [isContent, setContent] = useState(true);
 
-  async function submitHandler(event) {
+  function submitHandler(event) {
     event.preventDefault();
 
     const enteredName = fullNameInputRef.current.value;
     const enteredEmail = emailInputRef.current.value;
     const enteredContent = contentInputRef.current.value;
 
-    console.log("Name: " + enteredName);
-    console.log("Email: " + enteredEmail);
-    console.log("Content: " + enteredContent);
-
-    // optional: Add validation
+    // Below validation is optional.
+    // Most browser cover that with the 'required' argument passed to html elements
     if (!enteredEmail.includes("@")) {
       setEmailValid(false);
     } else {
@@ -38,6 +39,47 @@ function ContactForm() {
       setContent(false);
     } else {
       setContent(true);
+    }
+
+    if (isEmailValid && isName && isContent) {
+      fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify({ enteredName, enteredEmail, enteredContent }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          }
+
+          return response.json().then((data) => {
+            throw new Error(data.message || "Something went wrong!");
+          });
+        })
+        .then((data) => {
+          notificationCtx.showNotification({
+            title: "Success!",
+            message: "Message was sent!",
+            status: "success",
+          });
+          router.replace("/");
+        })
+        .catch((error) => {
+          notificationCtx.showNotification({
+            title: "Error!",
+            message: "Something went wrong!",
+            status: "error",
+          });
+        });
+
+      // const data = await response.json();
+      // setResponseCode(response.status);
+      // Ensure Email sent
+      // if (response.status === 200) {
+      //   router.replace("/");
+      // }
     }
   }
 
@@ -123,6 +165,7 @@ function ContactForm() {
           </div>
         </div>
       </form>
+
       <div className={Styles.gap}></div>
     </section>
   );

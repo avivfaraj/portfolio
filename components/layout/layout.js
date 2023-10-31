@@ -1,8 +1,14 @@
 import Head from "next/head";
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import Sidebar from "../sidebar/sidebar";
 import Styles from "./layout.module.css";
+import Notification from "/components/ui/notification";
+import NotificationContext from "/store/notification-context";
+
 export default function Layout({ children }) {
+  const notificationCtx = useContext(NotificationContext);
+
+  const activeNotification = notificationCtx.notification;
   return (
     <Fragment>
       <Head>
@@ -14,6 +20,13 @@ export default function Layout({ children }) {
         </aside>
         <div className={Styles.content}>{children}</div>
       </main>
+      {activeNotification && (
+        <Notification
+          title={activeNotification.title}
+          message={activeNotification.message}
+          status={activeNotification.status}
+        />
+      )}
     </Fragment>
   );
 }

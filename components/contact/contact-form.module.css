@@ -17,3 +17,10 @@
 .gap{
     height: var(--gap-bottom-100);
 }
+
+.alert{
+    margin: 3% 17%;
+    align-self: center;
+    justify-items: center;
+    width: 55%;
+}
