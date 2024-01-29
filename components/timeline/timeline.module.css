@@ -28,7 +28,6 @@ https://github.com/Borges53/Timeline/blob/main/components/Timeline/item.module.c
   border-left-width: 3px;
   border-left-style: solid;
   top: 0;
-  /*height: 45px;*/
   position: absolute;
   content: "";
 }
@@ -49,6 +48,21 @@ https://github.com/Borges53/Timeline/blob/main/components/Timeline/item.module.c
   right: auto;
   position: absolute;
   content: "";
+}
+
+.container-item:last-child::after{
+    border-image: repeating-linear-gradient(
+    0deg,
+    #C4F3C4 10%,
+    transparent 10%,    
+    #4F934D 30%,
+    transparent 40%,
+    #4F934D 10%,
+    transparent 10%,
+    #C4F3C4 10%)
+    5;
+    
+  border-left-width: 3px;
 }
 
 .container-item {

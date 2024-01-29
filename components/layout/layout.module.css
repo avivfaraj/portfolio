@@ -9,14 +9,14 @@
 
 }
 
-/* .sidebar{
+.sidebar{
     flex-grow: 1;
-} */
+} 
 
 .content{
-    width: 100%;
+    width: 80%;
     margin-left: 20%;
-    flex-grow: 1;
+    flex-grow: 2;
 }
 .content p{
     width: 90%;
