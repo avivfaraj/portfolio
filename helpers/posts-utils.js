@@ -83,3 +83,19 @@ export function getProjects(featured = false) {
 
   return data;
 }
+
+export function getKeywordProjects(keyword) {
+  let data = [];
+  if (!keyword) {
+    return;
+  }
+
+  const projectsArray = getProjects(false);
+  for (const post of projectsArray) {
+    if (post.keywords.toLowerCase().includes(keyword.toLowerCase())) {
+      data.push(post);
+    }
+  }
+
+  return data;
+}
