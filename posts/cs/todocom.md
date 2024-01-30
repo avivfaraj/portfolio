@@ -80,14 +80,14 @@ pip install todocom
 There are two types of comments: single line and multi-line. Currently, multi-line comments (docstrings) are only supported in Python, but single line should work for most programming languages.
 
 Format is flexible and can be lower-case, upper-case or a combination of both. Below are several examples:
-```
+```list
                         - TODO:       - ToD0:
                         - To-D0:      - to-do:
                         - TODo:       - TOD0:
 ```
 
 In __Urgent__ and __soon__ comments the TODO part is flexible as shown above, but must be followed by either __urgent__ or __soon__ in lower-case:
-```
+```list
                     - TO-DO soon:       - tODo soon:
                     - ToD0 urgent:      - T0-D0 urgent:
 ```

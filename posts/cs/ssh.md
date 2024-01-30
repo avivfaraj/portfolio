@@ -8,7 +8,7 @@ isFeatured: true
 github:
 ---
 
-# Secure SSH Connection
+# SSH Connection
 
 ## Introduction {#introduction}
 

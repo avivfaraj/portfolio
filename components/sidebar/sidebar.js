@@ -61,9 +61,12 @@ export default function Sidebar() {
       <div className={Styles.profile}>
         <img src={"/images/profile.png"} className={Styles.borderCircle} />
       </div>
-      <h1 className={Styles.heading2Xl}>{name}</h1>
-
-      <ButtonList buttons={Cards} />
+      <div className={Styles.heading2Xl}>
+        <h2>{name}</h2>
+      </div>
+      <div className={Styles.buttons}>
+        <ButtonList buttons={Cards} />
+      </div>
 
       <div className={Styles.banner}>
         <ModalImage

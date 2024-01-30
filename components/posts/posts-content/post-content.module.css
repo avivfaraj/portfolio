@@ -103,6 +103,13 @@ margin-left:60px;
 
 }
 
+.content summary{
+    font-size: 30px;
+    margin-top: 3%;
+    font-weight: bold;
+    margin-left: var(--margin-post-12);
+} 
+
 @media screen and (max-width: 1024px) {
     .code, .plaincode{
         font-size: 10px;
@@ -119,6 +126,9 @@ margin-left:60px;
         margin-left: 4%;
 
     }
+    .content summary{
+        font-size: 25px;
+    } 
 
     .h2{
         margin-left:-24%;
@@ -153,6 +163,10 @@ margin-left:60px;
     .code, .plaincode{
         font-size: 15px;
     }
+
+    .content summary{
+        font-size: 25px;
+    } 
 
     .container p {
         width: 85%;
@@ -202,9 +216,5 @@ margin-left:60px;
 
     .fig{
         margin-left: -10%;
-    }
-
-    .content h4{
-        margin-left: 6%;
     }
 }

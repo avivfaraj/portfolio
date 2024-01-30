@@ -1,17 +1,10 @@
 import HoverLink from "/components/hover-link/hover-link";
 import Image from "next/image";
 import Styles from "/components/posts/posts-content/post-content.module.css";
-import python from "react-syntax-highlighter/dist/cjs/languages/prism/python";
-import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
-import atomDark from "react-syntax-highlighter/dist/cjs/styles/prism/atom-dark";
-import js from "react-syntax-highlighter/dist/cjs/languages/prism/javascript";
-import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import GIF from "/components/gif/gif";
 import { Fragment, useState } from "react";
+import CodeBlock from "/helpers/code-block";
 
-SyntaxHighlighter.registerLanguage("javascript", js);
-SyntaxHighlighter.registerLanguage("python", python);
-SyntaxHighlighter.registerLanguage("shell", bash);
 
 export function getID(header) {
   const idTag = header.match(/\{\#([a-zA-z0-9\-]+)\}/g);
@@ -178,42 +171,37 @@ const customComponents = {
   code({ node, inline, className, children, ...props }) {
     const match = /language-(\w+)/.exec(className || "");
     const [lineNumbersOn, setLineNumbers] = useState(false);
-    return (
-      <div className={Styles.codeblock}>
-        <div className={Styles.copy}>
-          <button
-            type="button"
-            className="btn btn-outline-secondary"
-            onClick={() => navigator.clipboard.writeText(children)}
-          >
-            Copy
-          </button>
-          <button
-            type="button"
-            className="btn btn-outline-secondary"
-            style={{ marginLeft: "6px" }}
-            onClick={() => setLineNumbers((val) => !val)}
-          >
-            Show Line Numbers
-          </button>
-        </div>
-        {!inline && match ? (
-          <SyntaxHighlighter
-            {...props}
-            children={String(children).replace(/\n$/, "")}
-            style={atomDark}
-            language={match[1]}
-            className={Styles.code}
-            showLineNumbers={lineNumbersOn}
+    let header = "";
+    if(match && "input" in match && match["input"] !== match[0]){
+      var words = match["input"].split("-");
+      for (var i =2; i < words.length; i++){
+        header += " " + words[i];
+      }
+
+      return(
+        <details>
+          <summary>{header}</summary>
+
+          <CodeBlock
+              match={match}
+              node={node}
+              inline={inline}
+              className={className}
+              children={children}
+              props={...props} 
           />
-        ) : (
-          <code {...props} className={Styles.plaincode}>
-            {children}
-          </code>
-        )}
-      </div>
-    );
+      
+        </details>
+      );
+    }
+    return <CodeBlock match={match}
+              node={node}
+              inline={inline}
+              className={className}
+              children={children}
+              props={...props}  />
   },
 };
+
 
 export default customComponents;
