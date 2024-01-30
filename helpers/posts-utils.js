@@ -61,9 +61,8 @@ export function getFeaturedPosts(subDir) {
 }
 
 export function getProjects(featured = false) {
-  // const postFiles = getPostsFiles(subDir);
   let data = [];
-  ["cs", "ds"].map((subDir) => {
+  ["cs", "ds", "ee"].map((subDir) => {
     const postFiles = getPostsFiles(subDir);
 
     if (postFiles) {

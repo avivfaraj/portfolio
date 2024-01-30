@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Intro from "/components/home-page/intro";
 import { getProjects } from "/helpers/posts-utils";
 import Head from "next/head";
@@ -21,9 +21,10 @@ function Index(props) {
 
 export function getStaticProps() {
   const featuredPosts = getProjects(true);
+  const randomizePosts = [...featuredPosts].sort(() => 0.5 - Math.random());
   return {
     props: {
-      projects: featuredPosts,
+      projects: randomizePosts,
     },
   };
 }
