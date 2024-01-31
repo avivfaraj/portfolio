@@ -3,7 +3,7 @@ title: "Fake News Detection (PySpark)"
 date: "2022-10-16"
 image: logo.jpeg
 desc: Machine learning program that detect fake news.
-keywords: PySpark, Fake news.
+keywords: PySpark, Fake news, Machine Learning.
 isFeatured: true
 github: https://github.com/avivfaraj/Fake-News-Detection-PySpark
 ---

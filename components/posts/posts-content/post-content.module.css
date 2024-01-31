@@ -8,6 +8,12 @@
     margin-left: var(--margin-post-12);
 }
 
+.keywords{
+    margin-left: var(--margin-post-12);
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
 .content iframe {
     width: 120%;
     height: 101vh;
