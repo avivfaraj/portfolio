@@ -41,6 +41,7 @@ export function getStaticProps(context) {
       slug: slug,
       projects: projectsArray,
     },
+    revalidate: 10000,
   };
 }
 
@@ -62,7 +63,7 @@ export function getStaticPaths() {
 
   return {
     paths: slugs.map((slug) => ({ params: { slug: slug } })),
-    fallback: false,
+    fallback: true,
   };
 }
 
