@@ -28,13 +28,6 @@ export function getStaticProps(context) {
   const { slug } = params;
   const projectsArray = getKeywordProjects(slug);
 
-  // Redirect to 404 if there are no projects with the given keyword.
-  if (projectsArray.length == 0) {
-    return {
-      notFound: true,
-    };
-  }
-
   // Return relevant projects
   return {
     props: {
@@ -63,7 +56,7 @@ export function getStaticPaths() {
 
   return {
     paths: slugs.map((slug) => ({ params: { slug: slug } })),
-    fallback: true,
+    fallback: false,
   };
 }
 
