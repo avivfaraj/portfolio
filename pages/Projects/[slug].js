@@ -40,29 +40,26 @@ export function getStaticProps(context) {
       slug: slug,
       projects: projectsArray,
     },
-    revalidate: 10000,
   };
 }
 
 export function getStaticPaths() {
   let postFilenames = [];
   for (const field of ("cs", "ds", "ee")) {
-    const postFilenames = getPostsFiles(field);
+    let files = getPostsFiles(field);
 
-    const slugs = postFilenames.map((fileName) =>
-      fileName.replace(/\.md$/, ""),
-    );
+    if (files) {
+      let slugs = files.map((fileName) => fileName.replace(/\.md$/, ""));
 
-    for (const slug of slugs) {
-      postFilenames.push(slug);
+      for (const slug of slugs) {
+        postFilenames.push(slug);
+      }
     }
   }
 
-  const slugs = postFilenames.map((fileName) => fileName.replace(/\.md$/, ""));
-
   return {
-    paths: slugs.map((slug) => ({ params: { slug: slug } })),
-    fallback: true,
+    paths: postFilenames.map((slug) => ({ params: { slug: slug } })),
+    fallback: "blocking",
   };
 }
 
