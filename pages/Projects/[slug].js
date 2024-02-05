@@ -1,8 +1,13 @@
 import { Fragment } from "react";
 import { getKeywordProjects, getPostsFiles } from "/helpers/posts-utils";
 import PostGrid from "/components/posts/posts-grid/grid";
+import { useRouter } from "next/router";
 
 function KeywordsPage(props) {
+  const router = useRouter();
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
   return (
     <Fragment>
       <h1 style={{ textTransform: "capitalize" }}>{props.slug} Projects</h1>
@@ -57,7 +62,7 @@ export function getStaticPaths() {
 
   return {
     paths: slugs.map((slug) => ({ params: { slug: slug } })),
-    fallback: "blocking",
+    fallback: false,
   };
 }
 
