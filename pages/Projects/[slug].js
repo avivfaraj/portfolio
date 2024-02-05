@@ -28,6 +28,12 @@ export function getStaticProps(context) {
   const { slug } = params;
   const projectsArray = getKeywordProjects(slug);
 
+  if (!projectsArray) {
+    return {
+      notFound: true,
+    };
+  }
+
   // Return relevant projects
   return {
     props: {
@@ -41,7 +47,7 @@ export function getStaticProps(context) {
 export function getStaticPaths() {
   let postFilenames = [];
   for (const field of ("cs", "ds", "ee")) {
-    const postFilenames = getPostsFiles("cs");
+    const postFilenames = getPostsFiles(field);
 
     const slugs = postFilenames.map((fileName) =>
       fileName.replace(/\.md$/, ""),
@@ -56,7 +62,7 @@ export function getStaticPaths() {
 
   return {
     paths: slugs.map((slug) => ({ params: { slug: slug } })),
-    fallback: true,
+    fallback: "blocking",
   };
 }
 
