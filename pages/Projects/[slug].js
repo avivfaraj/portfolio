@@ -5,7 +5,7 @@ import PostGrid from "/components/posts/posts-grid/grid";
 function KeywordsPage(props) {
   return (
     <Fragment>
-      <h1 style={{ "text-transform": "capitalize" }}>{props.slug} Projects</h1>
+      <h1 style={{ textTransform: "capitalize" }}>{props.slug} Projects</h1>
       <PostGrid projects={props.projects} />
       <footer>
         <i>
