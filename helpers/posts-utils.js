@@ -96,7 +96,7 @@ export function getKeywordProjects(keyword) {
 
   const projectsArray = getProjects(false);
   for (const post of projectsArray) {
-    if (post.keywords.toLowerCase().includes(keyword.toLowerCase())) {
+    if (post.keywords.toLowerCase().includes(keyword.trim().toLowerCase())) {
       data.push(post);
     }
   }

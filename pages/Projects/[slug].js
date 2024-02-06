@@ -59,7 +59,7 @@ export function getStaticPaths() {
 
   return {
     paths: postFilenames.map((slug) => ({ params: { slug: slug } })),
-    fallback: "blocking",
+    fallback: true,
   };
 }
 
