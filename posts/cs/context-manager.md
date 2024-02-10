@@ -4,7 +4,7 @@ date: "2022-10-16"
 image: logo.jpeg
 desc: SQLite class built as context manager to ensure connection to database is closed.
 keywords: Python3.
-isFeatured: false
+isFeatured: true
 github:
 ---
 
@@ -41,7 +41,7 @@ import re
 class SQLiteClient():
 	def __new__(cls,
 				db_name: str = "",
-				timeout: int = 10):
+				timeout:int = 10):
 		"""
 		Ensure parameters are valid prior to memory allocation.
 
@@ -88,7 +88,7 @@ class SQLiteClient():
 		if db_name[-3:] != ".db":
 			self.name += ".db"
 		self.timeout = timeout
-		self.conn = None
+		self.__conn = None
 ```
 Note that the `__new__` method was utilized in order to check wether arguments are valid. If invalid, then an error is raised and memory will not be allocated. Otherwise, memory is allocated for the new object and `__init__` method is invoked to initialize attributes.
 
@@ -103,7 +103,7 @@ At this point an object can be created by simply running `SQLiteClient(arguments
 			#code.....
 		`
 		"""
-		self.conn = sqlite3.connect(self.name,
+		self.__conn = sqlite3.connect(self.name,
 									timeout=self.timeout)
 		
 		return self
@@ -115,9 +115,8 @@ At this point an object can be created by simply running `SQLiteClient(arguments
 		database is always closed at the end of execution,
 		even if an error is raised.
 		"""
-		self.conn.close()
-		self.conn = None
-
+		self.__conn.close()
+		self.__conn = None
 ```
 Note that `__enter__` establish connection to sqlite database using `sqlite3.connect()` method and `__exit__` ensures connection is closed by executing `self.conn.close()` method.
 
@@ -159,12 +158,12 @@ Additional functionality can be added to allow executing CRUD (Create, Read, Upd
 			rows = 1 returns only one row (fetchone) and specific number limit
 			the number of rows (fetchmany).
 		"""
-		cur = self.conn.cursor()
+		cur = self.__conn.cursor()
 		cur.execute(query, parameters)
 		
 		# CREATE, INSERT, UPDATE, DELETE operations
 		if rows == 0:
-			self.conn.commit()
+			self.__conn.commit()
 			return None
 
 		# SELECT - fetchall
@@ -180,6 +179,17 @@ Additional functionality can be added to allow executing CRUD (Create, Read, Upd
 			data_ls = cur.fetchmany(rows)
 
 		return data_ls
+
+	def is_conn(func):
+
+		def check_connection(self, query, parameters, *args, **kwargs):
+
+			if not self.__conn:
+				raise ValueError("No connection to database")
+
+			return func(self, query, parameters, *args, **kwargs)
+
+		return check_connection
 
 	def check_args(func):
 
@@ -224,6 +234,7 @@ Additional functionality can be added to allow executing CRUD (Create, Read, Upd
 
 		return wrapper
 
+	@is_conn
 	@check_args
 	def ciud(self,
 			 query: str,
@@ -245,6 +256,7 @@ Additional functionality can be added to allow executing CRUD (Create, Read, Upd
 
 		self.__exec(query, parameters)
 
+	@is_conn
 	@check_args
 	def read(self,
 		 	 query: str,
@@ -280,13 +292,15 @@ Final code appears in the bottom of this page.
 ```python
 test1 = SQLiteClient("test.db")
 print(test1.name)
-print(test1.conn)
+test1.ciud("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, username text, hash text)",())
 ```
 
 Output:
 ```output
 test.db
-None
+Traceback (most recent call last):
+	...
+ValueError: No Connection to database
 ```
 Object was initialied and name was set to `test.db`, but there is no connection.
 
@@ -328,7 +342,7 @@ import re
 class SQLiteClient():
 	def __new__(cls,
 				db_name: str = "",
-				timeout: int = 10):
+				timeout:int = 10):
 		"""
 		Ensure parameters are valid prior to memory allocation.
 
@@ -375,7 +389,7 @@ class SQLiteClient():
 		if db_name[-3:] != ".db":
 			self.name += ".db"
 		self.timeout = timeout
-		self.conn = None
+		self.__conn = None
 
 	def __enter__(self):
 		"""
@@ -386,7 +400,7 @@ class SQLiteClient():
 			#code.....
 		`
 		"""
-		self.conn = sqlite3.connect(self.name,
+		self.__conn = sqlite3.connect(self.name,
 									timeout=self.timeout)
 		
 		return self
@@ -398,8 +412,8 @@ class SQLiteClient():
 		database is always closed at the end of execution,
 		even if an error is raised.
 		"""
-		self.conn.close()
-		self.conn = None
+		self.__conn.close()
+		self.__conn = None
 
 	def __exec(self,
 		       query: str,
@@ -437,12 +451,12 @@ class SQLiteClient():
 			rows = 1 returns only one row (fetchone) and specific number limit
 			the number of rows (fetchmany).
 		"""
-		cur = self.conn.cursor()
+		cur = self.__conn.cursor()
 		cur.execute(query, parameters)
 		
 		# CREATE, INSERT, UPDATE, DELETE operations
 		if rows == 0:
-			self.conn.commit()
+			self.__conn.commit()
 			return None
 
 		# SELECT - fetchall
@@ -458,6 +472,17 @@ class SQLiteClient():
 			data_ls = cur.fetchmany(rows)
 
 		return data_ls
+
+	def is_conn(func):
+
+		def check_connection(self, query, parameters, *args, **kwargs):
+
+			if not self.__conn:
+				raise ValueError("No connection to database")
+
+			return func(self, query, parameters, *args, **kwargs)
+
+		return check_connection
 
 	def check_args(func):
 
@@ -502,6 +527,7 @@ class SQLiteClient():
 
 		return wrapper
 
+	@is_conn
 	@check_args
 	def ciud(self,
 			 query: str,
@@ -523,6 +549,7 @@ class SQLiteClient():
 
 		self.__exec(query, parameters)
 
+	@is_conn
 	@check_args
 	def read(self,
 		 	 query: str,
