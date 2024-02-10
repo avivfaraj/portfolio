@@ -20,9 +20,10 @@ function ComputerSciencePage(props) {
 
 export function getStaticProps() {
   const csProjects = getAllPosts("cs");
+  const randomizeProjects = [...csProjects].sort(() => 0.5 - Math.random());
   return {
     props: {
-      projects: csProjects,
+      projects: randomizeProjects,
     },
   };
 }
