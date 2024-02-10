@@ -2,8 +2,8 @@
 title: "Capstone"
 date: "2022-10-16"
 image: logo.jpeg
-desc: A group project as part of MSDS at Drexel University in which Floods data was visualized using Tableau Public in order to gain insights.
-keywords: Information Visualization, Tableau Public, Floods
+desc: Opioid overdose analysis and machine learning capstone project as part of MSDS at Drexel University.
+keywords: Information Visualization, Tableau Public, Python3, Machine Learning.
 isFeatured: true
 github: https://github.com/Joeyloganpython/Capstone
 ---
