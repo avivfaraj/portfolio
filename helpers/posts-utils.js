@@ -45,9 +45,11 @@ export function getPostData(postIdentifier, subDir) {
 
 export function getAllPosts(subDir) {
   const postFiles = getPostsFiles(subDir);
-  const allPosts = postFiles.map((postFile) => {
-    return getPostData(postFile, subDir);
-  });
+  const allPosts = postFiles
+    .map((postFile) => {
+      return getPostData(postFile, subDir);
+    })
+    .filter(Boolean);
 
   return allPosts;
 }
@@ -61,9 +63,8 @@ export function getFeaturedPosts(subDir) {
 }
 
 export function getProjects(featured = false) {
-  // const postFiles = getPostsFiles(subDir);
   let data = [];
-  ["cs", "ds"].map((subDir) => {
+  ["cs", "ds", "ee"].map((subDir) => {
     const postFiles = getPostsFiles(subDir);
 
     if (postFiles) {
@@ -75,7 +76,7 @@ export function getProjects(featured = false) {
       });
 
       for (const post of postsArray) {
-        if ((featured && post.isFeatured) || !featured) {
+        if (post && ((featured && post.isFeatured) || !featured)) {
           data.push(post);
         }
       }
