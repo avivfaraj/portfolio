@@ -26,7 +26,6 @@ export function getStaticProps() {
     props: {
       projects: randomizePosts,
     },
-    revalidate: 60,
   };
 }
 
