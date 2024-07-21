@@ -30,6 +30,13 @@ const customComponents = {
   ul(props) {
     return <ul className={Styles.customol}>{props.children}</ul>;
   },
+  h1(props) {
+      return (
+        <h1 className={Styles.h1}>
+          {props.children}
+        </h1>
+      );
+  },
   h2(props) {
     try {
       const { idTag, header } = getID(props.children[0]);
@@ -199,7 +206,7 @@ const customComponents = {
               inline={inline}
               className={className}
               children={children}
-              props={...props}  />
+              props={...props}  />;
   },
 };
 

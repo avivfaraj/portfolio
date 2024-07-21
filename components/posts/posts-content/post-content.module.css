@@ -1,41 +1,36 @@
 .container{
     width: 90%;
     text-align: left;
+    padding-left: var(--margin-post-12);
 }
 
 .container p {
     width: 85%;
-    margin-left: var(--margin-post-12);
 }
 
-.content iframe {
-    width: 120%;
-    height: 101vh;
-    margin-top: -0.5%;
-    margin-left: calc(var(--margin-post-12) * -0.86);
-}
-
-.container h4{
-    margin-left: var(--margin-post-12);
-}
 
 .codeblock{
     width:85%;
-    margin-left: var(--margin-post-12);
     font-size:16px;
     border-radius: 25px;
 }
 
 .h2{
     margin-bottom: 3%;
+    margin-right: 5%;
 }
 
+.h1{
+    padding-top: var(--margin-top-12);
+    padding-bottom: var(--margin-bottom-5);
+    margin-right: 5%;
+    font-style: italic;
+    font-family: "Times New Roman", Times, serif;
+  }
+
 .hr{
-    justify-content: center;
     margin-top: 50px;
     margin-bottom: 50px;
-    align-content: center;
-    padding-left: 15%;
     width: 80%;
 }
 
@@ -45,7 +40,6 @@
     height: 0;
     transition: all .5s;
 }
-
 
 .plaincode{
     font-size: 20px;
@@ -107,7 +101,6 @@ margin-left:60px;
     font-size: 30px;
     margin-top: 3%;
     font-weight: bold;
-    margin-left: var(--margin-post-12);
 } 
 
 @media screen and (max-width: 1024px) {
@@ -123,26 +116,13 @@ margin-left:60px;
 
     .content p{
         width: 70%;
-        margin-left: 4%;
 
     }
     .content summary{
         font-size: 25px;
     } 
 
-    .h2{
-        margin-left:-24%;
-    }
 
-
-    .content iframe{
-        margin-left: calc(var(--margin-post-12) * -0.75);
-        width:82vw;
-    }
-
-    .hr{
-        padding-left: 5%;
-    }
     .codeblock {
         width:75%;
     }
@@ -177,12 +157,6 @@ margin-left:60px;
         height: 80%;
     }
 
-
-    .content iframe{
-        margin-left: calc(var(--margin-post-12) * -1.23);
-        width:86vw;
-        height:101vh;
-    }
     .codeblock{
         width: 80%;
     }
@@ -192,27 +166,14 @@ margin-left:60px;
     .plaincode, .code{
       font-size: 24px;
     }
-    .codeblock{
-        margin-left: 6%;
-    }
 
     .content p{
         font-size: 24px;
-        margin-left: 6%;
-    }
-
-    .h2{
-        margin-left: -10%;
     }
 
   }
   
   @media screen and (min-width: 1720px) {
-    .content iframe{
-        margin-left: -12vw;
-        width:91.5vw;
-        height:101vh;
-    }
 
     .fig{
         margin-left: -10%;
