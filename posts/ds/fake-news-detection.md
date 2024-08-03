@@ -31,7 +31,7 @@ A data set that contains significantly more instances of one class than other cl
 In such case, a machine learning algorithm might tend toward the major class.
 Therefore, our first step is examining class balance as shown below:
 
-![Class Balance {caption: test}](fake-news-detection/dist.png)
+![Class Balance {859×335} {caption: test}](fake-news-detection/dist.png)
 
 
 The figure above shows the distribution of the target column.
@@ -76,7 +76,7 @@ df_dummy = (spark_df
             )
 ```
 
-![Dummy Classifier  {400x200} {caption: Dummy Classifier}](fake-news-detection/dummy.png)
+![Dummy Classifier  {250x200} {caption: Dummy Classifier}](fake-news-detection/dummy.png)
 
 Our goal is to design a pipeline and utilize a machine learning algorithm
 to classify news into either reliable or unreliable,
@@ -88,7 +88,7 @@ Target class is balanced, but there are several rows that are missing at least o
 Therefore, we must clean the data before developing pipeline.
 
 
-![Cleaning Dataset {400x150} {caption: Cleaning Dataset}](fake-news-detection/pre-process.png)
+![Cleaning Dataset {341x81} {caption: Cleaning Dataset}](fake-news-detection/pre-process.png)
 
 First stage is deleting all rows in which the text is shorter than 60 characters.
 The goal is to classify news articles, so instances with little to none content are not part of this study. Next stage deal with rows that do not have a title.
@@ -109,7 +109,7 @@ Document classification requires converting sentences to words, and then to nume
 The process contains 4 stages as described below. They are being executed one after the other
 in order to represent each word as a number (frequency).
 
-![Pipeline {400x150} {caption: Pipeline}](fake-news-detection/pipeline.png)
+![Pipeline {341x81} {caption: Pipeline}](fake-news-detection/pipeline.png)
 
 Tokenizer is the first stage in which the text is being split into a list of words.
 It uses white-space as the splitter, and also convert upper case letters to lower case. Then, stop words were removed from each list of words.

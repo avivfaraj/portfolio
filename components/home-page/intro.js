@@ -12,8 +12,7 @@ function Intro(props) {
                 target="_blank"
             />
             <div className={Styles.container}>
-                <h2> Welcome </h2>
-                <div style={{ height: "50px" }} />
+                <h2 className={Styles.h2}> Welcome </h2>
                 <p style={{ fontSize: "20px" }}>
                     I am a Data Scientist at USAA Federal Savings Bank. I
                     Graduated from Drexel University with Master of Science in
@@ -25,8 +24,7 @@ function Intro(props) {
             </div>
             <div className={Styles.single_gap} />
             <div className={Styles.latest}>
-                <h2>Featured Posts</h2>
-                <div style={{ height: "50px" }} />
+                <h2 className={Styles.h2}>Featured Posts</h2>
 
                 <PostGrid projects={props.projects} />
             </div>

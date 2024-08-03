@@ -3,9 +3,11 @@ import { getPostData, getPostsFiles } from "/helpers/posts-utils";
 import PostContent from "/components/posts/posts-content/post-content";
 import GithubCorner from "react-github-corner";
 import Head from "next/head";
+import PostIframe from "/components/posts/posts-iframe/posts-iframe";
 
 function CSPage(props) {
     const { post } = props;
+    const isIframe = post.content.includes("iframe");
     return (
         <Fragment>
             <Head>
@@ -13,7 +15,11 @@ function CSPage(props) {
                 <meta name="description" content={post.desc} />
             </Head>
             {post.github && <GithubCorner href={post.github} target="_blank" />}
-            <PostContent project={post} />
+            {isIframe ? (
+                <PostIframe project={post} />
+            ) : (
+                <PostContent project={post} />
+            )}
         </Fragment>
     );
 }

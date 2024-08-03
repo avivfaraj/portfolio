@@ -30,20 +30,6 @@ body {
 
   --gap-bottom-100: 100px;
   --gap-bottom-200: 200px;
-}
 
-h1{
-
-  padding-top: var(--margin-top-12);
-  padding-bottom: var(--margin-bottom-5);
-  
-  font-style: italic;
-  font-family: "Times New Roman", Times, serif;
-}
-
-@media screen and (min-height: 1024px) {
-  h1{
-    margin-left: -10%;
-  }
-
+  --padding-left-10-per: 10%;
 }

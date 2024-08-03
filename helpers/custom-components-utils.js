@@ -23,23 +23,34 @@ const customComponents = {
   li(props) {
     return (
       <li className={Styles.customli}>
-        <span className={Styles.licontent}>{props.children}</span>
+        {props.children}
       </li>
     );
   },
   ul(props) {
     return <ul className={Styles.customol}>{props.children}</ul>;
   },
+  h1(props) {
+      return (
+        <div className={Styles.h1}>
+        <h1 >
+          {props.children}
+        </h1>
+        </div>
+      );
+  },
   h2(props) {
     try {
       const { idTag, header } = getID(props.children[0]);
       return (
-        <h2 id={idTag} className={Styles.h2}>
+        <div className={Styles.h2}>
+        <h2 id={idTag}>
           {header}
         </h2>
+        </div>
       );
     } catch {
-      return <h2 className={Styles.h2}>{props.children[0]}</h2>;
+      return <div  className={Styles.h2}><h2 >{props.children[0]}</h2></div>;
     }
   },
   h4(props) {
@@ -117,6 +128,7 @@ const customComponents = {
       const caption = metastring?.match(/{caption: (.*?)}/)?.pop();
 
       return (
+        <div>
         <figure className={Styles.fig}>
           <Image
             src={`/images/${image.properties.src}`}
@@ -125,12 +137,14 @@ const customComponents = {
             height={height}
             className={Styles.image}
           />
+          
           {hasCaption && (
             <>
               <figcaption className={Styles.figcap}>{caption}</figcaption>
             </>
           )}
         </figure>
+        </div>
       );
     }
 
@@ -199,7 +213,7 @@ const customComponents = {
               inline={inline}
               className={className}
               children={children}
-              props={...props}  />
+              props={...props}  />;
   },
 };
 

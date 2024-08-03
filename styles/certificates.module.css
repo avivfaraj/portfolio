@@ -9,14 +9,21 @@
     margin-top: 10%;
 }
 
+.h1{
+
+  padding-top: var(--margin-top-12);
+  padding-left: var(--padding-left-10-per);
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+}
+
 .horizontalCertificate{
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .verticalCertificate{
   display: inline-block;
-  margin: 0% 10%;
-  padding-top: 50px;
+  margin: 5% 10%;
   width:80%
 }
 
