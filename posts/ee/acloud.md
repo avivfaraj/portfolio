@@ -114,15 +114,13 @@ To prevent access from hackers, the .sh file was encrypted with password using [
 Read and write speeds in the server are around 340MB/s and 80MB/s respectivley
 as shown in the images below:
 
-![read speed server {600x125} {caption: Read Speed Test}](acloud/read_speed.png)
-![write spped server {600x125} {caption: Write Speed Test}](acloud/write_speed.png)
+![read speed server {630x81} {caption: Read Speed Test}](acloud/read_speed.png)
 
 
 These test results follows the expected values of read/write speeds of USB3.0.
 However, the same test should be done on another machine connected to the Samba server in order to evaluate speed over the internet.
 
-![read speed samba {600x125} {caption: Read Speed Test Over Internet}](acloud/read_samba.png)
-![write spped samba {600x125} {caption: Write Speed Test Over Internet}](acloud/write_samba.png)
+![write spped samba {604x78} {caption: Write Speed Test Over Internet}](acloud/write_samba.png)
 
 As can be seen in the images above, performance is worse than the one performed on the server itself.
 Over the internet, read speed is 11,587,146 bytes/second which is ~11 MB/s, and write speed 10,101,961 bytes/second which is ~9.6 MB/s.
