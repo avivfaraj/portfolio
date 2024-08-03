@@ -5,25 +5,25 @@
 }
 
 .container p {
-    width: 85%;
+    width: 80%;
 }
 
 
 .codeblock{
-    width:85%;
+    width:80%;
     font-size:16px;
     border-radius: 25px;
 }
 
 .h2{
     margin-bottom: 3%;
-    margin-right: 5%;
+    width: 86%;
 }
 
 .h1{
     padding-top: var(--margin-top-12);
     padding-bottom: var(--margin-bottom-5);
-    margin-right: 5%;
+    width: 86%;
     font-style: italic;
     font-family: "Times New Roman", Times, serif;
   }
@@ -51,6 +51,7 @@
 }
 
 
+
 /* Thanks to NotQuiteHere for the figure counter code below.
 https://tamarisk.it/automatically-numbering-figures-in-markdown/
 */
@@ -59,7 +60,9 @@ https://tamarisk.it/automatically-numbering-figures-in-markdown/
     text-align:center;
     counter-increment: figureCounter;
     display: block;
-    align-items: center;
+    align-content: center;
+    width: 80%;
+
 }
 
 .fig .figcap{
@@ -79,22 +82,12 @@ https://tamarisk.it/automatically-numbering-figures-in-markdown/
    for the cutomol and customli css code below */
 .customol{
   counter-reset: item;
-  list-style: none;
-  list-style-position: outside;
-  padding: 0;
-  margin: 0;
+
+
 }
 
 .customol .customli {
     position: relative;
-}
-
-.customol .customli::before {
-counter-increment: item;
-content: counter(item) ".";
-position: absolute;
-margin-left:60px;
-
 }
 
 .content summary{
@@ -107,7 +100,6 @@ margin-left:60px;
     .code, .plaincode{
         font-size: 10px;
     }
-
 
     .image{
         width:90%;
@@ -125,11 +117,6 @@ margin-left:60px;
 
     .codeblock {
         width:75%;
-    }
-
-    .image{
-        width:60%;
-        height: 60%;
     }
 
     .copy button{
@@ -152,11 +139,6 @@ margin-left:60px;
         width: 85%;
     }
 
-    .image{
-        width:80%;
-        height: 80%;
-    }
-
     .codeblock{
         width: 80%;
     }
@@ -172,10 +154,4 @@ margin-left:60px;
     }
 
   }
-  
-  @media screen and (min-width: 1720px) {
 
-    .fig{
-        margin-left: -10%;
-    }
-}
