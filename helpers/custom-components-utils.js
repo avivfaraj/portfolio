@@ -107,7 +107,7 @@ const customComponents = {
         const title = text.match(/{title: (.*?)}/)?.pop();
         if (title && link.properties.href) {
           return (
-            <GIF id={Styles.test} src={link.properties.href} title={title} />
+              <GIF src={link.properties.href} title={title} />
           );
         }
       }
