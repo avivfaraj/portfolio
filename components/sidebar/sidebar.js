@@ -78,6 +78,10 @@ export default function Sidebar() {
           src="/images/gitlab-logo-500.png"
           alt="gitlab"
           href="https://gitlab.com/avivfaraj"
+          short_height="32"
+          short_width="36"
+          long_height="36"
+          long_width="40"
         />
         <ModalImage
           src="/images/linkedin_26px.png"
