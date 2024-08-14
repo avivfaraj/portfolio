@@ -1,5 +1,4 @@
 /* Credit to https://bryce.io/gitlab-corners/ */
-
 .gitlab-corner-wrapper{
 	overflow:hidden;
 	width:100px;
@@ -9,7 +8,7 @@
 	right:0}
 
 .gitlab-corner{
-	position:absolute;
+	position:fixed;
 	top:-16px;
 	right:-50px;
 	transform:rotate(45deg);

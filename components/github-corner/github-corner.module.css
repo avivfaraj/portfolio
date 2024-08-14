@@ -1,4 +1,9 @@
 /* Credit to https://tholman.com/github-corners/ */
+.github-corner{
+	top: 0;
+	right: 0;
+	position: fixed
+}
 .github-corner:hover .octo-arm{
 	animation:octocat-wave 560ms ease-in-out
 }
