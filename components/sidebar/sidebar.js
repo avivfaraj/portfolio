@@ -74,7 +74,11 @@ export default function Sidebar() {
           alt="github"
           href="https://github.com/avivfaraj"
         />
-
+        <ModalImage
+          src="/images/gitlab-logo-500.png"
+          alt="gitlab"
+          href="https://gitlab.com/avivfaraj"
+        />
         <ModalImage
           src="/images/linkedin_26px.png"
           alt="linkedin"
