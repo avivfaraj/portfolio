@@ -5,7 +5,7 @@ image: logo.jpeg
 desc: SQLite class built as context manager to ensure connection to database is closed.
 keywords: Python3.
 isFeatured: true
-github:
+gitlab: https://gitlab.com/avivfaraj/pytest-mocking-examples/-/blob/main/mocking/src/sql.py?ref_type=heads
 ---
 
 # Context Manager in Python
@@ -17,7 +17,7 @@ In this project a SQLite client was built as a context manager to ensure resourc
 
 ## Background {#background}
 
-One can open a file using `file = open(file_path, 'r')`, run some analysis and then close the file `file.close()`. This way works, but could be wasteful if an error is raised. If it is just a small file, it might not waste much memory/CPU, but for other tools, such as selenium driver, it could be bad. 
+One can open a file using `file = open(file_path, 'r')`, run some analysis and then close the file `file.close()`. This way works, but could be wasteful if an error is raised. If it is just a small file, it might not waste much memory/CPU, but for other tools, such as selenium driver, it could be bad.
 
 Best practice is to utilize with clause:
 ```python
@@ -105,7 +105,7 @@ At this point an object can be created by simply running `SQLiteClient(arguments
 		"""
 		self.__conn = sqlite3.connect(self.name,
 									timeout=self.timeout)
-		
+
 		return self
 
 	def __exit__(self, exc_type, exc_val, exc_tb):
@@ -160,7 +160,7 @@ Additional functionality can be added to allow executing CRUD (Create, Read, Upd
 		"""
 		cur = self.__conn.cursor()
 		cur.execute(query, parameters)
-		
+
 		# CREATE, INSERT, UPDATE, DELETE operations
 		if rows == 0:
 			self.__conn.commit()
@@ -203,7 +203,7 @@ Additional functionality can be added to allow executing CRUD (Create, Read, Upd
 				raise TypeError("Parameters variable must be a tuple!")
 
 			# Number of variables checks
-			# Number of ? in query vs. length of parameters 
+			# Number of ? in query vs. length of parameters
 			variables = re.findall('\?', query)
 			if len(variables) > len(parameters):
 				raise ValueError("Some variables are missing!")
@@ -310,16 +310,16 @@ Object was initialied and name was set to `test.db`, but there is no connection.
 with SQLiteClient("another_test") as client:
 	# Create table 'users' with columns: username, hash
 	client.ciud("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, username text, hash text)",())
-	
+
 	# Insert values
 	client.ciud("INSERT INTO users VALUES (NULL,?,?)",("Test 1", "a"))
 	client.ciud("INSERT INTO users VALUES (NULL,?,?)",("Test 2", "b"))
 	client.ciud("INSERT INTO users VALUES (NULL,?,?)",("Test 3", "c"))
-	
+
 	# Read all columns and all rows
 	print(client.read("SELECT * FROM users", (), rows = -1))
 
-	# Read all columns of the first 2 rows. 
+	# Read all columns of the first 2 rows.
 	print(client.read("SELECT * FROM users",(), rows= 2))
 ```
 A database file (another_test.db) was created in the current working directory, and the output of the `SELECT` statements appears below
@@ -402,7 +402,7 @@ class SQLiteClient():
 		"""
 		self.__conn = sqlite3.connect(self.name,
 									timeout=self.timeout)
-		
+
 		return self
 
 	def __exit__(self, exc_type, exc_val, exc_tb):
@@ -453,7 +453,7 @@ class SQLiteClient():
 		"""
 		cur = self.__conn.cursor()
 		cur.execute(query, parameters)
-		
+
 		# CREATE, INSERT, UPDATE, DELETE operations
 		if rows == 0:
 			self.__conn.commit()
@@ -496,7 +496,7 @@ class SQLiteClient():
 				raise TypeError("Parameters variable must be a tuple!")
 
 			# Number of variables checks
-			# Number of ? in query vs. length of parameters 
+			# Number of ? in query vs. length of parameters
 			variables = re.findall('\?', query)
 			if len(variables) > len(parameters):
 				raise ValueError("Some variables are missing!")
