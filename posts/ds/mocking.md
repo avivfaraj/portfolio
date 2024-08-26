@@ -249,12 +249,14 @@ def test_a():
 
 ## Example
 
-A test class was developed for the SQLiteClient, and can be viewed in [gitlab repository](https://gitlab.com/avivfaraj/pytest-mocking-examples/-/blob/main/mocking/test/test_sql.py?ref_type=heads). Coverage report was printed as part of the pipeline, and it shows 100% coverage.
+A test class was developed for the SQLiteClient, and can be viewed in the [gitlab repository](https://gitlab.com/avivfaraj/pytest-mocking-examples/-/blob/main/mocking/test/test_sql.py?ref_type=heads). Coverage report was printed as part of the pipeline, and it shows 100% coverage:
+
+![Coverage Report {450x139} {caption: Coverage Report}](mocking/coverage-report.png)
 
 To create & print coverage report simply run the following commands:
 
 ```bash
-python3 -m pytest --cov-report=html --cov=mocking/src
+python3 -m pytest --cov-report=html --cov=PATH_TO_SOURCE_FOLDER
 python3 -m coverage report -m
 ```
 
