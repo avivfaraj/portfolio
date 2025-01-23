@@ -16,6 +16,17 @@ export function getID(header) {
   return;
 }
 
+export function parseStyleString(styleString) {
+  const styleObject = {};
+  styleString.split(';').forEach((rule) => {
+    const [key, value] = rule.split(':').map((str) => str.trim());
+    if (key && value) {
+      styleObject[key] = value;
+    }
+  });
+  return styleObject;
+}
+
 const customComponents = {
   ol(props) {
     return <ol className={Styles.customol}>{props.children}</ol>;
@@ -82,6 +93,12 @@ const customComponents = {
       // }
       if (text.includes("iframe")) {
         const title = text.match(/{title: (.*?)}/)?.pop();
+        const style = text.match(/{style: {(.*?)}}/)?.pop();
+        let styleObject = {};
+        if (style){
+          styleObject = parseStyleString(style);
+        }
+
         const ref = link.properties.href;
 
         if (!ref.includes("https")) {
@@ -90,7 +107,6 @@ const customComponents = {
               <iframe
                 src={"/images/" + ref}
                 title={title}
-                className={Styles.pdf}
               />
             </Fragment>
           );
@@ -98,7 +114,7 @@ const customComponents = {
 
         return (
           <Fragment>
-            <iframe src={ref} title={title} className={Styles.pdf} />
+            <iframe src={ref} title={title} style={styleObject} />
           </Fragment>
         );
       }
@@ -137,7 +153,7 @@ const customComponents = {
             height={height}
             className={Styles.image}
           />
-          
+
           {hasCaption && (
             <>
               <figcaption className={Styles.figcap}>{caption}</figcaption>
@@ -202,9 +218,9 @@ const customComponents = {
               inline={inline}
               className={className}
               children={children}
-              props={...props} 
+              props={...props}
           />
-      
+
         </details>
       );
     }

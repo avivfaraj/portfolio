@@ -94,7 +94,7 @@ https://tamarisk.it/automatically-numbering-figures-in-markdown/
     font-size: 30px;
     margin-top: 3%;
     font-weight: bold;
-} 
+}
 
 @media screen and (max-width: 1024px) {
     .code, .plaincode{
@@ -112,7 +112,7 @@ https://tamarisk.it/automatically-numbering-figures-in-markdown/
     }
     .content summary{
         font-size: 25px;
-    } 
+    }
 
 
     .codeblock {
@@ -133,7 +133,7 @@ https://tamarisk.it/automatically-numbering-figures-in-markdown/
 
     .content summary{
         font-size: 25px;
-    } 
+    }
 
     .container p {
         width: 85%;
