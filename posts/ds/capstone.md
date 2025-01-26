@@ -8,4 +8,4 @@ isFeatured: true
 github: https://github.com/Joeyloganpython/Capstone
 ---
 
-[iframe {title: "MSDS - Capstone Project"} {style: {margin-left: 4.5%;height:100vw;}}](https://joeyloganpython.github.io/Capstone/)
+[iframe {title: "MSDS - Capstone Project"}](https://joeyloganpython.github.io/Capstone/)

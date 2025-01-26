@@ -8,4 +8,4 @@ isFeatured: true
 gitlab: https://gitlab.com/avivfaraj/weather-alerts
 ---
 
-[iframe {title: "Weather Alerts"} {style: {margin-left: 5%;}}](https://avivfaraj.gitlab.io/weather-alerts/)
+[iframe {title: "Weather Alerts"}](https://avivfaraj.gitlab.io/weather-alerts/)

@@ -94,6 +94,7 @@ const customComponents = {
       if (text.includes("iframe")) {
         const title = text.match(/{title: (.*?)}/)?.pop();
         const style = text.match(/{style: {(.*?)}}/)?.pop();
+
         let styleObject = {};
         if (style){
           styleObject = parseStyleString(style);
@@ -114,7 +115,7 @@ const customComponents = {
 
         return (
           <Fragment>
-            <iframe src={ref} title={title} style={styleObject} />
+            <iframe src={ref} title={title} style={styleObject} className={Styles.iframe_webpage}/>
           </Fragment>
         );
       }

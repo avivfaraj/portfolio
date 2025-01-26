@@ -1,3 +1,8 @@
+.container p{
+    margin-left: 10%;
+    width: 80%;
+}
+
 .big_gap{
     height:125px;
 }
@@ -5,17 +10,20 @@
 .single_gap{
     height:100px;
 }
-.container h2, .latest  h2{
-    margin-left: -14%;
-}
 
 
-.container, .latest {
-    padding-left: 20px;
+.footer{
+    margin-left:15%;
 }
+
+.latest {
+    margin-left: -8%;
+    width: 90%;
+}
+
 
 .h2{
-
+    margin-left: 40%;
     margin-bottom: var(--margin-bottom-5);
     font-style: italic;
     font-family: "Times New Roman", Times, serif;

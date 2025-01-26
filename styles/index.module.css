@@ -1,8 +1,14 @@
 .h1{
+  text-align: center;
+  margin-left: 25%;
 
   margin-top: var(--margin-top-12);
   margin-bottom: var(--margin-bottom-5);
-  
+
   font-style: italic;
   font-family: "Times New Roman", Times, serif;
+}
+
+.footer{
+  margin-left: 20%;
 }

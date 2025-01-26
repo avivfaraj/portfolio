@@ -1,5 +1,15 @@
+/* Re-work this css file.
+   Need to figure out why margin-left percentages
+   are so high in order to get it in the middle*/
+.contact{
+    margin-left: 100%;
+    width: 90%;
+}
+
+
 .input{
-    margin: 3% 25%;
+    width: 300%;
+    margin: 7% 25%;
 }
 
 .col{
@@ -10,8 +20,14 @@
     height: 500px;
 }
 
+.form{
+    padding-top: 10%;
+    width: 100%;
+    margin-left: 10%;
+}
 .form .actions{
-    margin: 0 45%;
+
+    margin-left: 140%;
 }
 
 .gap{
@@ -27,9 +43,17 @@
 
 .h1{
 
-    margin-top: var(--margin-top-12);
+    margin-left: 120%;
+    margin-top: 50%;
     margin-bottom: var(--margin-bottom-5);
-    
+
     font-style: italic;
     font-family: "Times New Roman", Times, serif;
   }
+
+  @media screen and (max-width: 1024px) {
+    .contact{
+        margin-left: 10%;
+        width: 50%;
+    }
+}
