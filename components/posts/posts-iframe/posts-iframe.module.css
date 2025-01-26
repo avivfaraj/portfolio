@@ -1,10 +1,21 @@
 
-.frame{
-    margin-left: -13%;
-    height:95vh;
+.frame iframe{
+    width: 80vw;
+    height:100vh;
 }
 
-.frame iframe{
-    width: 90vw;
-        height:99vh;
+
+
+@media screen and (min-width: 1080px) and (max-width: 1600px){
+    .frame iframe{
+        width: 86vw;
+    }
+
+}
+
+@media screen and (min-width: 1601px) and (max-width: 1900px){
+    .frame iframe{
+        width: 89vw;
+    }
+
 }

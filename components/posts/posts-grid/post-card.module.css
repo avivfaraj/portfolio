@@ -65,3 +65,15 @@ font-size: 18px;
     font-size: 14px;
 }
 
+
+@media screen and (max-width: 720px){
+    .card{
+        margin-left: -20%;
+        transform: scale(0.7, 0.7);
+        margin-top: -35%;
+    }
+
+    .card:hover{
+        transform: scale(0.75, 0.75);
+    }
+}

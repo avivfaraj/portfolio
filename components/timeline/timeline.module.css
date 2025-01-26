@@ -11,6 +11,7 @@ https://github.com/Borges53/Timeline/blob/main/components/Timeline/item.module.c
 .main > h2{
     margin-top: 10%;
     margin-bottom: 5%;
+    margin-left: 35%;
 }
 
 .container-timeline{
@@ -54,14 +55,14 @@ https://github.com/Borges53/Timeline/blob/main/components/Timeline/item.module.c
     border-image: repeating-linear-gradient(
     0deg,
     #C4F3C4 10%,
-    transparent 10%,    
+    transparent 10%,
     #4F934D 30%,
     transparent 40%,
     #4F934D 10%,
     transparent 10%,
     #C4F3C4 10%)
     5;
-    
+
   border-left-width: 3px;
 }
 

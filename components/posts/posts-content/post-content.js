@@ -1,10 +1,13 @@
 import ReactMarkdown from "react-markdown";
 import Styles from "./post-content.module.css";
 import customComponents from "/helpers/custom-components-utils";
+import { useState, useEffect } from 'react';
+
+
 
 function PostContent(props) {
     const { project } = props;
-
+    
     return (
         <article className={Styles.container}>
             <header>
