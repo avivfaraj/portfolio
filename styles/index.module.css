@@ -12,3 +12,12 @@
 .footer{
   margin-left: 20%;
 }
+
+@media screen and (max-width: 720px){
+  .h1{
+    margin-bottom: 25%;
+  }
+  .footer{
+    margin-top: -20%;
+  }
+}
