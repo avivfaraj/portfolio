@@ -10,7 +10,7 @@ SyntaxHighlighter.registerLanguage("javascript", js);
 SyntaxHighlighter.registerLanguage("python", python);
 SyntaxHighlighter.registerLanguage("shell", bash);
 
-function CodeBlock({ match, node, inline, className, children, props }) {
+function CodeBlock({ match, inline, children, filename, props }) {
   const [lineNumbersOn, setLineNumbers] = useState(false);
   const [isUnique, setIsUnique] = useState(false);
   useEffect(() => {
@@ -46,7 +46,9 @@ function CodeBlock({ match, node, inline, className, children, props }) {
             </button>
           </div>
         ) : null}
+        {filename && <span className={Styles.filename} >Filename: {filename}</span>}
         {!inline && match && !isUnique ? (
+
           <SyntaxHighlighter
             {...props}
             children={String(children).replace(/\n$/, "")}

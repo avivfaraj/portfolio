@@ -332,7 +332,7 @@ Output:
 
 
 
-```python-Final-Code
+```python {"title": "Final Code"}
 '''SQLite client'''
 import sqlite3
 from typing import Tuple, Any, List, Optional

@@ -135,7 +135,7 @@ This step is crucial for monitoring SSH sessions and enhance security. The sessi
   sudo nano send_email.sh
   ```
   This code will send the email using the curl command:
-  ```shell
+  ```shell {"filename": "send_email.sh"}
   curl -s -o /dev/null --ssl-reqd \
         --url "smtps://smtp.gmail.com:465" \
         --user "${SENDER_EMAIL}:${EMAIL_PASSWORD}" \

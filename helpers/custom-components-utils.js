@@ -202,23 +202,26 @@ const customComponents = {
   code({ node, inline, className, children, ...props }) {
     const match = /language-(\w+)/.exec(className || "");
     const [lineNumbersOn, setLineNumbers] = useState(false);
-    let header = "";
-    if(match && "input" in match && match["input"] !== match[0]){
-      var words = match["input"].split("-");
-      for (var i =2; i < words.length; i++){
-        header += " " + words[i];
-      }
+    console.log(node);
+    let title = "";
+    let filename = "";
+    if (node.hasOwnProperty('data')){
+      const meta = JSON.parse(node.data?.meta || {});
+      title = meta.title || '';
+      filename = meta.filename || '';
+      console.log(title);
+    }
 
+    if(title){
       return(
         <details>
-          <summary>{header}</summary>
+          <summary>{title}</summary>
 
           <CodeBlock
               match={match}
-              node={node}
               inline={inline}
-              className={className}
               children={children}
+              filename={filename}
               props={...props}
           />
 
@@ -230,6 +233,7 @@ const customComponents = {
               inline={inline}
               className={className}
               children={children}
+              filename={filename}
               props={...props}  />;
   },
 };
