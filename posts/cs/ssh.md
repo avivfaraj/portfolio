@@ -118,9 +118,9 @@ This step is crucial for monitoring SSH sessions and enhance security. The sessi
   ```
   This is the template of the email. You can change it according to your needs.
   ```shell
-  echo 'From: ssh-connection &lt;sender_email&gt;\n'\
-          'To: avivfaraj &lt;receiver_email&gt;\n'\
-          'Subject: ssh connection established\n\n'\
+  echo "From: ssh-connection &lt;${SENDER_EMAIL}&gt;\n"\
+          "To: avivfaraj &lt;${RECEIVER_EMAIL}&gt;\n"\
+          "Subject: ssh connection established\n\n"\
           $1 	> ~/.ssh/mail.txt
   ```
   This file will create the email_template (mail.txt) inside the .ssh directory. Note that $1 means first parameter sent while executing file.
@@ -137,15 +137,14 @@ This step is crucial for monitoring SSH sessions and enhance security. The sessi
   This code will send the email using the curl command:
   ```shell
   curl -s -o /dev/null --ssl-reqd \
-        --url 'smtps://smtp.gmail.com:465' \
-        --user 'SENDER_EMAIL:PASSWORD' \
-        --mail-from 'SENDER_EMAIL' \
-        --mail-rcpt 'RECEIVER_EMAIL' \
+        --url "smtps://smtp.gmail.com:465" \
+        --user "${SENDER_EMAIL}:${EMAIL_PASSWORD}" \
+        --mail-from "${SENDER_EMAIL}" \
+        --mail-rcpt "${RECEIVER_EMAIL}" \
         --upload-file ~/.ssh/mail.txt
   ```
-  Replace SENDER_EMAIL and RECEIVER_EMAIL with email addresses. Also, the PASSWORD should be replaced with the app password.
+  `SENDER_EMAIL`, `RECEIVER_EMAIL` and `EMAIL_PASSWORD` are all environment variables and should be defined prior to execution.
   The -s -o /dev/null options are utilized for silent execution meaning there will be no output in terminal.
-  **Note:** It is a better practice to use envorinment variables in the code, so instead of writing sensitive information such as password in the file, it is better to read a variable that is defined locally. However, I tried to do so, and it didn't read the variable at all, so login was denied.
 
 - Create rc file that will execute the above .sh programs and send an email for every connection:
   ```shell
