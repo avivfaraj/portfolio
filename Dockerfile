@@ -7,6 +7,7 @@ EXPOSE 3000
 FROM base as builder
 WORKDIR /app
 COPY . .
+RUN npm ci
 RUN npm run build
 
 
