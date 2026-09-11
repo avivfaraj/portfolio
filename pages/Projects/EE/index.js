@@ -1,7 +1,7 @@
 import { Fragment } from "react";
-import { getAllPosts } from "../../helpers/posts-utils";
-import PostGrid from "../../components/posts/posts-grid/grid";
-import Styles from "../../styles/index.module.css";
+import { getAllPosts } from "../../../helpers/posts-utils";
+import PostGrid from "../../../components/posts/posts-grid/grid";
+import Styles from "../../../styles/index.module.css";
 
 function DataSciencePage(props) {
     return (
