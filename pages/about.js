@@ -2,9 +2,9 @@
 https://github.com/Borges53/Timeline/blob/main/components/Timeline/index.js
 */
 
-import Items from "/vars/about_timeline";
-import Item from "/components/timeline/timeline-item";
-import Styles from "/components/timeline/timeline.module.css";
+import Items from "../vars/about_timeline";
+import Item from "../components/timeline/timeline-item";
+import Styles from "../components/timeline/timeline.module.css";
 
 function About() {
     return (

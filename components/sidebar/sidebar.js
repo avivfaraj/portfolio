@@ -1,7 +1,7 @@
 import Styles from "./sidebar.module.css";
 import React, { useState } from "react";
-import ButtonList from "/components/button/buttonList";
-import ModalImage from "/components/modal-image/modal-image";
+import ButtonList from "../button/buttonList";
+import ModalImage from "../modal-image/modal-image";
 
 const name = "Aviv Faraj";
 const Cards = [

@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import Intro from "/components/home-page/intro";
-import { getProjects } from "/helpers/posts-utils";
+import Intro from "../components/home-page/intro";
+import { getProjects } from "../helpers/posts-utils";
 import Head from "next/head";
 
 function Index(props) {

@@ -1,4 +1,4 @@
-import HoverLink from "/components/hover-link/hover-link";
+import HoverLink from "../components/hover-link/hover-link";
 
 const steps = [
     {

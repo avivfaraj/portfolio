@@ -2,8 +2,8 @@ import Head from "next/head";
 import { Fragment, useContext } from "react";
 import Sidebar from "../sidebar/sidebar";
 import Styles from "./layout.module.css";
-import Notification from "/components/ui/notification";
-import NotificationContext from "/store/notification-context";
+import Notification from "../ui/notification";
+import NotificationContext from "../../store/notification-context";
 
 export default function Layout({ children }) {
   const notificationCtx = useContext(NotificationContext);

@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Layout from "/components/layout/layout";
+import Layout from "../components/layout/layout";
 import { NotificationContextProvider } from "../store/notification-context";
-import "/styles/global.css";
+import "../styles/global.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Analytics } from "@vercel/analytics/react";
 

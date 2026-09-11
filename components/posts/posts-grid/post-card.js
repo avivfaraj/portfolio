@@ -1,7 +1,7 @@
 import React from "react";
 import Styles from "./post-card.module.css";
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 function PostCard(props) {
   const { title, field, desc, date, image, keywords, slug } = props.project;
@@ -28,7 +28,7 @@ function PostCard(props) {
               alt={title}
               width={100}
               height={65}
-              layout="responsive"
+              style={{ width: "100%", height: "auto" }}
             />
           </div>
           <div className={Styles.content}>

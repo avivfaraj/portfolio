@@ -1,6 +1,6 @@
-import Styles from "/styles/certificates.module.css";
-import HonorsArray from "/vars/honors";
-import LinkedImage from "/components/linked-image/linked-image";
+import Styles from "../styles/certificates.module.css";
+import HonorsArray from "../vars/honors";
+import LinkedImage from "../components/linked-image/linked-image";
 
 function Honors() {
     const name = "Aviv Faraj";

@@ -6,7 +6,7 @@
 
 import React, { useState } from "react";
 import styles from "./modal-image.module.css";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 
 function ModalImage(props) {

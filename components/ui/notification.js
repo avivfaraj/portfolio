@@ -6,7 +6,7 @@ https://github.com/mschwarzmueller/nextjs-course-code/blob/09-context/components
 import { useContext } from "react";
 
 import classes from "./notification.module.css";
-import NotificationContext from "/store/notification-context";
+import NotificationContext from "../../store/notification-context";
 
 function Notification(props) {
   const notificationCtx = useContext(NotificationContext);

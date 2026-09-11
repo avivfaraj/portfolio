@@ -1,6 +1,6 @@
 import Styles from "./intro.module.css";
-import GithubCorner from "/components/github-corner/github-corner";
-import PostGrid from "/components/posts/posts-grid/grid";
+import GithubCorner from "../github-corner/github-corner";
+import PostGrid from "../posts/posts-grid/grid";
 
 function Intro(props) {
   return (
