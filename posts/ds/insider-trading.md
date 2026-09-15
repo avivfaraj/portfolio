@@ -8,4 +8,4 @@ isFeatured: true
 gitlab: https://gitlab.com/avivfaraj/insider-trading-alerts
 ---
 
-[iframe {title: "Insider Trading Alerts"}](https://insider-trading-alerts-bd84ea.gitlab.io)
+[iframe {title: "Insider Trading Alerts"}](https://avivfaraj.gitlab.io/insider-trading-alerts)
