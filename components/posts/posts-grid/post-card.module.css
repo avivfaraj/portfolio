@@ -6,7 +6,8 @@ text-align: center;
 border-radius: 10px;
 overflow:hidden;
 height:425px;
-display: block;
+display: flex;
+flex-direction: column;
 transition: .5s all;
 }
 
@@ -49,11 +50,13 @@ font-size: 18px;
 .content{
     align-items: center;
     justify-content: center;
+    flex: 1;
 }
 
 .content p{
     display: -webkit-box;
     max-width: 300px;
+    line-clamp: 4;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -61,8 +64,10 @@ font-size: 18px;
     font-size: 20px;
 }
 
-.span{
+.footer{
     font-size: 14px;
+    margin-top: auto;
+    margin-bottom: 1rem;
 }
 
 

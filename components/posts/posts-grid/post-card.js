@@ -26,9 +26,9 @@ function PostCard(props) {
             <Image
               src={imagePath}
               alt={title}
-              width={100}
-              height={65}
-              style={{ width: "100%", height: "auto" }}
+              width={300}
+              height={200}
+              className={Styles.image}
             />
           </div>
           <div className={Styles.content}>
@@ -36,7 +36,7 @@ function PostCard(props) {
             {/* <time>{formattedDate}</time> */}
             <p>{desc}</p>
           </div>
-          <footer className={Styles.span}>
+          <footer className={Styles.footer}>
             <b>Keywords: </b> {keywords}
           </footer>
         </div>
