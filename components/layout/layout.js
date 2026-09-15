@@ -14,11 +14,11 @@ export default function Layout({ children }) {
       <Head>
         <title>Aviv Faraj | Data Scientist</title>
       </Head>
-      <main className={Styles.main}>
-        <aside className={Styles.sidebar}>
+      <main className={Styles.layoutMain}>
+        <aside className={Styles.layoutSidebar}>
           <Sidebar />
         </aside>
-        <div className={Styles.content}>{children}</div>
+        <div className={Styles.contentWrapper}>{children}</div>
       </main>
       {activeNotification && (
         <Notification

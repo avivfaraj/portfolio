@@ -1,24 +1,21 @@
-.main {
-    min-height:100vh;
-    display: flex;
-    flex-direction:row;
-    background-color: var(--back-color);
-
+.layoutMain {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--back-color);
 }
 
-.sidebar{
-
-    width: 30%;
-    max-width: 200px;
+.layoutSidebar {
+  width: 30%;
+  max-width: 200px;
 }
 
-.content p{
-    width: 90%;
+.contentWrapper p {
+  width: 90%;
 }
-
 
 @media screen and (max-width: 1024px) {
-    .sidebar {
-      max-width: 20%;
-    }
+  .layoutSidebar {
+    max-width: 20%;
+  }
 }

@@ -57,18 +57,18 @@ const Cards = [
 
 export default function Sidebar() {
   return (
-    <nav className={Styles.nav}>
+    <nav className={Styles.sidebarNav}>
       <div className={Styles.profile}>
-        <img src={"/images/profile.png"} className={Styles.borderCircle} />
+        <img src={"/images/profile.png"} className={Styles.profileImage} />
       </div>
-      <div className={Styles.heading2Xl}>
+      <div className={Styles.profileName}>
         <h2>{name}</h2>
       </div>
-      <div className={Styles.buttons}>
+      <div className={Styles.navButtons}>
         <ButtonList buttons={Cards} />
       </div>
 
-      <div className={Styles.banner}>
+      <div className={Styles.socialLinks}>
         <ModalImage
           src="/images/github_32px.png"
           alt="github"

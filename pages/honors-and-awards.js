@@ -5,8 +5,8 @@ import LinkedImage from "../components/linked-image/linked-image";
 function Honors() {
     const name = "Aviv Faraj";
     return (
-        <div className={Styles.main}>
-            <h1 className={Styles.h1}>Honors & Awards</h1>
+        <div className={Styles.certificatesPage}>
+            <h1 className={Styles.certificateTitle}>Honors & Awards</h1>
             <div className={Styles.horizontalCertificate}>
                 <h3>Master of Science in Data Science</h3>
                 <LinkedImage {...HonorsArray[0]} />
@@ -39,7 +39,7 @@ function Honors() {
                 <LinkedImage {...HonorsArray[7]} />
             </div>
 
-            <div className={Styles.gap} />
+            <div className={Styles.pageGap} />
         </div>
     );
 }

@@ -1,23 +1,22 @@
-.h1{
+.pageTitle {
   text-align: center;
   margin-left: 25%;
-
   margin-top: var(--margin-top-12);
   margin-bottom: var(--margin-bottom-5);
-
   font-style: italic;
   font-family: "Times New Roman", Times, serif;
 }
 
-.footer{
+.pageFooter {
   margin-left: 20%;
 }
 
-@media screen and (max-width: 720px){
-  .h1{
+@media screen and (max-width: 720px) {
+  .pageTitle {
     margin-bottom: 25%;
   }
-  .footer{
+
+  .pageFooter {
     margin-top: -20%;
   }
 }

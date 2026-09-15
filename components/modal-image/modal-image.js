@@ -27,12 +27,12 @@ function ModalImage(props) {
         <div
             onMouseEnter={onMouseEnterLink}
             onMouseLeave={onMouseLeaveLink}
-            className={styles.allLinks}
+            className={styles.iconLinkContainer}
         >
-            <Link className={styles.social} href={href} target="_blank">
+            <Link className={styles.socialLink} href={href} target="_blank">
                 {isHoveringLink ? (
                     <Image
-                        className={styles.borderCircle}
+                        className={styles.iconImage}
                         src={src}
                         width={long_width}
                         height={long_height}
@@ -40,7 +40,7 @@ function ModalImage(props) {
                     />
                 ) : (
                     <Image
-                        className={styles.borderCircle}
+                        className={styles.iconImage}
                         src={src}
                         width={short_width}
                         height={short_height}
