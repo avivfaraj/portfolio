@@ -51,6 +51,8 @@ font-size: 18px;
     align-items: center;
     justify-content: center;
     flex: 1;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .content p{
@@ -62,12 +64,17 @@ font-size: 18px;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 20px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .footer{
     font-size: 14px;
     margin-top: auto;
     margin-bottom: 1rem;
+    margin-left: 1rem;
+    padding-left: 0.25rem;
+    text-align: left;
 }
 
 
