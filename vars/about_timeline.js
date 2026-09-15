@@ -4,6 +4,23 @@ const steps = [
     {
         title: (
             <span>
+                {" "}
+                Data Scientist I at{" "}
+                <HoverLink href={"https://www.usaa.com"} alt={"USAA"} />
+            </span>
+        ),
+        description: (
+            <p>
+                Develop and maintain machine-learning models, create dashboards to monitor their performance,
+                prepare clear documentation, and collaborate with team members to ensure that the models effectively support business goals.
+                
+            </p>
+        ),
+        start_date: "Jan 2025",
+    },
+    {
+        title: (
+            <span>
                 Graduated{" "}
                 <HoverLink
                     href={"https://drexel.edu"}
