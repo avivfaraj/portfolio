@@ -1,9 +1,9 @@
-import HoverLink from "/components/hover-link/hover-link";
+import HoverLink from "../components/hover-link/hover-link";
 import Image from "next/image";
-import Styles from "/components/posts/posts-content/post-content.module.css";
-import GIF from "/components/gif/gif";
+import Styles from "../components/posts/posts-content/post-content.module.css";
+import GIF from "../components/gif/gif";
 import { Fragment, useState } from "react";
-import CodeBlock from "/helpers/code-block";
+import CodeBlock from "./code-block";
 
 
 export function getID(header) {
@@ -222,7 +222,7 @@ const customComponents = {
               inline={inline}
               children={children}
               filename={filename}
-              props={...props}
+              props={props}
           />
 
         </details>
@@ -234,7 +234,7 @@ const customComponents = {
               className={className}
               children={children}
               filename={filename}
-              props={...props}  />;
+              props={props}  />;
   },
 };
 

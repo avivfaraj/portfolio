@@ -2,8 +2,8 @@ import Head from "next/head";
 import { Fragment, useContext } from "react";
 import Sidebar from "../sidebar/sidebar";
 import Styles from "./layout.module.css";
-import Notification from "/components/ui/notification";
-import NotificationContext from "/store/notification-context";
+import Notification from "../ui/notification";
+import NotificationContext from "../../store/notification-context";
 
 export default function Layout({ children }) {
   const notificationCtx = useContext(NotificationContext);
@@ -14,11 +14,11 @@ export default function Layout({ children }) {
       <Head>
         <title>Aviv Faraj | Data Scientist</title>
       </Head>
-      <main className={Styles.main}>
-        <aside className={Styles.sidebar}>
+      <main className={Styles.layoutMain}>
+        <aside className={Styles.layoutSidebar}>
           <Sidebar />
         </aside>
-        <div className={Styles.content}>{children}</div>
+        <div className={Styles.contentWrapper}>{children}</div>
       </main>
       {activeNotification && (
         <Notification

@@ -4,6 +4,10 @@
     text-align: left;
 }
 
+.content {
+    margin-left: -3%;
+}
+
 .container h1, .container h2{
     text-align: center;
     margin-left:-13%;
@@ -113,6 +117,9 @@ https://tamarisk.it/automatically-numbering-figures-in-markdown/
     .container{
         margin-left: 25%;
     }
+    .content {
+        margin-left: 0;
+    }
     .code, .plaincode{
         font-size: 10px;
     }
@@ -146,6 +153,9 @@ https://tamarisk.it/automatically-numbering-figures-in-markdown/
 
     .container{
         margin-left: 15%;
+    }
+    .content {
+        margin-left: 7%;
     }
     .code, .plaincode{
         font-size: 15px;

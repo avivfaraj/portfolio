@@ -1,6 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import Styles from "./post-content.module.css";
-import customComponents from "/helpers/custom-components-utils";
+import customComponents from "../../../helpers/custom-components-utils";
 
 
 function PostContent(props) {

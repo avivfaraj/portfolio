@@ -1,10 +1,10 @@
 import { Fragment } from "react";
-import { getPostData, getPostsFiles } from "/helpers/posts-utils";
-import PostContent from "/components/posts/posts-content/post-content";
-import GithubCorner from "/components/github-corner/github-corner";
-import GitlabCorner from "/components/gitlab-corner/gitlab-corner";
+import { getPostData, getPostsFiles } from "../../../helpers/posts-utils";
+import PostContent from "../../../components/posts/posts-content/post-content";
+import GithubCorner from "../../../components/github-corner/github-corner";
+import GitlabCorner from "../../../components/gitlab-corner/gitlab-corner";
 import Head from "next/head";
-import PostIframe from "/components/posts/posts-iframe/posts-iframe";
+import PostIframe from "../../../components/posts/posts-iframe/posts-iframe";
 
 function CSPage(props) {
   const { post } = props;

@@ -1,8 +1,19 @@
 :root {
-    --nav-pad: 23px;
-    --par-space: 14%;
-    --toc-width: 10%;
+  --nav-pad: 23px;
+  --par-space: 14%;
+  --toc-width: 10%;
+  --back-color: #d9d9d9;
+  --size-2: 0.5rem;
+  --size-4: 1rem;
+  --size-6: 1.5rem;
+  --margin-post-12: 10%;
+  --margin-top-12: 12%;
+  --margin-bottom-5: 5%;
+  --gap-bottom-100: 100px;
+  --gap-bottom-200: 200px;
+  --padding-left-10-per: 10%;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -12,24 +23,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   margin: 0;
-  --back-color: #d9d9d9;
-
-
   counter-reset: figureCounter;
   counter-reset: gifCounter;
-
-  --size-2: 0.5rem;
-  --size-4: 1rem;
-  --size-6: 1.5rem;
-
-
-  --margin-post-12: 10%;
-
-  --margin-top-12: 12%;
-  --margin-bottom-5: 5%;
-
-  --gap-bottom-100: 100px;
-  --gap-bottom-200: 200px;
-
-  --padding-left-10-per: 10%;
 }

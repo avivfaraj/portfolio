@@ -1,36 +1,36 @@
-.main{
-    display: block;
-    overflow-y: auto;
-    justify-content: center;
-    text-align: center;
-    width:80%;
-}
-.main > h2{
-    margin-top: 10%;
+.certificatesPage {
+  display: block;
+  overflow-y: auto;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
 }
 
-.h1{
+.certificatesPage > h2 {
+  margin-top: 10%;
+}
 
+.certificateTitle {
   padding-top: var(--margin-top-12);
   padding-left: var(--padding-left-10-per);
   font-style: italic;
   font-family: "Times New Roman", Times, serif;
 }
 
-.horizontalCertificate{
+.horizontalCertificate {
   margin-top: 5%;
 }
 
-.verticalCertificate{
+.verticalCertificate {
   display: inline-block;
   margin: 5% 10%;
-  width:80%
+  width: 80%;
 }
 
-.ul{
+.certificateList {
   list-style: none;
 }
 
-.gap{
-    height:100px;
+.pageGap {
+  height: 100px;
 }

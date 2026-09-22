@@ -4,7 +4,7 @@ import atomDark from "react-syntax-highlighter/dist/cjs/styles/prism/atom-dark";
 import js from "react-syntax-highlighter/dist/cjs/languages/prism/javascript";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { Fragment, useState, useEffect } from "react";
-import Styles from "/components/posts/posts-content/post-content.module.css";
+import Styles from "../components/posts/posts-content/post-content.module.css";
 
 SyntaxHighlighter.registerLanguage("javascript", js);
 SyntaxHighlighter.registerLanguage("python", python);

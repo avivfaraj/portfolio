@@ -1,7 +1,7 @@
 import React from "react";
 import Styles from "./post-card.module.css";
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 function PostCard(props) {
   const { title, field, desc, date, image, keywords, slug } = props.project;
@@ -26,9 +26,9 @@ function PostCard(props) {
             <Image
               src={imagePath}
               alt={title}
-              width={100}
-              height={65}
-              layout="responsive"
+              width={300}
+              height={200}
+              className={Styles.image}
             />
           </div>
           <div className={Styles.content}>
@@ -36,7 +36,7 @@ function PostCard(props) {
             {/* <time>{formattedDate}</time> */}
             <p>{desc}</p>
           </div>
-          <footer className={Styles.span}>
+          <footer className={Styles.footer}>
             <b>Keywords: </b> {keywords}
           </footer>
         </div>

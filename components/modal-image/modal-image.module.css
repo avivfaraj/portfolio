@@ -1,24 +1,23 @@
-.social{
+.socialLink {
   padding-right: 20px;
 }
 
-.borderCircle {
+.iconImage {
   border-radius: 9999px;
 }
 
-.link:hover{
-  color:gray;
+.link:hover {
+  color: gray;
   text-decoration: underline;
 }
 
-.link{
-  color: #294D28;
+.link {
+  color: #294d28;
   text-decoration: none;
 }
 
 @media screen and (min-height: 1024px) {
-  .allLinks{
+  .iconLinkContainer {
     margin-top: -170%;
   }
-  
 }

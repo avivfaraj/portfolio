@@ -1,8 +1,8 @@
 import { Fragment } from "react";
-import { getPostData, getPostsFiles } from "/helpers/posts-utils";
-import PostContent from "/components/posts/posts-content/post-content";
-import GithubCorner from "/components/github-corner/github-corner";
-import GitlabCorner from "/components/gitlab-corner/gitlab-corner";
+import { getPostData, getPostsFiles } from "../../../helpers/posts-utils";
+import PostContent from "../../../components/posts/posts-content/post-content";
+import GithubCorner from "../../../components/github-corner/github-corner";
+import GitlabCorner from "../../../components/gitlab-corner/gitlab-corner";
 
 function EEPage(props) {
   const { post } = props;
